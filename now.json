@@ -1,6 +1,6 @@
 {
-  "name": "oneGlance",
-  "version": 2,
+  "name": "issuereporter",
+  "version": 1,
   "builds": [
     {
       "src": "package.json",

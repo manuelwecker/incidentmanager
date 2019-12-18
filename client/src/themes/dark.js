@@ -1,9 +1,10 @@
 const dark = {
   colors: {
-    background: "#999999",
     corporatedesignprimary: "#004da0",
     corporatedesignsecondary: "#00a6eb",
-    primary: "#777",
+    background: "#303030",
+    primary: "#3f3f3f",
+    secondary: "#b1b1b1",
     font: "#fff"
   }
 };

@@ -1,22 +1,27 @@
 import React from "react";
 import { ThemeProvider } from "emotion-theming";
 import styled from "@emotion/styled";
-import light from "./themes/light";
 import dark from "./themes/dark";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Logo from "./components/Logo";
+import Button from "./components/Button";
 
 const Headline = styled.h1`
   font-weight: bold;
-  color: ${dark.colors.font};
+  /* color: ${dark.colors.font}; */
+  color: ${props => props.theme.colors.font};
 `;
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={light}>
+      <ThemeProvider theme={dark}>
         <GlobalStyles />
         <Router>
+          <header>
+            <Logo />
+          </header>
           <Switch>
             <Route path="/show-all">
               <Headline>Homepage – All issues</Headline>
@@ -50,11 +55,12 @@ function App() {
             </Route>
             <Route path="/login">
               <Headline>
-                Login – Enter your user and password or register
+                Login – Enter your user and password or register
               </Headline>
             </Route>
             <Route path="/">
-              <Headline>Login – Hello issue Tracker</Headline>
+              <Headline>Login – Hello issue Tracker</Headline>
+              <Button text={"Login"} />
             </Route>
           </Switch>
           <div></div>

@@ -1,8 +1,5 @@
-import React from "react";
-// import styled from "@emotion/styled";
+import styled from "@emotion/styled";
 
-function Button(text) {
-  return <button>{text}</button>;
-}
+const Button = styled.button``;
 
 export default Button;

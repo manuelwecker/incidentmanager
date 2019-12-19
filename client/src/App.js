@@ -60,7 +60,7 @@ function App() {
             </Route>
             <Route path="/">
               <Headline>Login – Hello issue Tracker</Headline>
-              <Button text={"Login"} />
+              <Button text="Login" />
             </Route>
           </Switch>
           <div></div>

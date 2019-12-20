@@ -6,6 +6,8 @@ import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
 import Button from "./components/Button";
+import ReportOne from "./pages/ReportOne";
+import IssueList from "./pages/IssueList";
 
 const Headline = styled.h1`
   font-weight: bold;
@@ -24,11 +26,9 @@ function App() {
           </header>
           <Switch>
             <Route path="/show-all">
-              <Headline>Homepage – All issues</Headline>
+              <Headline component={IssueList}>Homepage – All issues</Headline>
             </Route>
-            <Route path="/report-1">
-              <Headline>Report – Step 1 of 4</Headline>
-            </Route>
+            <Route path="/report" component={ReportOne}></Route>
             <Route path="/report-2">
               <Headline>Report – Step 2 of 4</Headline>
             </Route>

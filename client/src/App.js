@@ -6,6 +6,8 @@ import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
 import Button from "./components/Button";
+import Footer from "./components/Footer";
+import ButtonToggle from "./components/ButtonToggle";
 
 const Headline = styled.h1`
   font-weight: bold;
@@ -64,6 +66,8 @@ function App() {
             </Route>
           </Switch>
           <div></div>
+          <Footer />
+          <ButtonToggle></ButtonToggle>
         </Router>
       </ThemeProvider>
     </>

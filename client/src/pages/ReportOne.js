@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import useSessionStorage from "../hooks/useSessionStorage";
+import IconTypeAccident from "../assets/IconTypeAccident";
 
 const Form = styled.form`
   border: 1px solid black;
@@ -33,10 +34,13 @@ const SubmitButton = styled.button`
   border: 1px solid black;
 `;
 
-export default function ReportOne() {
-  // const [typ, setTyp] = React.useState("");
-  // const [timedate, setTimedate] = React.useState(new Date());
+const label = styled.label`
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+`;
 
+export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
   const [typ, setTyp] = useSessionStorage("typ", "");
   const [timedate, setTimedate] = useSessionStorage("timedate", new Date());
@@ -67,40 +71,28 @@ export default function ReportOne() {
       <h3>Date and Time: </h3>
       <h2>When did it happened?</h2>
 
-      <label>
-        <img
-          src="../images/greenchem.png"
-          alt="Issue Fire"
-          width="50"
-          height="50"
-        />
+      <Label>
+        <IconTypeAccident />
         typFire
         <Typ
-          name="radio-button-group"
+          name="typeofissue"
           type="radio"
           value="typFire"
           placeholder="typFire"
           onChange={event => setTyp(event.target.value)}
-          isStateful={true}
         />
-      </label>
-      <label>
-        <img
-          src="../images/greenchem.png"
-          alt="Issue Terror"
-          width="50"
-          height="50"
-        />
+      </Label>
+      <Label>
+        <img src="../icons/icontypeaccident.svg" width="50" height="50" />
         typFire
         <Typ
-          name="radio-button-group"
+          name="typeofissue"
           type="radio"
           value="typTerror"
           placeholder="typTerror"
           onChange={event => setTyp(event.target.value)}
-          isStateful={true}
         />
-      </label>
+      </Label>
 
       <TimeDate
         type="datetime-local"

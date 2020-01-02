@@ -4,8 +4,7 @@ import { text } from "@storybook/addon-knobs";
 import Button from "../components/Button";
 
 export default {
-  component: Button,
-  title: "Button"
+  title: "UserInput| Buttons"
 };
 
 export function ButtonText() {

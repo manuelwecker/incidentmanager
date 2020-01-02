@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
 import Button from "./components/Button";
 import ReportOne from "./pages/ReportOne";
-import IssueList from "./pages/IssueList";
 
 const Headline = styled.h1`
   font-weight: bold;
@@ -26,7 +25,7 @@ function App() {
           </header>
           <Switch>
             <Route path="/show-all">
-              <Headline component={IssueList}>Homepage – All issues</Headline>
+              <Headline>Homepage – All issues</Headline>
             </Route>
             <Route path="/report" component={ReportOne}></Route>
             <Route path="/report-2">

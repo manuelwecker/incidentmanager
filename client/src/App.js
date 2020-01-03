@@ -2,13 +2,20 @@ import React from "react";
 import { ThemeProvider } from "emotion-theming";
 import styled from "@emotion/styled";
 import dark from "./themes/dark";
+import light from "./themes/light";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ButtonText from "./components/Button";
-import ReportOne from "./pages/ReportOne";
+import Main from "./components/Main";
+import {
+  Button,
+  ButtonText,
+  ButtonSvg,
+  ButtonSubmit
+} from "./components/Buttons";
+import { ReportOne, ReportTwo, ReportThree, ReportFour } from "./pages";
 const Headline = styled.h1`
   font-weight: bold;
   /* color: ${dark.colors.font}; */
@@ -21,15 +28,10 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const Main = styled.main`
-  overflow: auto;
-  height: 100%;
-`;
-
 function App() {
   return (
     <>
-      <ThemeProvider theme={dark}>
+      <ThemeProvider theme={light}>
         <GlobalStyles />
         <Router>
           <Container>
@@ -40,17 +42,13 @@ function App() {
               <Switch>
                 <Route path="/issues">
                   <Headline>Homepage – All issues</Headline>
+
+                  <ButtonText text="Report current issue"></ButtonText>
                 </Route>
                 <Route path="/report" component={ReportOne}></Route>
-                <Route path="/report-2">
-                  <Headline>Report – Step 2 of 4</Headline>
-                </Route>
-                <Route path="/report-3">
-                  <Headline>Report – Step 3 of 4</Headline>
-                </Route>
-                <Route path="/report-4">
-                  <Headline>Report – Step 4 of 4</Headline>
-                </Route>
+                <Route path="/report-2" component={ReportTwo}></Route>
+                <Route path="/report-3" component={ReportThree}></Route>
+                <Route path="/report-4" component={ReportFour}></Route>
                 <Route path="/summary">
                   <Headline>
                     Report – Summary and last chance to edit the message before
@@ -81,7 +79,7 @@ function App() {
                   <Headline>
                     Login – Welcome to issue Tracker - tap to enter
                   </Headline>
-                  <ButtonText text="Login" />
+                  <ButtonText>Login</ButtonText>
                 </Route>
               </Switch>
             </Main>

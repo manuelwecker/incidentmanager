@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
-import SVGIcon from "./SVGIcon";
+import SVGIcon from "../SVGIcon";
 
 const Path = styled.path`
-  fill: red;
+  fill: ${props => props.theme.colors.background};
 `;
 
-function IconTypeAccident(props) {
+function Accident(props) {
   return (
     <SVGIcon {...props}>
       <Path
@@ -29,4 +29,4 @@ function IconTypeAccident(props) {
   );
 }
 
-export default IconTypeAccident;
+export default Accident;

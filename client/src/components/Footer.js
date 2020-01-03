@@ -4,11 +4,12 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const FooterNavigation = styled.div`
-  background-color: #44ff66;
+  background-color: ${props => props.theme.colors.background};
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  padding: 4px;
 `;
 
 const Button = styled.button`

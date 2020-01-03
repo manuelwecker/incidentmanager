@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const HeaderNavigation = styled.div`
-  background-color: #44ff66;
+  background-color: ${props => props.theme.colors.corporatedesignprimary};
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  padding: 4px;
 `;
 
 const Button = styled.button`
@@ -18,15 +19,17 @@ const Button = styled.button`
 function Header() {
   const location = useLocation();
   return (
-    <HeaderNavigation>
-      <Link to="/issues" active={location.pathname === "/issues"}>
-        <Button>Show all issues</Button>
-      </Link>
-
-      <Link to="/settings" active={location.pathname === "/settings"}>
-        <Button>Settings</Button>
-      </Link>
-    </HeaderNavigation>
+    <>
+      <Logo></Logo>
+      <HeaderNavigation>
+        <Link to="/issues" active={location.pathname === "/issues"}>
+          <Button>Show all issues</Button>
+        </Link>
+        <Link to="/settings" active={location.pathname === "/settings"}>
+          <Button>Settings</Button>
+        </Link>
+      </HeaderNavigation>
+    </>
   );
 }
 

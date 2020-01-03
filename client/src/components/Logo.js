@@ -1,27 +1,36 @@
 import React from "react";
 import styled from "@emotion/styled";
+import LogoCompanySvg from "./LogoCompanySvg";
 
 const ImageWrapper = styled.div`
-  background-color: ${props => props.theme.colors.primary};
-  border-radius: 50%;
-  min-width: 10px;
-  min-height: 100px;
-  max-width: 100px;
-  max-height: 100px;
-  object-fit: cover;
+  background-color: ${props => props.theme.colors.corporatedesignprimary};
+  max-height: 32px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  /* object-fit: cover; */
 `;
 
-// function LogoImage() {
-//   return (
-//     <img
-//       src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/box.svg"
-//       alt="company logo"
-//     />
-//   );
-// }
+const SvgWrapper = styled.div`
+  width: 80px;
+`;
+
+function LogoImage() {
+  return (
+    <>
+      <SvgWrapper>
+        <LogoCompanySvg />
+      </SvgWrapper>
+    </>
+  );
+}
 
 function Logo() {
-  return <ImageWrapper>{/* <LogoImage /> */}</ImageWrapper>;
+  return (
+    <ImageWrapper>
+      <LogoImage />
+    </ImageWrapper>
+  );
 }
 
 export default Logo;

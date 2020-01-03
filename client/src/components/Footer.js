@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const HeaderNavigation = styled.div`
+const FooterNavigation = styled.div`
   background-color: #44ff66;
   display: flex;
   justify-content: space-between;
@@ -15,19 +15,18 @@ const Button = styled.button`
   color: ${props => props.theme.colors.secondary};
 `;
 
-function Header() {
+function Footer() {
   const location = useLocation();
   return (
-    <HeaderNavigation>
-      <Link to="/issues" active={location.pathname === "/issues"}>
-        <Button>Show all issues</Button>
+    <FooterNavigation>
+      <Link to="/crisismanual" active={location.pathname === "/crisismanual"}>
+        <Button>crisis manual</Button>
       </Link>
-
-      <Link to="/settings" active={location.pathname === "/settings"}>
-        <Button>Settings</Button>
+      <Link to="/legalnotice" active={location.pathname === "/legalnotice"}>
+        <Button>legal notice</Button>
       </Link>
-    </HeaderNavigation>
+    </FooterNavigation>
   );
 }
 
-export default Header;
+export default Footer;

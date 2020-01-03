@@ -20,11 +20,11 @@ const Typ = styled.input`
   opacity: 0;
 `;
 
-const TypFire = styled(Typ)`
-  width: 50px;
-  height: 50px;
-  background-color: red;
-`;
+// const TypFire = styled(Typ)`
+//   width: 50px;
+//   height: 50px;
+//   background-color: red;
+// `;
 
 const TimeDate = styled.input`
   border: 1px solid;

@@ -1,5 +1,6 @@
 import React from "react";
 import LogoCompanyUrl from "../components/LogoCompanyUrl";
+import LogoCompanySvg from "../components/LogoCompanySvg";
 import { text } from "@storybook/addon-knobs";
 
 export default {
@@ -7,9 +8,16 @@ export default {
 };
 
 export function LogoFromUrlWithoutUrl() {
-  return <LogoCompanyUrl />;
+  return <LogoCompanySvg />;
 }
 
 export function LogoFromUrlWithUrl() {
-  return <LogoCompanyUrl src={text("src:", "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg")} />;
+  return (
+    <LogoCompanyUrl
+      src={text(
+        "src:",
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg"
+      )}
+    />
+  );
 }

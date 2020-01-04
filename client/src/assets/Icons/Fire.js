@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import SVGIcon from "../SVGIcon";
 
 const Path = styled.path`
-  fill: ${props => props.theme.colors.background};
+  fill: ${props => props.theme.colors.corporatedesignsecondary};
 `;
 
 function Fire(props) {

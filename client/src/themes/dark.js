@@ -6,10 +6,18 @@ const dark = {
   colors: {
     corporatedesignprimary: "#004da0",
     corporatedesignsecondary: "#00a6eb",
-    background: "#303030",
-    primary: "#3f3f3f",
-    secondary: "#b1b1b1",
-    font: "#fff"
+    background: "#333333",
+
+    primary: "#333333",
+    secondary: "#52565a",
+    tertiary: "#7e8890",
+
+    warninghigh: "#b70000",
+    warningmid: "#f49d00",
+    warninglow: "#7EB61C",
+
+    font: "#ffffff",
+    fontsofter: "#bec4c7"
   }
 };
 

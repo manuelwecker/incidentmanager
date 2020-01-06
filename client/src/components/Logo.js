@@ -2,34 +2,28 @@ import React from "react";
 import styled from "@emotion/styled";
 import LogoCompanySvg from "./LogoCompanySvg";
 
-const ImageWrapper = styled.div`
-  background-color: ${props => props.theme.colors.corporatedesignprimary};
-  max-height: 32px;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  /* object-fit: cover; */
-`;
-
 const SvgWrapper = styled.div`
-  width: 80px;
+  width: 100px;
+  max-height: 32px;
+  margin: 4px 0 0 0;
 `;
 
-function LogoImage() {
-  return (
-    <>
-      <SvgWrapper>
-        <LogoCompanySvg />
-      </SvgWrapper>
-    </>
-  );
-}
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 8px;
+  color: #ffffff;
+`;
 
 function Logo() {
   return (
-    <ImageWrapper>
-      <LogoImage />
-    </ImageWrapper>
+    <Container>
+      Your IssueReporter at
+      <SvgWrapper>
+        <LogoCompanySvg />
+      </SvgWrapper>
+    </Container>
   );
 }
 

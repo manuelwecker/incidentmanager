@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Svg = styled.svg`
-  fill: ${props => props.theme.colors.background};
+  fill: #ffffff;
 `;
 
 export default function LogoCompanySvg(props) {

@@ -12,10 +12,7 @@ import {
 } from "../components/Buttons";
 import { Headline3, Headline2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
-
-const Form = styled.form`
-  border: 1px solid black;
-`;
+import { FormReport } from "../components/Forms";
 
 const Label = styled.label`
   border: 1px solid black;
@@ -93,7 +90,7 @@ export default function ReportOne() {
   const location = useLocation();
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <FormReport onSubmit={handleSubmit}>
         <Headline3>Typ of incident:</Headline3>
         <Headline2>What happened?</Headline2>
         <Container>
@@ -138,7 +135,7 @@ export default function ReportOne() {
         />
 
         <ButtonSubmit text="Report current issue"></ButtonSubmit>
-      </Form>
+      </FormReport>
       <ButtonSliderDots />
       <Link to="/report-2" active={location.pathname === "/report-2"}>
         <ButtonText text="Next to step 2"></ButtonText>

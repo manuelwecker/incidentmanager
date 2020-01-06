@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Button from "../Buttons/Button";
 
 // const ButtonTextOnly = styled(Button)`
 const ButtonTextOnly = styled.button`

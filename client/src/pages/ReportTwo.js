@@ -1,12 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
-import {
-  Button,
-  ButtonText,
-  ButtonSvg,
-  ButtonSubmit,
-  ButtonSliderDots
-} from "../components/Buttons";
+import { ButtonText, ButtonSliderDots } from "../components/Buttons";
 import { Headline3, Headline2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 

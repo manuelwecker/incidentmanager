@@ -1,11 +1,8 @@
 import React from "react";
-import styled from "@emotion/styled";
+
 import {
-  Button,
   ButtonText,
-  ButtonSvg,
   ButtonSvgText,
-  ButtonSubmit,
   ButtonSliderDots
 } from "../components/Buttons";
 import { Fire, Accident } from "../assets/Icons";

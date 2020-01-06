@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Button from "../Buttons/Button";
-import { Fire, Accident } from "../../assets/Icons";
 
 const ButtonSvgOnly = styled.button`
   width: 80px;

@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import useSessionStorage from "../hooks/useSessionStorage";
-import IconTypeAccident from "../assets/IconTypeAccident";
 import { Accident, Fire } from "../assets/Icons";
 import {
-  Button,
   ButtonText,
-  ButtonSvg,
   ButtonSubmit,
   ButtonSliderDots
 } from "../components/Buttons";

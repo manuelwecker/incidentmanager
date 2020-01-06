@@ -9,16 +9,16 @@ import Logo from "./components/Logo";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import { ButtonText } from "./components/Buttons";
 import {
-  Button,
-  ButtonText,
-  ButtonSvg,
-  ButtonSubmit
-} from "./components/Buttons";
-import { ReportOne, ReportTwo, ReportThree, ReportFour } from "./pages";
+  ReportOne,
+  ReportTwo,
+  ReportThree,
+  ReportFour,
+  IssueList
+} from "./pages";
 const Headline = styled.h1`
   font-weight: bold;
-  /* color: ${dark.colors.font}; */
   color: ${props => props.theme.colors.font};
 `;
 
@@ -40,11 +40,7 @@ function App() {
             </Header>
             <Main>
               <Switch>
-                <Route path="/issues">
-                  <Headline>Homepage – All issues</Headline>
-
-                  <ButtonText text="Report current issue"></ButtonText>
-                </Route>
+                <Route path="/issues" component={IssueList}></Route>
                 <Route path="/report" component={ReportOne}></Route>
                 <Route path="/report-2" component={ReportTwo}></Route>
                 <Route path="/report-3" component={ReportThree}></Route>

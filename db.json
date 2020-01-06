@@ -154,6 +154,12 @@
       "timedate": "2020-01-04T09:01:49.659Z",
       "text": "Output Way back",
       "id": 28
+    },
+    {
+      "typ": "typFire",
+      "timedate": "2020-01-06T12:30",
+      "text": "Status okay",
+      "id": 29
     }
   ]
 }

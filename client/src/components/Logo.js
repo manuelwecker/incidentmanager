@@ -1,27 +1,30 @@
 import React from "react";
 import styled from "@emotion/styled";
+import LogoCompanySvg from "./LogoCompanySvg";
 
-const ImageWrapper = styled.div`
-  background-color: ${props => props.theme.colors.primary};
-  border-radius: 50%;
-  min-width: 10px;
-  min-height: 100px;
-  max-width: 100px;
-  max-height: 100px;
-  object-fit: cover;
+const SvgWrapper = styled.div`
+  width: 100px;
+  max-height: 32px;
+  margin: 4px 0 0 0;
 `;
 
-// function LogoImage() {
-//   return (
-//     <img
-//       src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/box.svg"
-//       alt="company logo"
-//     />
-//   );
-// }
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 8px;
+  color: #ffffff;
+`;
 
 function Logo() {
-  return <ImageWrapper>{/* <LogoImage /> */}</ImageWrapper>;
+  return (
+    <Container>
+      Your IssueReporter at
+      <SvgWrapper>
+        <LogoCompanySvg />
+      </SvgWrapper>
+    </Container>
+  );
 }
 
 export default Logo;

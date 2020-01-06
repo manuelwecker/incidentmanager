@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const FooterNavigation = styled.div`
+const FooterNavigation = styled.footer`
   background-color: ${props => props.theme.colors.background};
   display: flex;
   justify-content: space-between;

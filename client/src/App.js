@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "emotion-theming";
 import styled from "@emotion/styled";
-import dark from "./themes/dark";
 import light from "./themes/light";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

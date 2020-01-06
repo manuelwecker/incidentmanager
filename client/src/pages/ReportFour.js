@@ -17,7 +17,7 @@ export default function ReportThree() {
       <Headline2>Are there already media requests or coverage?</Headline2>
       <form>
         <ButtonSvgText svg={<Fire />} text="requests"></ButtonSvgText>
-        <ButtonSvgText svg={<Fire />} text="broadcasting"></ButtonSvgText>
+        <ButtonSvgText svg={<Accident />} text="broadcasting"></ButtonSvgText>
         <ButtonSvgText svg={<Fire />} text="published"></ButtonSvgText>
 
         <ButtonSvgText svg={<Fire />} text="television"></ButtonSvgText>

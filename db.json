@@ -1,30 +1,33 @@
 {
   "issues": [
     {
-      "typ": "Fire",
+      "type": "Fire",
       "country": "DEU",
       "timedate": "2020-01-03T16:20:27.633Z",
       "timezone": "CET",
       "opentasks": "3",
       "tasks": "9",
+      "issueid": 1,
       "id": 1
     },
     {
-      "typ": "Demonstration",
+      "type": "Demonstration",
       "country": "POL",
       "timedate": "2020-01-04T09:01:49.659Z",
       "timezone": "CET",
       "opentasks": "6",
       "tasks": "9",
+      "issueid": 2,
       "id": 2
     },
     {
-      "typ": "Fraud",
+      "type": "Fraud",
       "country": "FRA",
       "timedate": "2020-01-06T12:30",
       "timezone": "CET",
       "opentasks": "5",
       "tasks": "9",
+      "issueid": 3,
       "id": 3
     }
   ]

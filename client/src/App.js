@@ -14,7 +14,8 @@ import {
   ReportTwo,
   ReportThree,
   ReportFour,
-  IssueList
+  IssueList,
+  SendMemo
 } from "./pages";
 const Headline = styled.h1`
   font-weight: bold;
@@ -50,11 +51,8 @@ function App() {
                     send
                   </Headline>
                 </Route>
-                <Route path="/send">
-                  <Headline>
-                    Report – Send out and add email addresses to list
-                  </Headline>
-                </Route>
+                <Route path="/send" component={SendMemo}></Route>
+
                 <Route path="/tasks">
                   <Headline>
                     Tasks – overview of tasks after reporting the issue

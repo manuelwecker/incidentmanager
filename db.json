@@ -1,9 +1,9 @@
 {
   "issues": [
     {
-      "type": "Fire",
+      "type": "fire",
       "country": "DEU",
-      "timedate": "2020-01-03T16:20:27.633Z",
+      "timedate": "2020-01-07T16:20:27.633Z",
       "timezone": "CET",
       "opentasks": "3",
       "tasks": "9",
@@ -11,9 +11,9 @@
       "id": 1
     },
     {
-      "type": "Demonstration",
+      "type": "demonstration",
       "country": "POL",
-      "timedate": "2020-01-04T09:01:49.659Z",
+      "timedate": "2020-01-09T09:01:49.659Z",
       "timezone": "CET",
       "opentasks": "6",
       "tasks": "9",
@@ -21,13 +21,36 @@
       "id": 2
     },
     {
-      "type": "Fraud",
+      "type": "accident",
       "country": "FRA",
       "timedate": "2020-01-06T12:30",
       "timezone": "CET",
       "opentasks": "5",
       "tasks": "9",
       "issueid": 3,
+      "id": 3
+    }
+  ],
+  "memos": [
+    {
+      "type": "fire",
+      "headline": "Fire bei GreenChem",
+      "subline": "Initial statement for internal use only",
+      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
+      "id": 1
+    },
+    {
+      "type": "accident",
+      "headline": "Unfall bei GreenChem",
+      "subline": "Initial statement for internal use only",
+      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
+      "id": 2
+    },
+    {
+      "type": "demonstration",
+      "headline": "Demonstration bei GreenChem",
+      "subline": "Initial statement for internal use only",
+      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
       "id": 3
     }
   ]

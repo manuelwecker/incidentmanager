@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const ButtonSvgOnly = styled.button`
-  width: 160px;
-  height: 160px;
+  min-width: 34px;
+  min-height: 34px;
   background-color: white;
 `;
 

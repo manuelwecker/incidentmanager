@@ -15,7 +15,8 @@ import {
   ReportThree,
   ReportFour,
   IssueList,
-  SendMemo
+  SendMemo,
+  StartScreen
 } from "./pages";
 const Headline = styled.h1`
   font-weight: bold;
@@ -68,12 +69,7 @@ function App() {
                     Settings – Set up your company and personal profile
                   </Headline>
                 </Route>
-                <Route path="/">
-                  <Headline>
-                    Login – Welcome to issue Tracker - tap to enter
-                  </Headline>
-                  <ButtonText>Login</ButtonText>
-                </Route>
+                <Route path="/" component={StartScreen}></Route>
               </Switch>
             </Main>
             <Footer></Footer>

@@ -5,3 +5,4 @@ export { default as ButtonSvgText } from "./ButtonSvgText.js";
 export { default as ButtonSubmit } from "./ButtonSubmit.js";
 export { default as ButtonSliderDots } from "./ButtonSliderDots.js";
 export { default as ButtonEnlarge } from "./ButtonEnlarge.js";
+export { default as ButtonSVGLogin } from "./ButtonSVGLogin.js";

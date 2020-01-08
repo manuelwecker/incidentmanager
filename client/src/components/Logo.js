@@ -19,7 +19,7 @@ const Container = styled.div`
 function Logo() {
   return (
     <Container>
-      Your IssueReporter at
+      IncidentManager
       <SvgWrapper>
         <LogoCompanySvg />
       </SvgWrapper>

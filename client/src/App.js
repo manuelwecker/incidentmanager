@@ -40,10 +40,10 @@ function App() {
               <Main>
                 <Switch>
                   <Route path="/issues" component={IssueList}></Route>
-                  <Route path="/report" component={ReportOne}></Route>
-                  <Route path="/report-2" component={ReportTwo}></Route>
-                  <Route path="/report-3" component={ReportThree}></Route>
-                  <Route path="/report-4" component={ReportFour}></Route>
+                  <Route path="/report/1" component={ReportOne}></Route>
+                  <Route path="/report/2" component={ReportTwo}></Route>
+                  <Route path="/report/3" component={ReportThree}></Route>
+                  <Route path="/report/4" component={ReportFour}></Route>
                   <Route path="/summary">
                     <H2>
                       Summary and last chance to edit the message before send
@@ -51,7 +51,6 @@ function App() {
                     <H1>Report</H1>
                   </Route>
                   <Route path="/send" component={SendMemo}></Route>
-
                   <Route path="/tasks">
                     <H2>Overview of tasks after reporting the issue</H2>
                     <H1>Tasks</H1>

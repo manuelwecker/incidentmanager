@@ -134,7 +134,7 @@ export default function ReportOne() {
         <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>
       <SliderDotsButton />
-      <Link to="/report-2" active={location.pathname === "/report-2"}>
+      <Link to="/report/2" active={location.pathname === "/report/2"}>
         <TextButton>Next to step 2</TextButton>
       </Link>
     </>

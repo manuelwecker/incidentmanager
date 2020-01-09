@@ -37,7 +37,7 @@ export default function IssueList() {
         ))}
       </div>
 
-      <Link to="/report" active={location.pathname === "/report"}>
+      <Link to="/report/1" active={location.pathname === "/report/1"}>
         <TextButton>Report a new issue</TextButton>
       </Link>
     </>

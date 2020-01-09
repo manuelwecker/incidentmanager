@@ -2,7 +2,6 @@ import React from "react";
 import { ThemeProvider } from "emotion-theming";
 import styled from "@emotion/styled";
 import { light, dark } from "./themes/";
-
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
@@ -30,15 +29,11 @@ function App() {
   const [activeTheme, setActiveTheme] = React.useState(light);
 
   function onClick() {
-    // setActiveTheme({props => props.theme.dark});
-    // setActiveTheme(dark);
-
     if (activeTheme === light) {
       setActiveTheme(dark);
     } else {
       setActiveTheme(light);
     }
-    // console.log(activeTheme);
   }
 
   return (

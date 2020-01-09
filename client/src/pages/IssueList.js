@@ -1,10 +1,10 @@
 import React from "react";
-import { ButtonText } from "../components/Buttons";
+import { TextButton } from "../components/Buttons";
 import { Headline3, Headline2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Issue from "../components/Issue";
 
-export default function ReportThree() {
+export default function IssueList() {
   const location = useLocation();
   const [issues, setIssues] = React.useState([]);
 
@@ -38,7 +38,7 @@ export default function ReportThree() {
       </div>
 
       <Link to="/report" active={location.pathname === "/report"}>
-        <ButtonText text="Report a new issue"></ButtonText>
+        <TextButton>Report a new issue</TextButton>
       </Link>
     </>
   );

@@ -1,14 +1,14 @@
 import React from "react";
 import { TextButton, SliderDotsButton } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 
 export default function ReportOne() {
   const location = useLocation();
   return (
     <>
-      <Headline3>Location, Date and Time:</Headline3>
-      <Headline2>Where and when did it happened?</Headline2>
+      <H2>Location, Date and Time:</H2>
+      <H1>Where and when did it happened?</H1>
       <SliderDotsButton />
       <Link to="/report-3" active={location.pathname === "/report-3"}>
         <TextButton>Next to step 3</TextButton>

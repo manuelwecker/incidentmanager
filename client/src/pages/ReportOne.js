@@ -7,7 +7,7 @@ import {
   SubmitButton,
   SliderDotsButton
 } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import { FormReport } from "../components/Forms";
 
@@ -88,8 +88,8 @@ export default function ReportOne() {
   return (
     <>
       <FormReport onSubmit={handleSubmit}>
-        <Headline3>Typ of incident:</Headline3>
-        <Headline2>What happened?</Headline2>
+        <H2>Typ of incident:</H2>
+        <H1>What happened?</H1>
         <Container>
           <Typ
             name="typeofissue"
@@ -116,8 +116,8 @@ export default function ReportOne() {
             onChange={event => setTyp(event.target.value)}
           />
         </Container>
-        <Headline3>Date and Time:</Headline3>
-        <Headline2>When did it happened?</Headline2>
+        <H2>Date and Time:</H2>
+        <H1>When did it happened?</H1>
         <TimeDate
           type="datetime-local"
           value={timedate}

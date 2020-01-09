@@ -6,7 +6,7 @@ import {
   SliderDotsButton
 } from "../components/Buttons";
 import { Fire, Accident } from "../assets/Icons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 
 export default function ReportThree() {
@@ -14,8 +14,8 @@ export default function ReportThree() {
 
   return (
     <>
-      <Headline3>Media attention:</Headline3>
-      <Headline2>Are there already media requests or coverage?</Headline2>
+      <H2>Media attention:</H2>
+      <H1>Are there already media requests or coverage?</H1>
       <form>
         <SvgTextButton svg={<Fire />} text="requests"></SvgTextButton>
         <SvgTextButton svg={<Accident />} text="broadcasting"></SvgTextButton>

@@ -1,2 +1,2 @@
-export { default as Headline2 } from "./Headline2.js";
-export { default as Headline3 } from "./Headline3";
+export { default as H1 } from "./H1.js";
+export { default as H2 } from "./H2.js";

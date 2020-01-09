@@ -8,6 +8,7 @@ import Logo from "./components/Logo";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import { H1, H2 } from "./components/Headlines";
 import {
   ReportOne,
   ReportTwo,
@@ -17,11 +18,6 @@ import {
   SendMemo,
   StartScreen
 } from "./pages";
-
-const Headline = styled.h1`
-  font-weight: bold;
-  color: ${props => props.theme.colors.font};
-`;
 
 const Container = styled.div`
   display: flex;
@@ -49,27 +45,24 @@ function App() {
                   <Route path="/report-3" component={ReportThree}></Route>
                   <Route path="/report-4" component={ReportFour}></Route>
                   <Route path="/summary">
-                    <Headline>
-                      Report – Summary and last chance to edit the message
-                      before send
-                    </Headline>
+                    <H2>
+                      Summary and last chance to edit the message before send
+                    </H2>
+                    <H1>Report</H1>
                   </Route>
                   <Route path="/send" component={SendMemo}></Route>
 
                   <Route path="/tasks">
-                    <Headline>
-                      Tasks – overview of tasks after reporting the issue
-                    </Headline>
+                    <H2>Overview of tasks after reporting the issue</H2>
+                    <H1>Tasks</H1>
                   </Route>
                   <Route path="/login">
-                    <Headline>
-                      Login – Enter your user and password or register
-                    </Headline>
+                    <H2>Enter your user and password or register</H2>
+                    <H1>Login</H1>
                   </Route>
                   <Route path="/settings">
-                    <Headline>
-                      Settings – Set up your company and personal profile
-                    </Headline>
+                    <H2>Set up your company and personal profile</H2>
+                    <H1>Settings</H1>
                   </Route>
                 </Switch>
               </Main>

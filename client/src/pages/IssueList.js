@@ -1,6 +1,6 @@
 import React from "react";
 import { TextButton } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Issue from "../components/Issue";
 
@@ -20,8 +20,8 @@ export default function IssueList() {
 
   return (
     <>
-      <Headline3>What has happened worldwide?</Headline3>
-      <Headline2>Current issues</Headline2>
+      <H2>What has happened worldwide?</H2>
+      <H1>Current issues</H1>
 
       <div>
         {issues.map(issue => (

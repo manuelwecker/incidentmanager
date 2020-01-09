@@ -1,6 +1,6 @@
 import React from "react";
 import { TextButton } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import CreateMemo from "../components/CreateMemo";
@@ -48,8 +48,8 @@ export default function ReportOne() {
   if (!loading)
     return (
       <>
-        <Headline3>Internal memo</Headline3>
-        <Headline2>Inform the crisis management</Headline2>
+        <H2>Internal memo</H2>
+        <H1>Inform the crisis management</H1>
 
         <TextArea>
           <CreateMemo

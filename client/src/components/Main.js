@@ -11,11 +11,7 @@ const Container = styled.div`
   overflow: visible;
 `;
 function Main(props) {
-  return (
-    <>
-      <Container {...props}></Container>
-    </>
-  );
+  return <Container {...props}></Container>;
 }
 
 export default Main;

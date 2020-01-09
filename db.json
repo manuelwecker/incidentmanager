@@ -29,6 +29,12 @@
       "tasks": "9",
       "issueid": 3,
       "id": 3
+    },
+    {
+      "typ": "typFire",
+      "timeDate": "2020-01-09T12:46:59.603Z",
+      "text": "",
+      "id": 4
     }
   ],
   "memos": [

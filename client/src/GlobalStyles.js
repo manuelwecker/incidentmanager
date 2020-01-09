@@ -15,7 +15,7 @@ function GlobalStyles() {
           font-size: 16px;
           margin: 0;
           background: ${theme.colors.background};
-          font-family: "Frutiger Neue", Arial, sans-serif;
+          font-family: "Istok Web", "Frutiger", "Arial", sans-serif;
         }
       `}
     />

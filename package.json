@@ -11,14 +11,15 @@
     "server": "node server.js",
     "storybook": "cd client && npm run storybook",
     "test": "cd client && npm test",
-    "postinstall": "cd client && npm install"
+    "postinstall": "cd client && npm install",
+    "fake-api": "json-server --watch db.json --port 7070"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manuelwecker/issuereporter.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/manuelwecker/issuereporter/issues"
   },

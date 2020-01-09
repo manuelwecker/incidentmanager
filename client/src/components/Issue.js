@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonEnlarge } from "../components/Buttons";
+import { EnlargeButton } from "../components/Buttons";
 import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import tasks from "../assets/images/tasks.svg";
@@ -29,7 +29,7 @@ const IssueCrisisPotential = styled.div`
   margin: 0px;
   padding: 4px;
   color: #ffffff;
-  background-color: ${props => props.theme.colors.warninghigh};
+  background-color: ${props => props.theme.colors.warningHigh};
   border-radius: 4px;
   border: none;
   text-align: center;
@@ -90,9 +90,9 @@ const IssueDetailLinks = styled.div`
 export default function Issue({
   type,
   country,
-  timedate,
+  timeDate,
   timezone,
-  opentasks
+  openTasks
 }) {
   const [isClicked, setIsClicked] = React.useState(false);
   const location = useLocation();
@@ -116,11 +116,11 @@ export default function Issue({
             <TextRight>Tasks</TextRight>
           </ContainerFlexCol>
         </ContainerFlexRow>
-        <IssueTasks>{opentasks}</IssueTasks>
-        <ButtonEnlarge
+        <IssueTasks>{openTasks}</IssueTasks>
+        <EnlargeButton
           onClick={() => setIsClicked(!isClicked)}
           isClicked={isClicked}
-        ></ButtonEnlarge>
+        ></EnlargeButton>
       </IssueListEntry>
       {isClicked && (
         <IssueListEntryDetails>

@@ -1,23 +1,24 @@
 const dark = {
   company: {
     logo:
-      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg"
+      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg",
+    borderRadius: "4px"
   },
   colors: {
-    corporatedesignprimary: "#004da0",
-    corporatedesignsecondary: "#00a6eb",
+    corporateDesignPrimary: "#004da0",
+    corporateDesignSecondary: "#00a6eb",
     background: "#333333",
 
     primary: "#333333",
     secondary: "#52565a",
     tertiary: "#7e8890",
 
-    warninghigh: "#b70000",
-    warningmid: "#f49d00",
-    warninglow: "#7EB61C",
+    warningHigh: "#b70000",
+    warningMid: "#f49d00",
+    warningLow: "#7EB61C",
 
     font: "#ffffff",
-    fontsofter: "#bec4c7"
+    fontSofter: "#bec4c7"
   }
 };
 

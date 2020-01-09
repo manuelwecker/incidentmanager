@@ -1,10 +1,10 @@
 import React from "react";
-import { ButtonText } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { TextButton } from "../components/Buttons";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Issue from "../components/Issue";
 
-export default function ReportThree() {
+export default function IssueList() {
   const location = useLocation();
   const [issues, setIssues] = React.useState([]);
 
@@ -20,8 +20,8 @@ export default function ReportThree() {
 
   return (
     <>
-      <Headline3>What has happened worldwide?</Headline3>
-      <Headline2>Current issues</Headline2>
+      <H2>What has happened worldwide?</H2>
+      <H1>Current issues</H1>
 
       <div>
         {issues.map(issue => (
@@ -29,16 +29,16 @@ export default function ReportThree() {
             key={issue.id}
             type={issue.type}
             country={issue.country}
-            timedate={issue.timedate}
+            timeDate={issue.timeDate}
             timezone={issue.timezone}
-            opentasks={issue.opentasks}
+            openTasks={issue.openTasks}
             tasks={issue.tasks}
           />
         ))}
       </div>
 
-      <Link to="/report" active={location.pathname === "/report"}>
-        <ButtonText text="Report a new issue"></ButtonText>
+      <Link to="/report/1" active={location.pathname === "/report/1"}>
+        <TextButton>Report a new issue</TextButton>
       </Link>
     </>
   );

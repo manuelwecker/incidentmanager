@@ -3,11 +3,11 @@ import styled from "@emotion/styled";
 import useSessionStorage from "../hooks/useSessionStorage";
 import { Accident, Fire } from "../assets/Icons";
 import {
-  ButtonText,
-  ButtonSubmit,
-  ButtonSliderDots
+  TextButton,
+  SubmitButton,
+  SliderDotsButton
 } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import { FormReport } from "../components/Forms";
 
@@ -66,7 +66,7 @@ const TimeDate = styled.input`
 export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
   const [typ, setTyp] = useSessionStorage("typ", "");
-  const [timedate, setTimedate] = useSessionStorage("timedate", new Date());
+  const [timeDate, setTimedate] = useSessionStorage("timeDate", new Date());
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -77,7 +77,7 @@ export default function ReportOne() {
       },
       body: JSON.stringify({
         typ,
-        timedate,
+        timeDate,
         text
       })
     });
@@ -88,8 +88,8 @@ export default function ReportOne() {
   return (
     <>
       <FormReport onSubmit={handleSubmit}>
-        <Headline3>Typ of incident:</Headline3>
-        <Headline2>What happened?</Headline2>
+        <H2>Typ of incident:</H2>
+        <H1>What happened?</H1>
         <Container>
           <Typ
             name="typeofissue"
@@ -116,11 +116,11 @@ export default function ReportOne() {
             onChange={event => setTyp(event.target.value)}
           />
         </Container>
-        <Headline3>Date and Time:</Headline3>
-        <Headline2>When did it happened?</Headline2>
+        <H2>Date and Time:</H2>
+        <H1>When did it happened?</H1>
         <TimeDate
           type="datetime-local"
-          value={timedate}
+          value={timeDate}
           onChange={event => setTimedate(event.target.value)}
         />
 
@@ -131,11 +131,11 @@ export default function ReportOne() {
           placeholder="Textinput"
         />
 
-        <ButtonSubmit text="Report current issue"></ButtonSubmit>
+        <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>
-      <ButtonSliderDots />
-      <Link to="/report-2" active={location.pathname === "/report-2"}>
-        <ButtonText text="Next to step 2"></ButtonText>
+      <SliderDotsButton />
+      <Link to="/report/2" active={location.pathname === "/report/2"}>
+        <TextButton>Next to step 2</TextButton>
       </Link>
     </>
   );

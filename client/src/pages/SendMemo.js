@@ -1,6 +1,6 @@
 import React from "react";
-import { ButtonText } from "../components/Buttons";
-import { Headline3, Headline2 } from "../components/Headlines";
+import { TextButton } from "../components/Buttons";
+import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import CreateMemo from "../components/CreateMemo";
@@ -26,7 +26,7 @@ export default function ReportOne() {
       setLoading(true);
       setError(false);
       const response = await fetch(
-        "http://localhost:7070/issues?_sort=timedate&_order=desc&_limit=1"
+        "http://localhost:7070/issues?_sort=timeDate&_order=desc&_limit=1"
       );
       const newIssue = await response.json();
       setIssues(newIssue);
@@ -48,14 +48,14 @@ export default function ReportOne() {
   if (!loading)
     return (
       <>
-        <Headline3>Internal memo</Headline3>
-        <Headline2>Inform the crisis management</Headline2>
+        <H2>Internal memo</H2>
+        <H1>Inform the crisis management</H1>
 
         <TextArea>
           <CreateMemo
             type={currentIssue.type}
             country={currentIssue.country}
-            timedate={currentIssue.timedate}
+            timeDate={currentIssue.timeDate}
             timezone={currentIssue.timezone}
           ></CreateMemo>
 
@@ -65,7 +65,7 @@ export default function ReportOne() {
           </div>
         </TextArea>
         <Link to="/send" active={location.pathname === "/send"}>
-          <ButtonText text="Next to step 3"></ButtonText>
+          <TextButton>Next to step 3</TextButton>
         </Link>
       </>
     );

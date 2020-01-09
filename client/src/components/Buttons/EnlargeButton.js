@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Avatar } from "../../assets/Icons";
+import { Enlarge } from "../../assets/Icons";
 
-const ButtonSvg = styled.button`
+const SvgButtonOnly = styled.button`
   width: 34px;
   height: 34px;
   background-color: ${props => props.theme.colors.secondary};
@@ -12,14 +12,14 @@ const ButtonSvg = styled.button`
   border: none;
 `;
 
-function ButtonSVGLogin() {
+function EnlargeButton(props) {
   return (
     <>
-      <ButtonSvg>
-        <Avatar />
-      </ButtonSvg>
+      <SvgButtonOnly {...props}>
+        <Enlarge isClicked={props.isClicked} />
+      </SvgButtonOnly>
     </>
   );
 }
 
-export default ButtonSVGLogin;
+export default EnlargeButton;

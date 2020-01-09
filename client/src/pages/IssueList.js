@@ -45,7 +45,6 @@ export default function IssueList() {
   const TestButton = styled.button`
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
     height: 44px;
     width: 100%;

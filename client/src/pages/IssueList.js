@@ -29,9 +29,9 @@ export default function IssueList() {
             key={issue.id}
             type={issue.type}
             country={issue.country}
-            timedate={issue.timedate}
+            timeDate={issue.timeDate}
             timezone={issue.timezone}
-            opentasks={issue.opentasks}
+            openTasks={issue.openTasks}
             tasks={issue.tasks}
           />
         ))}

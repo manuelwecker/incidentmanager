@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateMemo({ type, country, timedate, timezone }) {
+function CreateMemo({ type, country, timeDate, timezone }) {
   const [memos, setMemos] = React.useState([]);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
@@ -29,13 +29,13 @@ function CreateMemo({ type, country, timedate, timezone }) {
   if (!loading) {
     let stringified = currentMemo.copytext;
     let replacedMemo = stringified;
-    // const replacedMemoetails = [{ TIMEDATE: timedate }, { COUNTRY: country }];
+    // const replacedMemoetails = [{ TIMEDATE: timeDate }, { COUNTRY: country }];
     // replacedMemoetails.forEach(function(key, value) {
     //   replacedMemo = replacedMemo.replace(key, value);
     //   console.log(key);
     //   console.log(value);
     // }, replacedMemoetails);
-    replacedMemo = stringified.replace("TIMEDATE", timedate);
+    replacedMemo = stringified.replace("TIMEDATE", timeDate);
     replacedMemo = replacedMemo.replace("COUNTRY", country);
     replacedMemo = replacedMemo.replace("TIMEZONE", timezone);
     replacedMemo = replacedMemo.replace("TYPE", type);

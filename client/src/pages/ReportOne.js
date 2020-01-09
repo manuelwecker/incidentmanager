@@ -66,7 +66,7 @@ const TimeDate = styled.input`
 export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
   const [typ, setTyp] = useSessionStorage("typ", "");
-  const [timedate, setTimedate] = useSessionStorage("timedate", new Date());
+  const [timeDate, setTimedate] = useSessionStorage("timeDate", new Date());
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -77,7 +77,7 @@ export default function ReportOne() {
       },
       body: JSON.stringify({
         typ,
-        timedate,
+        timeDate,
         text
       })
     });
@@ -120,7 +120,7 @@ export default function ReportOne() {
         <H1>When did it happened?</H1>
         <TimeDate
           type="datetime-local"
-          value={timedate}
+          value={timeDate}
           onChange={event => setTimedate(event.target.value)}
         />
 

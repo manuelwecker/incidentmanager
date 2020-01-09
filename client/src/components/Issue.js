@@ -90,9 +90,9 @@ const IssueDetailLinks = styled.div`
 export default function Issue({
   type,
   country,
-  timedate,
+  timeDate,
   timezone,
-  opentasks
+  openTasks
 }) {
   const [isClicked, setIsClicked] = React.useState(false);
   const location = useLocation();
@@ -116,7 +116,7 @@ export default function Issue({
             <TextRight>Tasks</TextRight>
           </ContainerFlexCol>
         </ContainerFlexRow>
-        <IssueTasks>{opentasks}</IssueTasks>
+        <IssueTasks>{openTasks}</IssueTasks>
         <EnlargeButton
           onClick={() => setIsClicked(!isClicked)}
           isClicked={isClicked}

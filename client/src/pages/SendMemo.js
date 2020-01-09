@@ -26,7 +26,7 @@ export default function ReportOne() {
       setLoading(true);
       setError(false);
       const response = await fetch(
-        "http://localhost:7070/issues?_sort=timedate&_order=desc&_limit=1"
+        "http://localhost:7070/issues?_sort=timeDate&_order=desc&_limit=1"
       );
       const newIssue = await response.json();
       setIssues(newIssue);
@@ -55,7 +55,7 @@ export default function ReportOne() {
           <CreateMemo
             type={currentIssue.type}
             country={currentIssue.country}
-            timedate={currentIssue.timedate}
+            timeDate={currentIssue.timeDate}
             timezone={currentIssue.timezone}
           ></CreateMemo>
 

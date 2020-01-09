@@ -3,7 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import LogoCompanySvg from "../components/LogoCompanySvg";
 import SVGIncidentManagerBig from "../assets/SVGIncidentManagerBig";
-import { Button, ButtonSVGLogin } from "../components/Buttons";
+import { Button, SVGLoginButton } from "../components/Buttons";
 import { Fire, Accident, Tasks } from "../assets/Icons";
 
 const ButtonStartScreen = styled(Button)`
@@ -64,7 +64,7 @@ function StartScreen() {
         </SVGWrapper>
         <Link to="/issues" active={location.pathname === "/issues"}>
           <ButtonStartScreen>
-            <Span>Login for a demo</Span> <ButtonSVGLogin></ButtonSVGLogin>
+            <Span>Login for a demo</Span> <SVGLoginButton></SVGLoginButton>
           </ButtonStartScreen>
         </Link>
       </Div>

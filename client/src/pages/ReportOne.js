@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 import useSessionStorage from "../hooks/useSessionStorage";
 import { Accident, Fire } from "../assets/Icons";
 import {
-  ButtonText,
-  ButtonSubmit,
-  ButtonSliderDots
+  TextButton,
+  SubmitButton,
+  SliderDotsButton
 } from "../components/Buttons";
 import { Headline3, Headline2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
@@ -131,11 +131,11 @@ export default function ReportOne() {
           placeholder="Textinput"
         />
 
-        <ButtonSubmit text="Report current issue"></ButtonSubmit>
+        <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>
-      <ButtonSliderDots />
+      <SliderDotsButton />
       <Link to="/report-2" active={location.pathname === "/report-2"}>
-        <ButtonText text="Next to step 2"></ButtonText>
+        <TextButton>Next to step 2</TextButton>
       </Link>
     </>
   );

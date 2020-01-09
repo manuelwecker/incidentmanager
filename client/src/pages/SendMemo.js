@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonText } from "../components/Buttons";
+import { TextButton } from "../components/Buttons";
 import { Headline3, Headline2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
@@ -65,7 +65,7 @@ export default function ReportOne() {
           </div>
         </TextArea>
         <Link to="/send" active={location.pathname === "/send"}>
-          <ButtonText text="Next to step 3"></ButtonText>
+          <TextButton>Next to step 3</TextButton>
         </Link>
       </>
     );

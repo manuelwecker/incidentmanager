@@ -6,7 +6,7 @@ const Button = styled.button`
   margin: 4px;
   padding: 4px;
   background-color: ${props => props.theme.colors.primary};
-  border-radius: 4px;
+  border-radius: ${props => props.theme.company.borderRadius};
   border: none;
 `;
 

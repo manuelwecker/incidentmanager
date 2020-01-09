@@ -7,7 +7,7 @@ export default {
   title: "UserInput| Buttons"
 };
 
-export function ButtonTextVersion() {
+export function TextButtonVersion() {
   return (
     <Button onClick={action("button-click")}>
       {text("Label", "eine Textversion")}

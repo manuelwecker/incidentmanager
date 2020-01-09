@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "@emotion/styled";
 
-// const ButtonTextOnly = styled(Button)`
-const ButtonTextOnly = styled.button`
+const TextButton = styled.button`
   min-width: 100%;
   min-height: 28px;
   background-color: ${props => props.theme.colors.corporatedesignsecondary};
@@ -11,8 +9,4 @@ const ButtonTextOnly = styled.button`
   border: none;
 `;
 
-function ButtonText({ text }) {
-  return <ButtonTextOnly>{text}</ButtonTextOnly>;
-}
-
-export default ButtonText;
+export default TextButton;

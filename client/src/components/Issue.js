@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonEnlarge } from "../components/Buttons";
+import { EnlargeButton } from "../components/Buttons";
 import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import tasks from "../assets/images/tasks.svg";
@@ -117,10 +117,10 @@ export default function Issue({
           </ContainerFlexCol>
         </ContainerFlexRow>
         <IssueTasks>{opentasks}</IssueTasks>
-        <ButtonEnlarge
+        <EnlargeButton
           onClick={() => setIsClicked(!isClicked)}
           isClicked={isClicked}
-        ></ButtonEnlarge>
+        ></EnlargeButton>
       </IssueListEntry>
       {isClicked && (
         <IssueListEntryDetails>

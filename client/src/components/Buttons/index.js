@@ -1,8 +1,8 @@
 export { default as Button } from "./Button.js";
-export { default as ButtonText } from "./ButtonText.js";
-export { default as ButtonSvg } from "./ButtonSvg.js";
-export { default as ButtonSvgText } from "./ButtonSvgText.js";
-export { default as ButtonSubmit } from "./ButtonSubmit.js";
-export { default as ButtonSliderDots } from "./ButtonSliderDots.js";
-export { default as ButtonEnlarge } from "./ButtonEnlarge.js";
-export { default as ButtonSVGLogin } from "./ButtonSVGLogin.js";
+export { default as TextButton } from "./TextButton.js";
+export { default as SvgButton } from "./SvgButton.js";
+export { default as SvgTextButton } from "./SvgTextButton.js";
+export { default as SubmitButton } from "./SubmitButton.js";
+export { default as SliderDotsButton } from "./SliderDotsButton.js";
+export { default as EnlargeButton } from "./EnlargeButton.js";
+export { default as SVGLoginButton } from "./SVGLoginButton.js";

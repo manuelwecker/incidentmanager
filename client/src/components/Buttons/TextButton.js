@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import Button from "./Button";
 
-const TextButton = styled.button`
+const TextButton = styled(Button)`
   min-width: 100%;
   min-height: 28px;
   background-color: ${props => props.theme.colors.corporateDesignSecondary};

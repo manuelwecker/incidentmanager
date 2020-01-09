@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Avatar } from "../../assets/Icons";
 
-const SvgButton = styled.button`
+const SvgWrapper = styled.div`
   width: 34px;
   height: 34px;
   background-color: ${props => props.theme.colors.secondary};
@@ -10,13 +10,16 @@ const SvgButton = styled.button`
   padding: 0px;
   border-radius: 4px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 function SVGLoginButton() {
   return (
-    <SvgButton>
+    <SvgWrapper>
       <Avatar />
-    </SvgButton>
+    </SvgWrapper>
   );
 }
 

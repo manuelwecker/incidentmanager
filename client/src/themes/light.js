@@ -1,7 +1,8 @@
 const light = {
   company: {
     logo:
-      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg"
+      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg",
+    borderRadius: "4px"
   },
   colors: {
     corporateDesignPrimary: "#004da0",

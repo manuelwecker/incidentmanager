@@ -16,13 +16,17 @@ const Button = styled.button`
   color: ${props => props.theme.colors.secondary};
 `;
 
-function Footer() {
+function Footer({ name, value, onClick }) {
   const location = useLocation();
   return (
     <FooterNavigation>
       <Link to="/crisismanual" active={location.pathname === "/crisismanual"}>
         <Button>crisis manual</Button>
       </Link>
+
+      <Button name="activeTheme" value={"light"} onClick={onClick}>
+        Theme
+      </Button>
       <Link to="/legalnotice" active={location.pathname === "/legalnotice"}>
         <Button>legal notice</Button>
       </Link>

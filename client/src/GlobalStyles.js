@@ -10,6 +10,9 @@ function GlobalStyles() {
         *:after {
           box-sizing: border-box;
         }
+        *:a {
+          text-decoration: none;
+        }
 
         body {
           font-size: 16px;

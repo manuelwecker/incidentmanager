@@ -42,17 +42,17 @@ function ButtonsSliderDots() {
   const location = useLocation();
   return (
     <Container>
-      <Link to="/report">
-        <Dot active={location.pathname === "/report"}></Dot>
+      <Link to="/report/1">
+        <Dot active={location.pathname === "/report/1"}></Dot>
       </Link>
-      <Link to="/report-2">
-        <Dot active={location.pathname === "/report-2"}></Dot>
+      <Link to="/report/2">
+        <Dot active={location.pathname === "/report/2"}></Dot>
       </Link>
-      <Link to="/report-3">
-        <Dot active={location.pathname === "/report-3"}></Dot>
+      <Link to="/report/3">
+        <Dot active={location.pathname === "/report/3"}></Dot>
       </Link>
-      <Link to="/report-4">
-        <Dot active={location.pathname === "/report-4"}></Dot>
+      <Link to="/report/4">
+        <Dot active={location.pathname === "/report/4"}></Dot>
       </Link>
       <HrLine></HrLine>
     </Container>

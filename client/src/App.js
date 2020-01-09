@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "emotion-theming";
 import styled from "@emotion/styled";
-import light from "./themes/light";
+import { light, dark } from "./themes/";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Logo from "./components/Logo";
@@ -26,8 +26,18 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [activeTheme, setActiveTheme] = React.useState(light);
+
+  function onClick() {
+    if (activeTheme === light) {
+      setActiveTheme(dark);
+    } else {
+      setActiveTheme(light);
+    }
+  }
+
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={activeTheme}>
       <GlobalStyles />
       <Router>
         <Container>
@@ -65,7 +75,7 @@ function App() {
                   </Route>
                 </Switch>
               </Main>
-              <Footer />
+              <Footer onClick={onClick} />
             </Route>
           </Switch>
         </Container>

@@ -18,8 +18,8 @@ const HeaderNavigation = styled.div`
 
 const ButtonNavigation = styled.button`
   color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
+  border: 0px solid #ffffff;
+  border-radius: ${props => props.theme.company.borderRadius};
   background-color: transparent;
   width: 34px;
   height: 34px;

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import SVGIconSmall from "../SVGIconSmall";
 
 const Path = styled.path`
-  fill: ${props => props.theme.colors.corporatedesignsecondary};
+  fill: ${props => props.theme.colors.corporateDesignSecondary};
 `;
 
 function Avatar() {

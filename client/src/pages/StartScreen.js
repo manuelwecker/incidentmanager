@@ -38,7 +38,7 @@ const Div = styled.div`
   );
   min-height: 90%;
   border-bottom: 8px solid
-    ${props => props.theme.colors.corporatedesignsecondary};
+    ${props => props.theme.colors.corporateDesignSecondary};
   display: flex;
   flex-direction: column;
   justify-content: center;

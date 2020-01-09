@@ -9,7 +9,7 @@ const HeaderNavigation = styled.div`
   max-height: 52px;
   margin: 0px;
   padding: 8px;
-  background-color: ${props => props.theme.colors.corporatedesignprimary};
+  background-color: ${props => props.theme.colors.corporateDesignPrimary};
   display: flex;
   justify-content: space-between;
   align-items: center;

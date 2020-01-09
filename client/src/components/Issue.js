@@ -29,7 +29,7 @@ const IssueCrisisPotential = styled.div`
   margin: 0px;
   padding: 4px;
   color: #ffffff;
-  background-color: ${props => props.theme.colors.warninghigh};
+  background-color: ${props => props.theme.colors.warningHigh};
   border-radius: 4px;
   border: none;
   text-align: center;

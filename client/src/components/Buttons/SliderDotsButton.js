@@ -5,7 +5,7 @@ import { useLocation, Link } from "react-router-dom";
 const Dot = styled.button`
   background-color: ${props =>
     props.active
-      ? props.theme.colors.corporatedesignsecondary
+      ? props.theme.colors.corporateDesignSecondary
       : props.theme.colors.primary};
   height: 20px;
   width: 20px;

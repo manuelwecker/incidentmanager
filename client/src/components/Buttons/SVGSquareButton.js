@@ -5,8 +5,9 @@ import { Avatar } from "../../assets/Icons";
 const SvgWrapper = styled.div`
   width: 34px;
   height: 34px;
-  background-color: ${props => props.theme.colors.secondary};
-  margin: 0px;
+  background-color: none;
+  background-color: ${props => props.theme.colors.primary};
+  margin: 4px;
   padding: 0px;
   border-radius: 4px;
   border: none;
@@ -15,12 +16,8 @@ const SvgWrapper = styled.div`
   justify-content: center;
 `;
 
-function SVGLoginButton() {
-  return (
-    <SvgWrapper>
-      <Avatar />
-    </SvgWrapper>
-  );
+function SVGSquareButton({ children }) {
+  return <SvgWrapper>{children}</SvgWrapper>;
 }
 
-export default SVGLoginButton;
+export default SVGSquareButton;

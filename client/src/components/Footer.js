@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const FooterNavigation = styled.footer`
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${props => props.theme.colors.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +14,16 @@ const FooterNavigation = styled.footer`
 
 const Button = styled.button`
   color: ${props => props.theme.colors.secondary};
+`;
+
+const None = styled(Link)`
+  text-decoration: non;
+  &:a {
+    text-decoration: non;
+  }
+  &:hover {
+    text-decoration: non;
+  }
 `;
 
 function Footer({ name, value, onClick }) {
@@ -27,9 +37,9 @@ function Footer({ name, value, onClick }) {
       <Button name="activeTheme" value={"light"} onClick={onClick}>
         Theme
       </Button>
-      <Link to="/legalnotice" active={location.pathname === "/legalnotice"}>
+      <None to="/legalnotice" active={location.pathname === "/legalnotice"}>
         <Button>legal notice</Button>
-      </Link>
+      </None>
     </FooterNavigation>
   );
 }

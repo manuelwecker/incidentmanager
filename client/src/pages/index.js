@@ -5,3 +5,4 @@ export { default as ReportFour } from "./ReportFour.js";
 export { default as IssueList } from "./IssueList.js";
 export { default as SendMemo } from "./SendMemo.js";
 export { default as StartScreen } from "./StartScreen.js";
+export { default as Summary } from "./Summary.js";

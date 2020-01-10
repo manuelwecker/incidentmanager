@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "@emotion/styled";
 import useSessionStorage from "../hooks/useSessionStorage";
-import { Accident, Fire } from "../assets/Icons";
+import { Accident, Fire, Next } from "../assets/Icons";
 import {
   TextButton,
   SubmitButton,
-  SliderDotsButton
+  SliderDotsButton,
+  SvgTextFooterButton
 } from "../components/Buttons";
 import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import { FormReport } from "../components/Forms";
+import Aside from "../components/Aside";
 
 const Label = styled.label`
   border: 1px solid black;
@@ -134,9 +136,15 @@ export default function ReportOne() {
         <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>
       <SliderDotsButton />
-      <Link to="/report/2" active={location.pathname === "/report/2"}>
-        <TextButton>Next to step 2</TextButton>
-      </Link>
+
+      <Aside>
+        <Link to="/report/2" active={location.pathname === "/report/2"}>
+          <SvgTextFooterButton
+            svg={<Next />}
+            text="Next to step 2"
+          ></SvgTextFooterButton>
+        </Link>
+      </Aside>
     </>
   );
 }

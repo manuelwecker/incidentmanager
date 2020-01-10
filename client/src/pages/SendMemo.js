@@ -1,15 +1,17 @@
 import React from "react";
-import { TextButton } from "../components/Buttons";
+import { TextButton, SvgTextFooterButton } from "../components/Buttons";
 import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import CreateMemo from "../components/CreateMemo";
+import Aside from "../components/Aside";
+import { Next } from "../assets/Icons";
 
 const TextArea = styled.div`
   border: 1px solid none;
   background-color: #ffffff;
   height: auto;
-  min-height: 200px;
+
   border-radius: 4px;
   margin: 0px;
   padding: 4px;
@@ -64,9 +66,15 @@ export default function ReportOne() {
             Prüfung (kommt aus db/issues): {currentIssue.type}
           </div>
         </TextArea>
-        <Link to="/send" active={location.pathname === "/send"}>
-          <TextButton>Next to step 3</TextButton>
-        </Link>
+
+        <Aside>
+          <Link to="/send" active={location.pathname === "/send"}>
+            <SvgTextFooterButton
+              svg={<Next />}
+              text="Send internal memo and show tasks"
+            ></SvgTextFooterButton>
+          </Link>
+        </Aside>
       </>
     );
 }

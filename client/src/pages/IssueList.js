@@ -46,7 +46,7 @@ export default function IssueList() {
       <Aside>
         <Link to="/report/1" active={location.pathname === "/report/1"}>
           <SvgTextFooterButton
-            svg={<Next />}
+            svg={<Plus />}
             text="Report a new issue"
           ></SvgTextFooterButton>
         </Link>

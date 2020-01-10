@@ -44,7 +44,7 @@ export default function ReportOne() {
             name="timeDate"
             value="otherDate"
           />
-          <label>Other date / time</label>
+          <label for="timeDate">Other date / time</label>
           <input
             type="datetime-local"
             value={timeDate}

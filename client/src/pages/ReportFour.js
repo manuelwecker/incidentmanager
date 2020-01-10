@@ -1,37 +1,145 @@
 import React from "react";
-
+import styled from "@emotion/styled";
+import useSessionStorage from "../hooks/useSessionStorage";
+import { Accident, Fire, Next } from "../assets/Icons";
 import {
   TextButton,
-  SvgTextButton,
+  SubmitButton,
   SliderDotsButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { Fire, Accident, Next } from "../assets/Icons";
 import { H1, H2 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
+import { FormReport } from "../components/Forms";
 import Aside from "../components/Aside";
 
-export default function ReportFour() {
-  const location = useLocation();
+const Label = styled.label`
+  border: 1px solid black;
+  width: 78px;
+  height: 78px;
+  box-shadow: 0px 0px 4px 1px grey;
+  background-color: yellow;
+  position: fixed;
+  width: 0;
+`;
 
+const Container = styled.div`
+  display: inline-block;
+  box-sizing: border-box;
+  width: 23%;
+  margin: 20px 1% 20px 0;
+  height: 120px;
+  vertical-align: top;
+  font-size: 22px;
+  text-align: center;
+`;
+
+const LabelSquare = styled(Label)`
+  border: 1px solid rgba($font-color, 0.15);
+  box-sizing: border-box;
+  display: block;
+  height: 30%;
+  width: 30%;
+  padding: 10px 10px 30px 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 1px solid;
+`;
+
+const Text = styled.input`
+  border: 1px solid;
+  width: 78px;
+  height: 78px;
+`;
+
+const Typ = styled.input`
+  opacity: 0;
+  width: 78px;
+  height: 78px;
+  &:active {
+    opacity: 1;
+  }
+`;
+
+const TimeDate = styled.input`
+  border: 1px solid;
+`;
+
+export default function ReportOne() {
+  const [text, setText] = useSessionStorage("text", "");
+  const [typ, setTyp] = useSessionStorage("typ", "");
+  const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
+
+  let city = sessionStorage.getItem("city");
+  let site = sessionStorage.getItem("site");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    await fetch("http://localhost:7070/issues", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        typ,
+        timeDate,
+        city,
+        site,
+        text
+      })
+    });
+    // setTyp("");
+    // setTimeDate("");
+  }
+  const location = useLocation();
   return (
     <>
-      <H2>Media attention:</H2>
-      <H1>Are there already media requests or coverage?</H1>
-      <form>
-        <SvgTextButton svg={<Fire />} text="requests"></SvgTextButton>
-        <SvgTextButton svg={<Accident />} text="broadcasting"></SvgTextButton>
-        <SvgTextButton svg={<Fire />} text="published"></SvgTextButton>
+      <FormReport onSubmit={handleSubmit}>
+        <H2>Typ of incident:</H2>
+        <H1>What happened?</H1>
+        <Container>
+          <Typ
+            name="typeofissue"
+            type="radio"
+            value="typFire"
+            placeholder="typFire"
+            onChange={event => setTyp(event.target.value)}
+          />
+          <LabelSquare>
+            <Accident />
+            Accident
+          </LabelSquare>
+        </Container>
+        <Container>
+          <LabelSquare>
+            <Fire />
+            Fire
+          </LabelSquare>
+          <Typ
+            name="typeofissue"
+            type="radio"
+            value="typTerror"
+            placeholder="typTerror"
+            onChange={event => setTyp(event.target.value)}
+          />
+        </Container>
+        <H2>Date and Time:</H2>
+        <H1>When did it happened?</H1>
+        <TimeDate
+          type="datetime-local"
+          value={timeDate}
+          onChange={event => setTimeDate(event.target.value)}
+        />
 
-        <SvgTextButton svg={<Fire />} text="television"></SvgTextButton>
-        <SvgTextButton svg={<Fire />} text="print"></SvgTextButton>
-        <SvgTextButton svg={<Fire />} text="online"></SvgTextButton>
+        <Text
+          type="text"
+          value={text}
+          onChange={event => setText(event.target.value)}
+          placeholder="Textinput"
+        />
 
-        <SvgTextButton svg={<Fire />} text="blogger/ activists"></SvgTextButton>
-        <SvgTextButton svg={<Fire />} text="local media"></SvgTextButton>
-        <SvgTextButton svg={<Fire />} text="country-wide media"></SvgTextButton>
-      </form>
-
+        <SubmitButton text="Report current issue"></SubmitButton>
+      </FormReport>
       <SliderDotsButton />
 
       <Aside>

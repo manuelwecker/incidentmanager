@@ -47,6 +47,26 @@
       "timeDate": "2020-01-10T16:45",
       "text": "Send not all ",
       "id": 6
+    },
+    {
+      "typ": "",
+      "timeDate": "2020-01-10T16:06:53.721Z",
+      "text": "Hallo?",
+      "id": 7
+    },
+    {
+      "typ": "",
+      "timeDate": "2020-01-10T16:08:09.573Z",
+      "text": "Jetzt asber?",
+      "city": "\"\"",
+      "id": 8
+    },
+    {
+      "typ": "",
+      "timeDate": "2020-01-10T16:08:09.573Z",
+      "text": "aus Session",
+      "city": "\"DDorf\"",
+      "id": 9
     }
   ],
   "memos": [

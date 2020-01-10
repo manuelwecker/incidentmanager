@@ -2,8 +2,9 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Form = styled.form`
-  background-color: grey;
   text-decoration: unset;
+  margin: 0px;
+  padding: 0px;
 `;
 
 function FormReport(props) {

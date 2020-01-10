@@ -68,7 +68,7 @@ const TimeDate = styled.input`
 export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
   const [typ, setTyp] = useSessionStorage("typ", "");
-  const [timeDate, setTimedate] = useSessionStorage("timeDate", new Date());
+  const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -84,7 +84,7 @@ export default function ReportOne() {
       })
     });
     // setTyp("");
-    // setTimedate("");
+    // setTimeDate("");
   }
   const location = useLocation();
   return (
@@ -123,7 +123,7 @@ export default function ReportOne() {
         <TimeDate
           type="datetime-local"
           value={timeDate}
-          onChange={event => setTimedate(event.target.value)}
+          onChange={event => setTimeDate(event.target.value)}
         />
 
         <Text

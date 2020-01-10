@@ -17,7 +17,8 @@ import {
   IssueList,
   SendMemo,
   StartScreen,
-  Summary
+  Summary,
+  ReportFive
 } from "./pages";
 
 const Container = styled.div`
@@ -55,6 +56,7 @@ function App() {
                   <Route path="/report/2" component={ReportTwo}></Route>
                   <Route path="/report/3" component={ReportThree}></Route>
                   <Route path="/report/4" component={ReportFour}></Route>
+                  <Route path="/report/5" component={ReportFive}></Route>
                   <Route path="/summary" component={Summary}></Route>
                   <Route path="/send" component={SendMemo}></Route>
                   <Route path="/tasks">

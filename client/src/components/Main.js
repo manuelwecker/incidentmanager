@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow: visible;
+  overflow: auto;
 `;
 function Main(props) {
   return <Container {...props}></Container>;

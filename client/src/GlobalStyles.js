@@ -10,7 +10,8 @@ function GlobalStyles() {
         *:after {
           box-sizing: border-box;
         }
-        *:a {
+
+        a {
           text-decoration: none;
         }
 

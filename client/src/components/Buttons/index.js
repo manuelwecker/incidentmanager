@@ -5,4 +5,6 @@ export { default as SvgTextButton } from "./SvgTextButton.js";
 export { default as SubmitButton } from "./SubmitButton.js";
 export { default as SliderDotsButton } from "./SliderDotsButton.js";
 export { default as EnlargeButton } from "./EnlargeButton.js";
-export { default as SVGLoginButton } from "./SVGLoginButton.js";
+export { default as SvgTextFooterButton } from "./SvgTextFooterButton";
+export { default as SVGSquareButton } from "./SVGSquareButton.js";
+export { default as NoStyleButton } from "./NoStyleButton.js";

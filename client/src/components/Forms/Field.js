@@ -4,7 +4,8 @@ const Field = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 34px;
+  min-height: 34px;
+  max-height: auto;
   width: 100%;
   background-color: ${props => props.theme.colors.primary};
   border: none;

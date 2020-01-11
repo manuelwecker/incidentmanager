@@ -6,11 +6,12 @@ import {
   TextButton,
   SubmitButton,
   SliderDotsButton,
-  SvgTextFooterButton
+  SvgTextFooterButton,
+  SvgTextButton
 } from "../components/Buttons";
-import { H1, H2 } from "../components/Headlines";
+import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
-import { FormReport } from "../components/Forms";
+import { FormReport, FieldGroup, Field } from "../components/Forms";
 import Aside from "../components/Aside";
 
 const Label = styled.label`
@@ -67,11 +68,11 @@ const TimeDate = styled.input`
 
 export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
-  const [typ, setTyp] = useSessionStorage("typ", "");
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
 
   let city = sessionStorage.getItem("city");
   let site = sessionStorage.getItem("site");
+  let type = sessionStorage.getItem("type");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -81,7 +82,7 @@ export default function ReportOne() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        typ,
+        type,
         timeDate,
         city,
         site,
@@ -97,13 +98,40 @@ export default function ReportOne() {
       <FormReport onSubmit={handleSubmit}>
         <H2>Typ of incident:</H2>
         <H1>What happened?</H1>
-        <Container>
+        Media attention: Are there already media requests or coverage?
+        <FieldGroup>
+          <H3>Where?</H3>
+          <Field></Field>
+        </FieldGroup>
+        <H2></H2>
+        <H1></H1>
+        <form>
+          <SvgTextButton svg={<Fire />} text="requests"></SvgTextButton>
+          <SvgTextButton svg={<Accident />} text="broadcasting"></SvgTextButton>
+          <SvgTextButton svg={<Fire />} text="published"></SvgTextButton>
+
+          <SvgTextButton svg={<Fire />} text="television"></SvgTextButton>
+          <SvgTextButton svg={<Fire />} text="print"></SvgTextButton>
+          <SvgTextButton svg={<Fire />} text="online"></SvgTextButton>
+
+          <SvgTextButton
+            svg={<Fire />}
+            text="blogger/ activists"
+          ></SvgTextButton>
+          <SvgTextButton svg={<Fire />} text="local media"></SvgTextButton>
+          <SvgTextButton
+            svg={<Fire />}
+            text="country-wide media"
+          ></SvgTextButton>
+        </form>
+        {/* new */}
+        {/* <Container>
           <Typ
             name="typeofissue"
             type="radio"
             value="typFire"
             placeholder="typFire"
-            onChange={event => setTyp(event.target.value)}
+            onChange={event => setType(event.target.value)}
           />
           <LabelSquare>
             <Accident />
@@ -120,7 +148,7 @@ export default function ReportOne() {
             type="radio"
             value="typTerror"
             placeholder="typTerror"
-            onChange={event => setTyp(event.target.value)}
+            onChange={event => setType(event.target.value)}
           />
         </Container>
         <H2>Date and Time:</H2>
@@ -130,14 +158,12 @@ export default function ReportOne() {
           value={timeDate}
           onChange={event => setTimeDate(event.target.value)}
         />
-
         <Text
           type="text"
           value={text}
           onChange={event => setText(event.target.value)}
           placeholder="Textinput"
-        />
-
+        /> */}
         <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>
       <SliderDotsButton />

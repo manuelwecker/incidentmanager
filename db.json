@@ -67,6 +67,14 @@
       "text": "aus Session",
       "city": "\"DDorf\"",
       "id": 9
+    },
+    {
+      "type": "\"theft\"",
+      "timeDate": "2020-01-11T18:30",
+      "city": "\"Cologne\"",
+      "site": "\"offsite\"",
+      "text": "",
+      "id": 10
     }
   ],
   "memos": [

@@ -14,7 +14,7 @@ import { FormReport, FieldGroup, Field, Radio } from "../components/Forms";
 import useSessionStorage from "../hooks/useSessionStorage";
 
 const BiggerField = styled(Field)`
-  min-height: 300px;
+  min-height: 280px;
   height: auto;
   flex-wrap: wrap;
   justify-content: center;

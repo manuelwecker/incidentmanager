@@ -96,33 +96,41 @@ export default function ReportOne() {
   return (
     <>
       <FormReport onSubmit={handleSubmit}>
-        <H2>Typ of incident:</H2>
-        <H1>What happened?</H1>
-        Media attention: Are there already media requests or coverage?
-        <FieldGroup>
-          <H3>Where?</H3>
-          <Field></Field>
-        </FieldGroup>
-        <H2></H2>
-        <H1></H1>
+        <H2>Media attention:</H2>
+        <H1>Media requests or coverage?</H1>
+
         <form>
-          <SvgTextButton svg={<Fire />} text="requests"></SvgTextButton>
-          <SvgTextButton svg={<Accident />} text="broadcasting"></SvgTextButton>
-          <SvgTextButton svg={<Fire />} text="published"></SvgTextButton>
+          <FieldGroup>
+            <H3>Current media</H3>
+            <Field>
+              <label>requests</label>
+              <input type="checkbox" />
+            </Field>
+            <Field>
+              <label>broadcasting</label>
+              <input type="checkbox" />
+            </Field>
+            <Field>
+              <label>published</label>
+              <input type="checkbox" />
+            </Field>
+          </FieldGroup>
 
-          <SvgTextButton svg={<Fire />} text="television"></SvgTextButton>
-          <SvgTextButton svg={<Fire />} text="print"></SvgTextButton>
-          <SvgTextButton svg={<Fire />} text="online"></SvgTextButton>
-
-          <SvgTextButton
-            svg={<Fire />}
-            text="blogger/ activists"
-          ></SvgTextButton>
-          <SvgTextButton svg={<Fire />} text="local media"></SvgTextButton>
-          <SvgTextButton
-            svg={<Fire />}
-            text="country-wide media"
-          ></SvgTextButton>
+          <FieldGroup>
+            <H3>Type of media</H3>
+            <Field>
+              <label>television</label>
+              <input type="checkbox" />
+            </Field>
+            <Field>
+              <label>print</label>
+              <input type="checkbox" />
+            </Field>
+            <Field>
+              <label>online</label>
+              <input type="checkbox" />
+            </Field>
+          </FieldGroup>
         </form>
         {/* new */}
         {/* <Container>

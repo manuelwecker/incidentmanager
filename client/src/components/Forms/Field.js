@@ -12,7 +12,7 @@ const Field = styled.div`
   color: ${props => props.theme.colors.fontSofter};
   border-radius: ${props => props.theme.company.borderRadius};
   font-size: 14px;
-  margin: 8px 0 0 0;
+  margin: 4px 0 0 0;
 `;
 
 export default Field;

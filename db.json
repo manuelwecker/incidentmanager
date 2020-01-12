@@ -29,68 +29,6 @@
       "tasks": "9",
       "issueid": 3,
       "id": 3
-    },
-    {
-      "typ": "typFire",
-      "timeDate": "2020-01-09T12:46:59.603Z",
-      "text": "",
-      "id": 4
-    },
-    {
-      "typ": "typFire",
-      "timeDate": "2020-01-10T16:45",
-      "text": "sdsds",
-      "id": 5
-    },
-    {
-      "typ": "typFire",
-      "timeDate": "2020-01-10T16:45",
-      "text": "Send not all ",
-      "id": 6
-    },
-    {
-      "typ": "",
-      "timeDate": "2020-01-10T16:06:53.721Z",
-      "text": "Hallo?",
-      "id": 7
-    },
-    {
-      "typ": "",
-      "timeDate": "2020-01-10T16:08:09.573Z",
-      "text": "Jetzt asber?",
-      "city": "\"\"",
-      "id": 8
-    },
-    {
-      "typ": "",
-      "timeDate": "2020-01-10T16:08:09.573Z",
-      "text": "aus Session",
-      "city": "\"DDorf\"",
-      "id": 9
-    },
-    {
-      "type": "\"theft\"",
-      "timeDate": "2020-01-11T18:30",
-      "city": "\"Cologne\"",
-      "site": "\"offsite\"",
-      "text": "",
-      "id": 10
-    },
-    {
-      "type": "\"accident\"",
-      "timeDate": "2020-01-11T20:36:56.333Z",
-      "city": "\"asdadas\"",
-      "site": "\"site\"",
-      "text": "",
-      "id": 11
-    },
-    {
-      "type": "\"accident\"",
-      "timeDate": "2020-01-11T20:36:56.333Z",
-      "city": "\"asdadas\"",
-      "site": "\"site\"",
-      "text": "",
-      "id": 12
     }
   ],
   "memos": [

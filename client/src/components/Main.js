@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   padding: 4px;
-  overflow: auto;
   height: 100%;
   display: flex;
   flex-direction: column;

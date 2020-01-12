@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const IssueCrisisPotential = styled.div`
   width: 34px;
   height: 34px;
-  margin: 4px;
+  margin: 0px;
   padding: 4px;
   color: #ffffff;
   background-color: ${props => props.theme.colors.warningHigh};

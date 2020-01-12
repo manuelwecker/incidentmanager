@@ -13,6 +13,7 @@ import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import { FormReport, FieldGroup, Field } from "../components/Forms";
 import Aside from "../components/Aside";
+import calculateCrisisPotential from "../utils/calculateCrisisPotential";
 
 const Label = styled.label`
   border: 1px solid black;
@@ -68,6 +69,10 @@ const TimeDate = styled.input`
 
 export default function ReportOne() {
   const [text, setText] = useSessionStorage("text", "");
+  const [crisisPotential, setCrisisPotential] = useSessionStorage(
+    "crisisPotential",
+    ""
+  );
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
 
   let city = sessionStorage.getItem("city");
@@ -75,6 +80,10 @@ export default function ReportOne() {
   let type = sessionStorage.getItem("type");
 
   async function handleSubmit(event) {
+    let typeStored = sessionStorage.getItem("type");
+    console.log(typeStored);
+    setCrisisPotential(calculateCrisisPotential(typeStored));
+
     event.preventDefault();
     await fetch("http://localhost:7070/issues", {
       method: "POST",
@@ -93,6 +102,7 @@ export default function ReportOne() {
     // setTimeDate("");
   }
   const location = useLocation();
+
   return (
     <>
       <FormReport onSubmit={handleSubmit}>
@@ -166,11 +176,13 @@ export default function ReportOne() {
           value={timeDate}
           onChange={event => setTimeDate(event.target.value)}
         />
-        <Text
+         */}
+
+        {/* <Text
           type="text"
-          value={text}
-          onChange={event => setText(event.target.value)}
-          placeholder="Textinput"
+          value={crisisPotential}
+          onChange={event => setCrisisPotential(event.target.value)}
+          placeholder="calculated"
         /> */}
         <SubmitButton text="Report current issue"></SubmitButton>
       </FormReport>

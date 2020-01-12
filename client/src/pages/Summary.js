@@ -17,6 +17,10 @@ import ContainerFlexRow from "../components/ContainerFlexRow";
 import ContainerFlexCol from "../components/ContainerFlexCol";
 
 const ContainerFlexRowWrap = styled(ContainerFlexRow)`
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
@@ -39,13 +43,20 @@ export default function ReportFour() {
 
       <Field>
         <ContainerFlexRowWrap>
-          <IssueCrisisPotential>2</IssueCrisisPotential>
-          <ContainerFlexCol>
-            <H3>Crisis potential</H3>
-            <span>based on your informnation</span>
-          </ContainerFlexCol>
-
-          <SVGSquareButton>{<Next />}</SVGSquareButton>
+          <div>
+            <IssueCrisisPotential>
+              {JSON.parse(sessionStorage.getItem("crisisPotential"))}
+            </IssueCrisisPotential>
+          </div>
+          <div>
+            <ContainerFlexCol>
+              <H3>Crisis potential</H3>
+              <span>based on your informnation</span>
+            </ContainerFlexCol>
+          </div>
+          <div>
+            <SVGSquareButton>{<Next />}</SVGSquareButton>
+          </div>
         </ContainerFlexRowWrap>
       </Field>
 

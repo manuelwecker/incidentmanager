@@ -13,10 +13,10 @@ import useSessionStorage from "../hooks/useSessionStorage";
 
 export default function ReportOne() {
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
-  const [city, setCity] = useSessionStorage("city", "");
-  const [site, setSite] = useSessionStorage("site", "");
-
+  const [city, setCity] = useSessionStorage("city");
+  const [site, setSite] = useSessionStorage("site");
   const [value, setValue] = React.useState(true);
+
   console.log(value);
 
   const location = useLocation(false);
@@ -34,8 +34,11 @@ export default function ReportOne() {
             name="timeDate"
             value={timeDate}
             onChange={event => setTimeDate(event.target.value)}
+            checked={location.pathname === "/report/2"}
+            // active={location.pathname === "/summary"}}checked
+            // {location.pathname === "/report/2"} (checked)}
           />
-          <label for="timeDate">Today and now</label>
+          <label htmlFor="timeDate">Today and now</label>
         </Field>
         <Field>
           <input
@@ -72,6 +75,7 @@ export default function ReportOne() {
             name="site"
             value="site"
             onChange={event => setSite(event.target.value)}
+            checked={sessionStorage.getItem("site") === value}
           />
           <label for="onsite">On site</label>
         </Field>
@@ -82,6 +86,7 @@ export default function ReportOne() {
             name="site"
             value="offsite"
             onChange={event => setSite(event.target.value)}
+            checked={sessionStorage.getItem("site") === "offsite"}
           />
           <label for="offsite">Off site</label>
         </Field>

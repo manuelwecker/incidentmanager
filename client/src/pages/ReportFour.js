@@ -10,7 +10,7 @@ import {
   SvgTextButton
 } from "../components/Buttons";
 import { H1, H2, H3 } from "../components/Headlines";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, Redirect } from "react-router-dom";
 import { FormReport, FieldGroup, Field } from "../components/Forms";
 import Aside from "../components/Aside";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
@@ -95,9 +95,10 @@ export default function ReportOne() {
         timeDate,
         city,
         site,
-        text
+        crisisPotential
       })
     });
+    // Redirect("/summary");
     // setTyp("");
     // setTimeDate("");
   }
@@ -109,39 +110,38 @@ export default function ReportOne() {
         <H2>Media attention:</H2>
         <H1>Media requests or coverage?</H1>
 
-        <form>
-          <FieldGroup>
-            <H3>Current media</H3>
-            <Field>
-              <label>requests</label>
-              <input type="checkbox" />
-            </Field>
-            <Field>
-              <label>broadcasting</label>
-              <input type="checkbox" />
-            </Field>
-            <Field>
-              <label>published</label>
-              <input type="checkbox" />
-            </Field>
-          </FieldGroup>
+        <FieldGroup>
+          <H3>Current media</H3>
+          <Field>
+            <label>requests</label>
+            <input type="checkbox" />
+          </Field>
+          <Field>
+            <label>broadcasting</label>
+            <input type="checkbox" />
+          </Field>
+          <Field>
+            <label>published</label>
+            <input type="checkbox" />
+          </Field>
+        </FieldGroup>
 
-          <FieldGroup>
-            <H3>Type of media</H3>
-            <Field>
-              <label>television</label>
-              <input type="checkbox" />
-            </Field>
-            <Field>
-              <label>print</label>
-              <input type="checkbox" />
-            </Field>
-            <Field>
-              <label>online</label>
-              <input type="checkbox" />
-            </Field>
-          </FieldGroup>
-        </form>
+        <FieldGroup>
+          <H3>Type of media</H3>
+          <Field>
+            <label>television</label>
+            <input type="checkbox" />
+          </Field>
+          <Field>
+            <label>print</label>
+            <input type="checkbox" />
+          </Field>
+          <Field>
+            <label>online</label>
+            <input type="checkbox" />
+          </Field>
+        </FieldGroup>
+
         {/* new */}
         {/* <Container>
           <Typ
@@ -185,17 +185,19 @@ export default function ReportOne() {
           placeholder="calculated"
         /> */}
         <SubmitButton text="Report current issue"></SubmitButton>
-      </FormReport>
-      <SliderDotsButton />
 
-      <Aside>
-        <Link to="/summary" active={location.pathname === "/summary"}>
-          <SvgTextFooterButton
-            svg={<Next />}
-            text="Check summary and crisis potential"
-          ></SvgTextFooterButton>
-        </Link>
-      </Aside>
+        <SliderDotsButton />
+
+        <Aside>
+          <Link to="/summary" active={location.pathname === "/summary"}>
+            <SvgTextFooterButton
+              type="submit"
+              svg={<Next />}
+              text="Check summary and crisis potential"
+            ></SvgTextFooterButton>
+          </Link>
+        </Aside>
+      </FormReport>
     </>
   );
 }

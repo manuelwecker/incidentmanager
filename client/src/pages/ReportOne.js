@@ -24,7 +24,7 @@ const BiggerField = styled(Field)`
 
 export default function ReportFour() {
   const location = useLocation();
-  const [type, setType] = useSessionStorage("type", "");
+  const [type, setType] = useSessionStorage("type");
   let [isChecked, setIsChecked] = React.useState();
 
   let typeStored = sessionStorage.getItem("type");

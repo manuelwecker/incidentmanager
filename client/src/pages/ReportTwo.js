@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  TextButton,
-  SliderDotsButton,
-  SvgTextFooterButton
-} from "../components/Buttons";
+import { SliderDotsButton, SvgTextFooterButton } from "../components/Buttons";
 import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
@@ -13,9 +9,13 @@ import useSessionStorage from "../hooks/useSessionStorage";
 
 export default function ReportOne() {
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
-  const [city, setCity] = useSessionStorage("city");
-  const [site, setSite] = useSessionStorage("site");
-  const [value, setValue] = React.useState(true);
+  const [city, setCity] = useSessionStorage("city", "");
+  const [site, setSite] = useSessionStorage("site", "");
+  const [employeeInjured, setEmployeeInjured] = useSessionStorage(
+    "employeeInjured",
+    false
+  );
+  const [value, setValue] = useSessionStorage("employeeInjured", false);
 
   console.log(value);
 
@@ -75,10 +75,11 @@ export default function ReportOne() {
             name="site"
             value="site"
             onChange={event => setSite(event.target.value)}
-            checked={sessionStorage.getItem("site") === value}
+            checked={site === "site"}
           />
-          <label for="onsite">On site</label>
+          <label htmlFor="onsite">On site</label>
         </Field>
+
         <Field>
           <input
             type="radio"
@@ -86,9 +87,23 @@ export default function ReportOne() {
             name="site"
             value="offsite"
             onChange={event => setSite(event.target.value)}
-            checked={sessionStorage.getItem("site") === "offsite"}
+            checked={site === "offsite"}
           />
           <label for="offsite">Off site</label>
+        </Field>
+        <Field>
+          <label htmlFor="employerInjured">Employer injured</label>
+          <Switch
+            type="radio"
+            isOn={value}
+            onColor={props => props.theme.colors.corporateDesignSecondary}
+            onColor="#00a6eb"
+            handleToggle={() => setValue(!value)}
+            id="employerInjured"
+            name="employerInjured"
+            value="employerInjured"
+            onChange={event => setEmployeeInjured(event.target.value)}
+          />
         </Field>
       </FieldGroup>
 

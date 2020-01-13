@@ -10,8 +10,8 @@ import {
   SvgTextButton
 } from "../components/Buttons";
 import { H1, H2, H3 } from "../components/Headlines";
-import { useLocation, Link, Redirect } from "react-router-dom";
-import { FormReport, FieldGroup, Field } from "../components/Forms";
+import { useLocation, useHistory } from "react-router-dom";
+import { FormReport, FieldGroup, Field, Switch } from "../components/Forms";
 import Aside from "../components/Aside";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
 
@@ -68,6 +68,7 @@ const TimeDate = styled.input`
 `;
 
 export default function ReportOne() {
+  const history = useHistory();
   const [text, setText] = useSessionStorage("text", "");
   const [crisisPotential, setCrisisPotential] = useSessionStorage(
     "crisisPotential",
@@ -75,10 +76,17 @@ export default function ReportOne() {
   );
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
 
+  const [employeeInjured, setEmployeeInjured] = useSessionStorage(
+    "employeeInjured",
+    ""
+  );
+  const [isSelected, setIsSelected] = React.useState(false);
+
   let city = sessionStorage.getItem("city");
   let site = sessionStorage.getItem("site");
   let type = sessionStorage.getItem("type");
 
+  // loading State onSubmitting = true
   async function handleSubmit(event) {
     let typeStored = sessionStorage.getItem("type");
     console.log(typeStored);
@@ -101,6 +109,7 @@ export default function ReportOne() {
     // Redirect("/summary");
     // setTyp("");
     // setTimeDate("");
+    history.push("/summary");
   }
   const location = useLocation();
 
@@ -112,9 +121,22 @@ export default function ReportOne() {
 
         <FieldGroup>
           <H3>Current media</H3>
-          <Field>
+          {/* <Field>
             <label>requests</label>
             <input type="checkbox" />
+          </Field> */}
+          <Field>
+            <label htmlFor="employerInjured">Employer injured</label>
+            <Switch
+              type="checkbox"
+              isOn={isSelected}
+              onColor="#00a6eb"
+              handleToggle={() => setIsSelected(!isSelected)}
+              id="employerInjured"
+              name="employerInjured"
+              value="employerInjured"
+              onChange={event => setEmployeeInjured(event.target.value)}
+            />
           </Field>
           <Field>
             <label>broadcasting</label>
@@ -189,13 +211,11 @@ export default function ReportOne() {
         <SliderDotsButton />
 
         <Aside>
-          <Link to="/summary" active={location.pathname === "/summary"}>
-            <SvgTextFooterButton
-              type="submit"
-              svg={<Next />}
-              text="Check summary and crisis potential"
-            ></SvgTextFooterButton>
-          </Link>
+          <SvgTextFooterButton
+            type="submit"
+            svg={<Next />}
+            text="Check summary and crisis potential"
+          ></SvgTextFooterButton>
         </Aside>
       </FormReport>
     </>

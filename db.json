@@ -301,6 +301,118 @@
       "site": "site",
       "crisisPotential": "1",
       "id": 37
+    },
+    {
+      "type": "storm",
+      "timeDate": "2020-01-12T16:00",
+      "city": "sdfdsgfghjgjg",
+      "site": "site",
+      "crisisPotential": "1",
+      "id": 38
+    },
+    {
+      "type": "fire",
+      "timeDate": "2020-01-12T18:45",
+      "city": "Cologne",
+      "site": "offsite",
+      "crisisPotential": "",
+      "id": 39
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "2020-01-12T18:45",
+      "city": "Cologne",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 40
+    },
+    {
+      "type": null,
+      "timeDate": "Mon Jan 13 2020 08:56:27 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 41
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "",
+      "id": 42
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "1",
+      "id": 43
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "1",
+      "id": 44
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "1",
+      "id": 45
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "1",
+      "id": 46
+    },
+    {
+      "type": null,
+      "timeDate": "2020-01-13T08:02:00.215Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "1",
+      "id": 47
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Mon Jan 13 2020 09:02:00 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "1",
+      "id": 48
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Mon Jan 13 2020 09:02:00 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "3",
+      "id": 49
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Mon Jan 13 2020 09:02:00 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "3",
+      "id": 50
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Mon Jan 13 2020 09:02:00 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "3",
+      "id": 51
     }
   ],
   "memos": [

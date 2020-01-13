@@ -107,7 +107,7 @@ export default function ReportOne() {
         crisisPotential
       })
     });
-    // Redirect("/summary");
+    // Clear for next session
     // setTyp("");
     // setTimeDate("");
     history.push("/summary");
@@ -207,13 +207,12 @@ export default function ReportOne() {
           onChange={event => setCrisisPotential(event.target.value)}
           placeholder="calculated"
         /> */}
-        <SubmitButton text="Report current issue"></SubmitButton>
-
         <SliderDotsButton />
+
+        <button type="submit"></button>
 
         <Aside>
           <SvgTextFooterButton
-            type="submit"
             svg={<Next />}
             text="Check summary and crisis potential"
           ></SvgTextFooterButton>

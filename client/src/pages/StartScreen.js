@@ -1,14 +1,14 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import LogoCompanySvg from "../components/LogoCompanySvg";
+import LogoCompanySvgColored from "../components/LogoCompanySvgColored";
 import SVGIncidentManagerBig from "../assets/SVGIncidentManagerBig";
 import {
   Button,
   SVGSquareButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { Fire, Accident, Tasks, Next, Avatar } from "../assets/Icons";
+import { FireAnimated, Next, Avatar } from "../assets/Icons";
 
 const ButtonStartScreen = styled(Button)`
   background-color: #ffffff;
@@ -58,15 +58,29 @@ const Span = styled.div`
   display: flex;
 `;
 
+const IconWrapper = styled.div`
+  margin-top: 20px;
+  height: 100px;
+  width: 200px;
+  z-index: 1;
+  position: absolute;
+  left: center;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+`;
+
 function StartScreen() {
   const location = useLocation();
   return (
     <>
       <Div>
         <SVGWrapper>
+          <IconWrapper>
+            <FireAnimated width="100px" height="100px" viewBox="0 0 64 64" />
+          </IconWrapper>
           <SVGIncidentManagerBig></SVGIncidentManagerBig>
         </SVGWrapper>
-
         <Link to="/issues" active={location.pathname === "/issues"}>
           <SvgTextFooterButton
             svg={<Avatar />}
@@ -77,7 +91,7 @@ function StartScreen() {
 
       <LogoWrapper>
         <SvgWrapper>
-          <LogoCompanySvg></LogoCompanySvg>
+          <LogoCompanySvgColored></LogoCompanySvgColored>
         </SvgWrapper>
       </LogoWrapper>
     </>

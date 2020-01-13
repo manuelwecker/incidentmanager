@@ -4,6 +4,17 @@ import SVGIcon from "../SVGIcon";
 
 const Path = styled.path`
   fill: ${props => props.theme.colors.corporateDesignSecondary};
+  animation: move 3s infinite alternate;
+}
+  @keyframes move {
+  0% {
+    opacity: 0.9;
+    transform: scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 `;

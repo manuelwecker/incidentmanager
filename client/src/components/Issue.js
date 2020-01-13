@@ -77,21 +77,22 @@ const IssueDetailLinks = styled.div`
 
 export default function Issue({
   type,
-  country,
+  city,
   timeDate,
   timezone,
-  openTasks
+  openTasks,
+  crisisPotential
 }) {
   const [isClicked, setIsClicked] = React.useState(false);
   const location = useLocation();
   return (
     <>
       <IssueListEntry>
-        <IssueCrisisPotential>1</IssueCrisisPotential>
+        <IssueCrisisPotential>{crisisPotential}</IssueCrisisPotential>
         <ContainerFlexCol>
           <ContainerFlexRow>
             <TextLeft>{type}</TextLeft>
-            <TextRight>{country}</TextRight>
+            <TextRight>{city}</TextRight>
           </ContainerFlexRow>
           <ContainerFlexRow>
             <TextLeft>Time</TextLeft>

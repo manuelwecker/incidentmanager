@@ -8,7 +8,7 @@ function CreateMemo({ type, country, timeDate, timezone }) {
   async function fetchMemos() {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:7070/memos?type=${type}`);
+      const response = await fetch(`/api/memos?type=${type}`);
       const newMemo = await response.json();
       setMemos(newMemo);
     } catch (error) {

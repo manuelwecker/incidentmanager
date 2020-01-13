@@ -93,6 +93,7 @@ export default function ReportOne() {
     setCrisisPotential(calculateCrisisPotential(typeStored));
 
     event.preventDefault();
+
     await fetch("/api/issues", {
       method: "POST",
       headers: {

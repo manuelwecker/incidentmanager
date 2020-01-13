@@ -12,6 +12,7 @@ node_modules
 # production
 build
 storybook-static
+client/build
 
 # misc
 .DS_Store

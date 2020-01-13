@@ -12,7 +12,8 @@
     "storybook": "cd client && npm run storybook",
     "test": "cd client && npm test",
     "postinstall": "cd client && npm install",
-    "fake-api": "json-server --watch db.json --port 7070"
+    "fake-api": "json-server --watch db.json --port 7070",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

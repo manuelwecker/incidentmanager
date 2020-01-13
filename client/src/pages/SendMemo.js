@@ -28,7 +28,7 @@ export default function ReportOne() {
       setLoading(true);
       setError(false);
       const response = await fetch(
-        "http://localhost:7070/issues?_sort=timeDate&_order=desc&_limit=1"
+        "/api/issues?_sort=timeDate&_order=desc&_limit=1"
       );
       const newIssue = await response.json();
       setIssues(newIssue);

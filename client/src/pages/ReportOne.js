@@ -1,140 +1,126 @@
 import React from "react";
 import styled from "@emotion/styled";
-import useSessionStorage from "../hooks/useSessionStorage";
-import { Accident, Fire, Next } from "../assets/Icons";
 import {
   TextButton,
-  SubmitButton,
+  SvgTextButton,
   SliderDotsButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { H1, H2 } from "../components/Headlines";
+import { Fire, Accident, Next } from "../assets/Icons";
+import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
-import { FormReport } from "../components/Forms";
 import Aside from "../components/Aside";
+import { FormReport, FieldGroup, Field, Radio } from "../components/Forms";
+import useSessionStorage from "../hooks/useSessionStorage";
 
-const Label = styled.label`
-  border: 1px solid black;
-  width: 78px;
-  height: 78px;
-  box-shadow: 0px 0px 4px 1px grey;
-  background-color: yellow;
-  position: fixed;
-  width: 0;
+const BiggerField = styled(Field)`
+  min-height: 280px;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4px 0 12px 0;
+  overflow: auto;
 `;
 
-const Container = styled.div`
-  display: inline-block;
-  box-sizing: border-box;
-  width: 23%;
-  margin: 20px 1% 20px 0;
-  height: 120px;
-  vertical-align: top;
-  font-size: 22px;
-  text-align: center;
-`;
-
-const LabelSquare = styled(Label)`
-  border: 1px solid rgba($font-color, 0.15);
-  box-sizing: border-box;
-  display: block;
-  height: 30%;
-  width: 30%;
-  padding: 10px 10px 30px 10px;
-  cursor: pointer;
-  opacity: 0.5;
-  border: 1px solid;
-`;
-
-const Text = styled.input`
-  border: 1px solid;
-  width: 78px;
-  height: 78px;
-`;
-
-const Typ = styled.input`
-  opacity: 0;
-  width: 78px;
-  height: 78px;
-  &:active {
-    opacity: 1;
-  }
-`;
-
-const TimeDate = styled.input`
-  border: 1px solid;
-`;
-
-export default function ReportOne() {
-  const [text, setText] = useSessionStorage("text", "");
-  const [typ, setTyp] = useSessionStorage("typ", "");
-  const [timeDate, setTimedate] = useSessionStorage("timeDate", new Date());
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-    await fetch("http://localhost:7070/issues", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        typ,
-        timeDate,
-        text
-      })
-    });
-    // setTyp("");
-    // setTimedate("");
-  }
+export default function ReportFour() {
   const location = useLocation();
+  const [type, setType] = useSessionStorage("type");
+  let [isChecked, setIsChecked] = React.useState();
+
+  let typeStored = sessionStorage.getItem("type");
+
+  function onChangeHandler(event, id) {
+    setType(event.target.value);
+    id === event.target.value
+      ? setIsChecked((isChecked = false))
+      : setIsChecked((isChecked = true));
+    console.log(typeStored);
+    console.log(isChecked);
+  }
   return (
     <>
-      <FormReport onSubmit={handleSubmit}>
-        <H2>Typ of incident:</H2>
-        <H1>What happened?</H1>
-        <Container>
-          <Typ
-            name="typeofissue"
-            type="radio"
-            value="typFire"
-            placeholder="typFire"
-            onChange={event => setTyp(event.target.value)}
-          />
-          <LabelSquare>
-            <Accident />
-            Accident
-          </LabelSquare>
-        </Container>
-        <Container>
-          <LabelSquare>
-            <Fire />
-            Fire
-          </LabelSquare>
-          <Typ
-            name="typeofissue"
-            type="radio"
-            value="typTerror"
-            placeholder="typTerror"
-            onChange={event => setTyp(event.target.value)}
-          />
-        </Container>
-        <H2>Date and Time:</H2>
-        <H1>When did it happened?</H1>
-        <TimeDate
-          type="datetime-local"
-          value={timeDate}
-          onChange={event => setTimedate(event.target.value)}
-        />
+      <H2>Typ of incident:</H2>
+      <H1>What happened?</H1>
 
-        <Text
-          type="text"
-          value={text}
-          onChange={event => setText(event.target.value)}
-          placeholder="Textinput"
-        />
+      <BiggerField>
+        <FieldGroup>
+          <Radio
+            svg={<Accident />}
+            text="Accident"
+            name="type"
+            id="accident"
+            value="accident"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+          <Radio
+            svg={<Fire />}
+            text="Demonstration"
+            name="type"
+            id="demonstration"
+            value="demonstration"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+          <Radio
+            svg={<Fire />}
+            text="Fire"
+            name="type"
+            id="fire"
+            value="fire"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+        </FieldGroup>
+        <FieldGroup>
+          <Radio
+            svg={<Fire />}
+            text="Spillage"
+            name="type"
+            id="spillage"
+            value="spillage"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+          <Radio
+            svg={<Fire />}
+            text="Storm"
+            name="type"
+            id="storm"
+            value="storm"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+          <Radio
+            svg={<Fire />}
+            text="Strike"
+            name="type"
+            id="strike"
+            value="strike"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+        </FieldGroup>
+        <FieldGroup>
+          <Radio
+            svg={<Fire />}
+            text="Theft"
+            name="type"
+            id="theft"
+            value="theft"
+            onClick={onChangeHandler}
+            isChecked
+            typeStored
+          />
+        </FieldGroup>
+      </BiggerField>
 
-        <SubmitButton text="Report current issue"></SubmitButton>
-      </FormReport>
       <SliderDotsButton />
 
       <Aside>

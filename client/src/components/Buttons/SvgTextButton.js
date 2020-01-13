@@ -21,7 +21,9 @@ function SvgTextButton({ svg, text, ...other }) {
   );
 }
 
-const a = styled(SvgTextButton)`
-  color: red;
-`;
-export default a;
+export default SvgTextButton;
+
+// const a = styled(SvgTextButton)`
+//   color: red;
+// `;
+// export default a;

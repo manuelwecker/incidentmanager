@@ -28,7 +28,8 @@ const HrLine = styled.hr`
 const Container = styled.div`
   width: 100%;
   padding: 0px 20px 0px 20px;
-  height: 20px;
+  margin: 16px 0 12px 0;
+  height: 30px;
   background-color: ${props => props.theme.colors.background};
   flex-direction: row;
   justify-content: space-between;
@@ -36,6 +37,9 @@ const Container = styled.div`
   flex-wrap: wrap;
   display: flex;
   z-index: 1;
+  position: absolute;
+  bottom: +70px;
+  left: 0px;
 `;
 
 function ButtonsSliderDots() {

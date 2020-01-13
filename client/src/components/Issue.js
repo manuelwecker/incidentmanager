@@ -3,6 +3,7 @@ import { EnlargeButton } from "../components/Buttons";
 import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import tasks from "../assets/images/tasks.svg";
+import IssueCrisisPotential from "../components/Forms/IssueCrisisPotential";
 
 const IssueTasks = styled.div`
   width: 34px;
@@ -21,20 +22,6 @@ const IssueTasks = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-`;
-
-const IssueCrisisPotential = styled.div`
-  width: 34px;
-  height: 34px;
-  margin: 0px;
-  padding: 4px;
-  color: #ffffff;
-  background-color: ${props => props.theme.colors.warningHigh};
-  border-radius: 4px;
-  border: none;
-  text-align: center;
-  font-weight: bold;
-  vertical-align: middle;
 `;
 
 const IssueListEntry = styled.div`
@@ -69,7 +56,8 @@ const ContainerFlexCol = styled.div`
 `;
 
 const IssueInfo = styled.span`
-  min-width: 110px;
+  min-width: 50px;
+  font-size: 12px;
 `;
 const TextLeft = styled(IssueInfo)`
   text-align: left;

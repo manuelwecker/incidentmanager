@@ -44,5 +44,6 @@
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }

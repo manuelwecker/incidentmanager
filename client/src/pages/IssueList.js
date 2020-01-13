@@ -18,7 +18,7 @@ export default function IssueList() {
   const [issues, setIssues] = React.useState([]);
 
   async function fetchIssues() {
-    const response = await fetch("http://localhost:7070/issues");
+    const response = await fetch("/api/issues");
     const newIssue = await response.json();
     setIssues(newIssue);
   }

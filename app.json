@@ -1,14 +1,7 @@
 {
   "name": "incidentmanager",
   "scripts": {},
-  "env": {
-    // "MONGO_URL": {
-    //   "required": true
-    // },
-    // "DB_NAME": {
-    //   "required": true
-    // }
-  },
+  "env": {},
   "formation": {
     "web": {
       "quantity": 1

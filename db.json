@@ -1,26 +1,6 @@
 {
   "issues": [
     {
-      "type": "fire",
-      "country": "DEU",
-      "timedate": "2020-01-07T16:20:27.633Z",
-      "timezone": "CET",
-      "opentasks": "3",
-      "tasks": "9",
-      "issueid": 1,
-      "id": 1
-    },
-    {
-      "type": "demonstration",
-      "country": "POL",
-      "timedate": "2020-01-09T09:01:49.659Z",
-      "timezone": "CET",
-      "opentasks": "6",
-      "tasks": "9",
-      "issueid": 2,
-      "id": 2
-    },
-    {
       "type": "accident",
       "country": "FRA",
       "timedate": "2020-01-06T12:30",
@@ -31,68 +11,37 @@
       "id": 3
     },
     {
-      "type": "\"accident\"",
-      "timeDate": "2020-01-12T11:30:06.949Z",
-      "city": "\"\"",
-      "site": "\"\"",
-      "text": "",
-      "id": 4
-    },
-    {
-      "type": "storm",
-      "timeDate": "Mon Jan 13 2020 15:24:52 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 5
-    },
-    {
       "type": "accident",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "site",
-      "crisisPotential": "1",
-      "id": 6
-    },
-    {
-      "type": "accident",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "site",
-      "crisisPotential": "1",
-      "id": 7
-    },
-    {
-      "type": "spillage",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 8
-    },
-    {
-      "type": "spillage",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 9
-    },
-    {
-      "type": "spillage",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
+      "timeDate": "Tue Jan 14 2020 12:50:01 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "dfsdf",
       "site": "offsite",
       "crisisPotential": "1",
       "id": 10
     },
     {
-      "type": "spillage",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "offsite",
-      "crisisPotential": "1",
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 12:43:11 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "3",
       "id": 11
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "AufgabeA",
+      "taskStatus": true
+    },
+    {
+      "id": 2,
+      "taskName": "AufgabeB",
+      "taskStatus": true
+    },
+    {
+      "id": 3,
+      "taskName": "AufgabeC",
+      "taskStatus": true
     }
   ],
   "memos": [

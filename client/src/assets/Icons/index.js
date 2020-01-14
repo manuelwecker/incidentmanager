@@ -4,5 +4,7 @@ export { default as Tasks } from "./Tasks";
 export { default as Avatar } from "./Avatar";
 export { default as Plus } from "./Plus";
 export { default as Next } from "./Next";
+export { default as Todo } from "./Todo";
+export { default as Done } from "./Done";
 export { default as Fire } from "./Fire";
 export { default as FireAnimated } from "./FireAnimated";

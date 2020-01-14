@@ -68,7 +68,7 @@ export default function ReportOne() {
         </TextArea>
 
         <Aside>
-          <Link to="/send" active={location.pathname === "/send"}>
+          <Link to="/tasks" active={location.pathname === "/tasks"}>
             <SvgTextFooterButton
               svg={<Next />}
               text="Send internal memo and show tasks"

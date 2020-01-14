@@ -16,7 +16,9 @@ import {
   Field,
   IssueCrisisPotential,
   TextEntry,
-  BiggerField
+  BiggerField,
+  DetailLink,
+  LinkEntry
 } from "../components/Forms";
 import ContainerFlexRow from "../components/ContainerFlexRow";
 import ContainerFlexCol from "../components/ContainerFlexCol";
@@ -58,20 +60,19 @@ export default function ReportFour() {
 
       <BiggerField>
         <H3>&nbsp;Please check</H3>
-        <TextEntry url="/report/1" sessionStorageValue="type" svg={<Next />} />
-        <TextEntry
+        <LinkEntry url="/report/1" sessionStorageValue="type" svg={<Next />} />
+        <LinkEntry
           url="/report/2"
           sessionStorageValue="timeDate"
           svg={<Next />}
         />
-        <TextEntry url="/report/2" sessionStorageValue="city" svg={<Next />} />
-        <TextEntry url="/report/2" sessionStorageValue="site" svg={<Next />} />
+        <LinkEntry url="/report/2" sessionStorageValue="site" svg={<Next />} />
       </BiggerField>
 
       <SliderDotsButton />
 
       <Aside>
-        <Link to="/tasks" active={location.pathname === "/tasks"}>
+        <Link to="/send" active={location.pathname === "/send"}>
           <SvgTextFooterButton
             svg={<Next />}
             text="Report to the crisis management"

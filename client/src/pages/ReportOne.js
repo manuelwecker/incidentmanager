@@ -23,6 +23,8 @@ const BiggerField = styled(Field)`
 `;
 
 export default function ReportFour() {
+  sessionStorage.clear();
+  console.log("cleared");
   const location = useLocation();
   const [type, setType] = useSessionStorage("type");
   let [isChecked, setIsChecked] = React.useState();

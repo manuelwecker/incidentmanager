@@ -25,6 +25,126 @@
       "site": "site",
       "crisisPotential": "3",
       "id": 11
+    },
+    {
+      "type": "accident",
+      "timeDate": "2020-01-14T18:00",
+      "city": "dfsdf",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 12
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Tue Jan 14 2020 21:08:21 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 13
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Tue Jan 14 2020 21:08:50 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 14
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Tue Jan 14 2020 21:09:55 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 15
+    },
+    {
+      "type": "strike",
+      "timeDate": "Tue Jan 14 2020 21:10:37 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 16
+    },
+    {
+      "type": "fire",
+      "timeDate": "Tue Jan 14 2020 21:11:10 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "onsite",
+      "crisisPotential": "",
+      "id": 17
+    },
+    {
+      "type": "fire",
+      "timeDate": "Tue Jan 14 2020 21:11:10 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "onsite",
+      "crisisPotential": "1",
+      "id": 18
+    },
+    {
+      "type": "undefined",
+      "timeDate": "2020-01-14T20:15:21.010Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "",
+      "id": 19
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Tue Jan 14 2020 21:16:02 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "",
+      "crisisPotential": "",
+      "id": 20
+    },
+    {
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "offsite",
+      "crisisPotential": "",
+      "id": 21
+    },
+    {
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 22
+    },
+    {
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 23
+    },
+    {
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 24
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "2020-01-14T20:22:25.493Z",
+      "city": null,
+      "site": null,
+      "crisisPotential": "",
+      "id": 25
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Tue Jan 14 2020 21:22:38 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "asdsadasd",
+      "site": "",
+      "crisisPotential": "",
+      "id": 26
     }
   ],
   "tasks": [

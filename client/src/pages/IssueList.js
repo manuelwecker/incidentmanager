@@ -37,10 +37,12 @@ export default function IssueList() {
           key={issue.id}
           type={issue.type}
           country={issue.country}
+          city={issue.city}
           timeDate={issue.timeDate}
           timezone={issue.timezone}
           openTasks={issue.openTasks}
           tasks={issue.tasks}
+          crisisPotential={issue.crisisPotential}
         />
       ))}
       <Aside>

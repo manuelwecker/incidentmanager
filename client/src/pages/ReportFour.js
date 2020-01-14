@@ -10,7 +10,7 @@ import {
   SvgTextButton
 } from "../components/Buttons";
 import { H1, H2, H3 } from "../components/Headlines";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { FormReport, FieldGroup, Field, Switch } from "../components/Forms";
 import Aside from "../components/Aside";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
@@ -89,7 +89,6 @@ export default function ReportOne() {
   // loading State onSubmitting = true
   async function handleSubmit(event) {
     let typeStored = sessionStorage.getItem("type");
-    console.log(typeStored);
     setCrisisPotential(calculateCrisisPotential(typeStored));
 
     event.preventDefault();
@@ -107,12 +106,11 @@ export default function ReportOne() {
         crisisPotential
       })
     });
-    // Redirect("/summary");
+    // Clear for next session
     // setTyp("");
     // setTimeDate("");
     history.push("/summary");
   }
-  const location = useLocation();
 
   return (
     <>
@@ -207,13 +205,12 @@ export default function ReportOne() {
           onChange={event => setCrisisPotential(event.target.value)}
           placeholder="calculated"
         /> */}
-        <SubmitButton text="Report current issue"></SubmitButton>
-
         <SliderDotsButton />
+
+        {/* <button type="submit"></button> */}
 
         <Aside>
           <SvgTextFooterButton
-            type="submit"
             svg={<Next />}
             text="Check summary and crisis potential"
           ></SvgTextFooterButton>

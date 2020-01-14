@@ -12,7 +12,12 @@ import { Fire, Accident, Next } from "../assets/Icons";
 import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
-import { Field, IssueCrisisPotential, TextEntry } from "../components/Forms";
+import {
+  Field,
+  IssueCrisisPotential,
+  TextEntry,
+  BiggerField
+} from "../components/Forms";
 import ContainerFlexRow from "../components/ContainerFlexRow";
 import ContainerFlexCol from "../components/ContainerFlexCol";
 
@@ -22,16 +27,6 @@ const ContainerFlexRowWrap = styled(ContainerFlexRow)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const BiggerField = styled(Field)`
-  min-height: 160px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  padding: 4px 0 12px 0;
-  overflow: auto;
 `;
 
 export default function ReportFour() {
@@ -76,7 +71,7 @@ export default function ReportFour() {
       <SliderDotsButton />
 
       <Aside>
-        <Link to="/send" active={location.pathname === "/send"}>
+        <Link to="/tasks" active={location.pathname === "/tasks"}>
           <SvgTextFooterButton
             svg={<Next />}
             text="Report to the crisis management"

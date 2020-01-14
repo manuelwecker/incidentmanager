@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import tasks from "../assets/images/tasks.svg";
 import IssueCrisisPotential from "../components/Forms/IssueCrisisPotential";
+import { TextEntry, DetailLink, BiggerField } from "./Forms";
+import { Next } from "../assets/Icons";
 
 const IssueTasks = styled.div`
   width: 34px;
@@ -66,35 +68,52 @@ const TextRight = styled(IssueInfo)`
   text-align: right;
 `;
 
-const IssueDetailLinks = styled.div`
-  width: 100%;
-  height: 34px;
-  display: block;
-  background-color: ${props => props.theme.colors.primary};
-  border-bottom: 1px solid ${props => props.theme.colors.background};
-  text-align: left;
-`;
+// const IssueDetailLinks = styled.div`
+//   width: 100%;
+//   height: 34px;
+//   display: block;
+//   background-color: ${props => props.theme.colors.primary};
+//   border-bottom: 1px solid ${props => props.theme.colors.background};
+//   text-align: left;
+// `;
 
 export default function Issue({
   type,
+  city,
   country,
   timeDate,
   timezone,
-  openTasks
+  openTasks,
+  crisisPotential
 }) {
   const [isClicked, setIsClicked] = React.useState(false);
-  const location = useLocation();
+
+  // function ShortenDate(date) {
+  // let shortenedDate = `date`;
+  // shortenedDate =
+  //   shortenedDate > 10
+  //     ? Number(shortenedDate.toString().slice(0, 5))
+  //     : shortenedDate;
+  // return console.log(shortenedDate);
+  // }
+
   return (
     <>
       <IssueListEntry>
-        <IssueCrisisPotential>1</IssueCrisisPotential>
+        <IssueCrisisPotential>{crisisPotential}</IssueCrisisPotential>
         <ContainerFlexCol>
           <ContainerFlexRow>
-            <TextLeft>{type}</TextLeft>
-            <TextRight>{country}</TextRight>
+            <TextLeft>
+              <strong>{type}</strong>
+            </TextLeft>
+            <TextRight>{city}</TextRight>
           </ContainerFlexRow>
           <ContainerFlexRow>
-            <TextLeft>Time</TextLeft>
+            <TextLeft>
+              {/* <ShortenDate date= */}
+              {timeDate}
+              {/* // /> */}
+            </TextLeft>
             <TextRight>{timezone}</TextRight>
           </ContainerFlexRow>
         </ContainerFlexCol>
@@ -111,28 +130,19 @@ export default function Issue({
         ></EnlargeButton>
       </IssueListEntry>
       {isClicked && (
-        <IssueListEntryDetails>
-          <ContainerFlexCol>
-            <IssueDetailLinks
-              to="/report"
-              active={location.pathname === "/report"}
-            >
-              Internal memo
-            </IssueDetailLinks>
-            <IssueDetailLinks
-              to="/report"
-              active={location.pathname === "/report"}
-            >
-              Press release
-            </IssueDetailLinks>
-            <IssueDetailLinks
-              to="/report"
-              active={location.pathname === "/report"}
-            >
-              Task list
-            </IssueDetailLinks>
-          </ContainerFlexCol>
-        </IssueListEntryDetails>
+        <BiggerField>
+          <DetailLink
+            url="/send"
+            text="Internal memo"
+            svg={<Next />}
+          ></DetailLink>
+          <DetailLink
+            url="/send"
+            text="Press release"
+            svg={<Next />}
+          ></DetailLink>
+          <DetailLink url="/tasks" text="Task list" svg={<Next />}></DetailLink>
+        </BiggerField>
       )}
     </>
   );

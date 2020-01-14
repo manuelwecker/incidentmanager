@@ -18,7 +18,8 @@ import {
   SendMemo,
   StartScreen,
   Summary,
-  ReportFive
+  ReportFive,
+  TaskList
 } from "./pages";
 
 const Container = styled.div`
@@ -59,10 +60,7 @@ function App() {
                   <Route path="/report/5" component={ReportFive}></Route>
                   <Route path="/summary" component={Summary}></Route>
                   <Route path="/send" component={SendMemo}></Route>
-                  <Route path="/tasks">
-                    <H2>Overview of tasks after reporting the issue</H2>
-                    <H1>Tasks</H1>
-                  </Route>
+                  <Route path="/tasks" component={TaskList}></Route>
                   <Route path="/login">
                     <H2>Enter your user and password or register</H2>
                     <H1>Login</H1>

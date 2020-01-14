@@ -206,9 +206,7 @@ export default function ReportOne() {
           placeholder="calculated"
         /> */}
         <SliderDotsButton />
-
         {/* <button type="submit"></button> */}
-
         <Aside>
           <SvgTextFooterButton
             svg={<Next />}

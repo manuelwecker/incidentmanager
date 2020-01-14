@@ -1,14 +1,14 @@
 {
   "issues": [
     {
-      "type": "demonstration",
-      "timeDate": "2020-01-13T17:50",
+      "type": "accident",
+      "country": "FRA",
+      "timedate": "2020-01-06T12:30",
       "timezone": "CET",
-      "city": "Münster",
-      "site": "site",
-      "crisisPotential": "1",
-      "opentasks": "9",
-      "id": 1
+      "opentasks": "5",
+      "tasks": "9",
+      "issueid": 3,
+      "id": 3
     },
     {
       "type": "accident",

@@ -73,9 +73,9 @@ export default function ReportOne() {
             type="radio"
             id="onsite"
             name="site"
-            value="site"
+            value="onsite"
             onChange={event => setSite(event.target.value)}
-            checked={site === "site"}
+            checked={site === "onsite"}
           />
           <label htmlFor="onsite">On site</label>
         </Field>

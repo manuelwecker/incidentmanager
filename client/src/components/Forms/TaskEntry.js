@@ -1,12 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { SVGSquareButton } from "../../components/Buttons";
-import { Link } from "react-router-dom";
-
-const LinkWrapper = styled(Link)`
-  width: 100%;
-  display: block;
-`;
+import { SVGSquareButton } from "../Buttons";
 
 const TextEntryWrapper = styled.div`
   width: 100%;
@@ -21,10 +15,10 @@ const TextEntryWrapper = styled.div`
   }
 `;
 
-function TextEntry({ sessionStorageValue, svg, children }) {
+function TaskEntry({ text, svg, children }) {
   return (
     <TextEntryWrapper>
-      <span>{sessionStorage.getItem(sessionStorageValue)}</span>
+      <span>{text}</span>
       <SVGSquareButton>
         {svg}
         {children}
@@ -33,4 +27,4 @@ function TextEntry({ sessionStorageValue, svg, children }) {
   );
 }
 
-export default TextEntry;
+export default TaskEntry;

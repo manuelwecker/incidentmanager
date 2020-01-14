@@ -1,42 +1,47 @@
 {
   "issues": [
     {
-      "type": "fire",
-      "city": "DEU",
-      "timedate": "2020-01-07T16:20:27.633Z",
+      "type": "demonstration",
+      "timeDate": "2020-01-13T17:50",
       "timezone": "CET",
-      "opentasks": "3",
-      "tasks": "9",
-      "issueid": 1,
+      "city": "Münster",
+      "site": "site",
+      "crisisPotential": "1",
+      "opentasks": "9",
       "id": 1
     },
     {
-      "type": "demonstration",
-      "city": "POL",
-      "timedate": "2020-01-09T09:01:49.659Z",
-      "timezone": "CET",
-      "opentasks": "6",
-      "tasks": "9",
-      "issueid": 2,
-      "id": 2
+      "type": "accident",
+      "timeDate": "Tue Jan 14 2020 12:50:01 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "dfsdf",
+      "site": "offsite",
+      "crisisPotential": "1",
+      "id": 10
     },
     {
       "type": "accident",
-      "city": "FRA",
-      "timedate": "2020-01-06T12:30",
-      "timezone": "CET",
-      "opentasks": "5",
-      "tasks": "9",
-      "issueid": 3,
-      "id": 3
+      "timeDate": "Tue Jan 14 2020 12:43:11 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "city": "",
+      "site": "site",
+      "crisisPotential": "3",
+      "id": 11
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "AufgabeA",
+      "taskStatus": true
     },
     {
-      "type": "spillage",
-      "timeDate": "2020-01-13T15:30",
-      "city": "Cologne",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 11
+      "id": 2,
+      "taskName": "AufgabeB",
+      "taskStatus": true
+    },
+    {
+      "id": 3,
+      "taskName": "AufgabeC",
+      "taskStatus": true
     }
   ],
   "memos": [

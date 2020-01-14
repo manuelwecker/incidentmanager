@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { SVGSquareButton } from "../../components/Buttons";
+import { SVGSquareButton } from "../Buttons";
 import { Link } from "react-router-dom";
 
 const LinkWrapper = styled(Link)`
@@ -21,16 +21,18 @@ const TextEntryWrapper = styled.div`
   }
 `;
 
-function TextEntry({ sessionStorageValue, svg, children }) {
+function DetailLink({ url, text, svg, children }) {
   return (
-    <TextEntryWrapper>
-      <span>{sessionStorage.getItem(sessionStorageValue)}</span>
-      <SVGSquareButton>
-        {svg}
-        {children}
-      </SVGSquareButton>
-    </TextEntryWrapper>
+    <LinkWrapper to={url}>
+      <TextEntryWrapper>
+        <span>{text}</span>
+        <SVGSquareButton>
+          {svg}
+          {children}
+        </SVGSquareButton>
+      </TextEntryWrapper>
+    </LinkWrapper>
   );
 }
 
-export default TextEntry;
+export default DetailLink;

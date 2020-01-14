@@ -13,6 +13,7 @@ function GlobalStyles() {
 
         a {
           text-decoration: none;
+          color: ${theme.colors.font};
         }
 
         body {

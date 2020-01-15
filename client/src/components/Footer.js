@@ -11,6 +11,18 @@ const FooterNavigation = styled.footer`
   align-items: center;
   align-content: center;
   padding: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  background-color: ${props => props.theme.colors.primary};
+  padding: 4px;
+  z-index: 1;
+  @media only screen and (min-width: ${props =>
+      props.theme.company.deviceWidth}) {
+    max-width: ${props => props.theme.company.deviceWidth};
+  }
 `;
 
 const Button = styled.button``;

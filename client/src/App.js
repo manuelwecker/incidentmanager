@@ -27,7 +27,14 @@ import {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
   height: 100vh;
+  @media only screen and (min-width: ${props =>
+    props.theme.company.deviceWidth}) {
+            max-width: ${props => props.theme.company.deviceWidth};
+          }
+  
+  }
 `;
 
 function App() {

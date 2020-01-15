@@ -1,7 +1,7 @@
 const dark = {
   company: {
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg",
+    logo: "",
+    deviceWidth: "500px",
     borderRadius: "4px"
   },
   colors: {

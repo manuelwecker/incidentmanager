@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateMemo({ type, country, timeDate, timezone }) {
+function CreateMemo({ type, city, country, timedate, timezone }) {
   const [memos, setMemos] = React.useState([]);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
@@ -29,16 +29,19 @@ function CreateMemo({ type, country, timeDate, timezone }) {
   if (!loading) {
     let stringified = currentMemo.copytext;
     let replacedMemo = stringified;
-    // const replacedMemoetails = [{ TIMEDATE: timeDate }, { COUNTRY: country }];
-    // replacedMemoetails.forEach(function(key, value) {
-    //   replacedMemo = replacedMemo.replace(key, value);
-    //   console.log(key);
-    //   console.log(value);
-    // }, replacedMemoetails);
-    replacedMemo = stringified.replace("TIMEDATE", timeDate);
+
+    replacedMemo = stringified.replace(/TIMEDATE/g, timedate);
     replacedMemo = replacedMemo.replace("COUNTRY", country);
+    replacedMemo = replacedMemo.replace("CITY", city);
     replacedMemo = replacedMemo.replace("TIMEZONE", timezone);
     replacedMemo = replacedMemo.replace("TYPE", type);
+
+    // advanced function but not in use, missing quotations in object?
+    // const replacedMemoDetails = [{ TIMEDATE: timedate }, { TYPE: type }];
+    // replacedMemoDetails.forEach(memoDetail => {
+    //   const [key, value] = Object.entries(memoDetail);
+    //   replacedMemo = replacedMemo.replace(new RegExp(key, "g"), value);
+    // });
 
     return (
       <>

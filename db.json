@@ -2,156 +2,38 @@
   "issues": [
     {
       "type": "accident",
-      "country": "FRA",
-      "timedate": "2020-01-06T12:30",
-      "timezone": "CET",
-      "opentasks": "5",
-      "tasks": "9",
-      "issueid": 3,
-      "id": 3
-    },
-    {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 12:50:01 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "dfsdf",
+      "timeDate": "2020-01-10T10:35:36.977Z",
+      "city": "Cologne",
       "site": "offsite",
-      "crisisPotential": "1",
-      "id": 10
+      "crisisPotential": "2",
+      "openTasks": "3",
+      "id": 1
     },
+
     {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 12:43:11 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "site",
+      "type": "fire",
+      "timeDate": "2020-01-14T20:35:36.977Z",
+      "city": "Münster",
+      "site": "onsite",
       "crisisPotential": "3",
-      "id": 11
-    },
-    {
-      "type": "accident",
-      "timeDate": "2020-01-14T18:00",
-      "city": "dfsdf",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 12
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Tue Jan 14 2020 21:08:21 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 13
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Tue Jan 14 2020 21:08:50 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 14
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Tue Jan 14 2020 21:09:55 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 15
-    },
-    {
-      "type": "strike",
-      "timeDate": "Tue Jan 14 2020 21:10:37 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 16
-    },
-    {
-      "type": "fire",
-      "timeDate": "Tue Jan 14 2020 21:11:10 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "onsite",
-      "crisisPotential": "",
-      "id": 17
-    },
-    {
-      "type": "fire",
-      "timeDate": "Tue Jan 14 2020 21:11:10 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "onsite",
-      "crisisPotential": "1",
-      "id": 18
-    },
-    {
-      "type": "undefined",
-      "timeDate": "2020-01-14T20:15:21.010Z",
-      "city": null,
-      "site": null,
-      "crisisPotential": "",
-      "id": 19
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Tue Jan 14 2020 21:16:02 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "",
-      "crisisPotential": "",
-      "id": 20
-    },
-    {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "offsite",
-      "crisisPotential": "",
-      "id": 21
-    },
-    {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 22
-    },
-    {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 23
-    },
-    {
-      "type": "accident",
-      "timeDate": "Tue Jan 14 2020 21:17:18 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "",
-      "site": "offsite",
-      "crisisPotential": "1",
-      "id": 24
+      "openTasks": "3",
+      "id": 2
     },
     {
       "type": "demonstration",
-      "timeDate": "2020-01-14T20:22:25.493Z",
-      "city": null,
-      "site": null,
-      "crisisPotential": "",
-      "id": 25
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Tue Jan 14 2020 21:22:38 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "city": "asdsadasd",
-      "site": "",
-      "crisisPotential": "",
-      "id": 26
+      "timeDate": "2020-01-12T20:35:36.977Z",
+      "city": "München",
+      "site": "onsite",
+      "crisisPotential": "1",
+      "openTasks": "3",
+      "id": 3
     }
   ],
   "tasks": [
     {
       "id": 1,
       "taskName": "AufgabeA",
-      "taskStatus": true
+      "taskStatus": false
     },
     {
       "id": 2,
@@ -161,7 +43,7 @@
     {
       "id": 3,
       "taskName": "AufgabeC",
-      "taskStatus": true
+      "taskStatus": false
     }
   ],
   "memos": [

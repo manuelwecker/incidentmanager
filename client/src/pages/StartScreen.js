@@ -81,7 +81,7 @@ function StartScreen() {
           </IconWrapper>
           <SVGIncidentManagerBig></SVGIncidentManagerBig>
         </SVGWrapper>
-        <Link to="/issues" active={location.pathname === "/issues"}>
+        <Link to="/login">
           <SvgTextFooterButton
             svg={<Avatar />}
             text="Login for a demo"

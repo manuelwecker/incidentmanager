@@ -8,3 +8,5 @@ export { default as SendMemo } from "./SendMemo.js";
 export { default as StartScreen } from "./StartScreen.js";
 export { default as Summary } from "./Summary.js";
 export { default as TaskList } from "./TaskList.js";
+export { default as Settings } from "./Settings.js";
+export { default as Login } from "./Login.js";

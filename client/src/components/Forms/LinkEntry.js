@@ -25,8 +25,9 @@ function LinkEntry({ url, sessionStorageValue, svg, children }) {
   return (
     <LinkWrapper to={url}>
       <TextEntryWrapper>
-        <span>{sessionStorageValue}</span>
+        <span>{sessionStorage.getItem(sessionStorageValue)}</span>
         <SVGSquareButton>
+          {/* <Next /> */}
           {svg}
           {children}
         </SVGSquareButton>

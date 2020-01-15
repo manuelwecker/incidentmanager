@@ -24,7 +24,6 @@ const BiggerField = styled(Field)`
 
 export default function ReportFour() {
   sessionStorage.clear();
-  console.log("cleared");
   const location = useLocation();
   const [type, setType] = useSessionStorage("type");
   let [isChecked, setIsChecked] = React.useState();
@@ -126,7 +125,7 @@ export default function ReportFour() {
       <SliderDotsButton />
 
       <Aside>
-        <Link to="/report/2" active={location.pathname === "/report/2"}>
+        <Link to="/report/2">
           <SvgTextFooterButton
             svg={<Next />}
             text="Next to step 2"

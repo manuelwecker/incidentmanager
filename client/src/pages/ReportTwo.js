@@ -47,7 +47,7 @@ export default function ReportOne() {
             name="timeDate"
             value="otherDate"
           />
-          <label for="timeDate">Other date / time</label>
+          <label htmlFor="timeDate">Other date / time</label>
           <input
             type="datetime-local"
             value={timeDate}
@@ -89,7 +89,7 @@ export default function ReportOne() {
             onChange={event => setSite(event.target.value)}
             checked={site === "offsite"}
           />
-          <label for="offsite">Off site</label>
+          <label htmlFor="offsite">Off site</label>
         </Field>
         <Field>
           <label htmlFor="employerInjured">Employer injured</label>
@@ -109,7 +109,7 @@ export default function ReportOne() {
 
       <SliderDotsButton />
       <Aside>
-        <Link to="/report/3" active={location.pathname === "/report/3"}>
+        <Link to="/report/3">
           <SvgTextFooterButton
             svg={<Next />}
             text="Next to step 2"

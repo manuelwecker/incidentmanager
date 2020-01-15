@@ -97,7 +97,7 @@ export default function ReportThree() {
 
       <SliderDotsButton />
       <Aside>
-        <Link to="/report/4" active={location.pathname === "/report/4"}>
+        <Link to="/report/4">
           <SvgTextFooterButton
             svg={<Next />}
             text="Next to step 3"

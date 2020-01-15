@@ -42,14 +42,18 @@ export default function ReportFour() {
       <Field>
         <ContainerFlexRowWrap>
           <div>
-            <IssueCrisisPotential>
+            <IssueCrisisPotential
+              crisisPotential={parseInt(
+                sessionStorage.getItem("crisisPotential")
+              )}
+            >
               {sessionStorage.getItem("crisisPotential")}
             </IssueCrisisPotential>
           </div>
           <div>
             <ContainerFlexCol>
               <H3>Crisis potential</H3>
-              <span>based on your informnation</span>
+              <span>based on your information</span>
             </ContainerFlexCol>
           </div>
           <div>
@@ -59,7 +63,6 @@ export default function ReportFour() {
       </Field>
 
       <BiggerField>
-        <H3>&nbsp;Please check</H3>
         <LinkEntry url="/report/1" sessionStorageValue="type" svg={<Next />} />
         <LinkEntry
           url="/report/2"
@@ -72,7 +75,7 @@ export default function ReportFour() {
       <SliderDotsButton />
 
       <Aside>
-        <Link to="/send" active={location.pathname === "/send"}>
+        <Link to="/send">
           <SvgTextFooterButton
             svg={<Next />}
             text="Report to the crisis management"

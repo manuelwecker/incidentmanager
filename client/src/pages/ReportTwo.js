@@ -10,6 +10,7 @@ import useSessionStorage from "../hooks/useSessionStorage";
 export default function ReportOne() {
   const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
   const [city, setCity] = useSessionStorage("city", "");
+  const [country, setCountry] = useSessionStorage("country", "");
   const [site, setSite] = useSessionStorage("site", "");
   const [employeeInjured, setEmployeeInjured] = useSessionStorage(
     "employeeInjured",
@@ -60,6 +61,16 @@ export default function ReportOne() {
         <Field>
           <input
             type="text"
+            id="country"
+            name="country"
+            value={country}
+            onChange={event => setCountry(event.target.value)}
+            placeholder="Country"
+          />
+        </Field>
+        <Field>
+          <input
+            type="text"
             id="city"
             name="city"
             value={city}
@@ -67,7 +78,6 @@ export default function ReportOne() {
             placeholder="Next City"
           />
         </Field>
-
         <Field>
           <input
             type="radio"
@@ -91,7 +101,7 @@ export default function ReportOne() {
           />
           <label htmlFor="offsite">Off site</label>
         </Field>
-        <Field>
+        {/* <Field>
           <label htmlFor="employerInjured">Employer injured</label>
           <Switch
             type="radio"
@@ -104,7 +114,7 @@ export default function ReportOne() {
             value="employerInjured"
             onChange={event => setEmployeeInjured(event.target.value)}
           />
-        </Field>
+        </Field> */}
       </FieldGroup>
 
       <SliderDotsButton />
@@ -112,7 +122,7 @@ export default function ReportOne() {
         <Link to="/report/3">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 2"
+            text="Next to step 3"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

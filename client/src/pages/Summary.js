@@ -10,7 +10,6 @@ import {
 } from "../components/Buttons";
 import { Fire, Accident, Next } from "../assets/Icons";
 import { H1, H2, H3 } from "../components/Headlines";
-import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
 import {
   Field,
@@ -18,10 +17,15 @@ import {
   TextEntry,
   BiggerField,
   DetailLink,
-  LinkEntry
+  LinkEntry,
+  FormReport
 } from "../components/Forms";
 import ContainerFlexRow from "../components/ContainerFlexRow";
 import ContainerFlexCol from "../components/ContainerFlexCol";
+
+import useSessionStorage from "../hooks/useSessionStorage";
+import { useHistory } from "react-router-dom";
+import calculateCrisisPotential from "../utils/calculateCrisisPotential";
 
 const ContainerFlexRowWrap = styled(ContainerFlexRow)`
   width: 100%;
@@ -31,57 +35,102 @@ const ContainerFlexRowWrap = styled(ContainerFlexRow)`
   justify-content: space-between;
 `;
 
-export default function ReportFour() {
-  const location = useLocation();
+export default function Summary() {
+  const history = useHistory();
+  let type = sessionStorage.getItem("type");
+  const [crisisPotential, setCrisisPotential] = useSessionStorage(
+    "crisisPotential",
+    calculateCrisisPotential(type)
+  );
+  console.log("Summaray", type, crisisPotential);
+  // let typeStored = setCrisisPotential(sessionStorage.getItem("type"));
+  // const crisisPotential =
+  //   calculateCrisisPotential(typeStored)
+  // );
+
+  const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
+
+  const [employeeInjured, setEmployeeInjured] = useSessionStorage(
+    "employeeInjured",
+    ""
+  );
+  const [isSelected, setIsSelected] = React.useState(false);
+
+  let city = sessionStorage.getItem("city");
+  let country = sessionStorage.getItem("country");
+  let site = sessionStorage.getItem("site");
+
+  // loading State onSubmitting = true
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    await fetch("/api/issues", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        type,
+        timeDate,
+        country,
+        city,
+        crisisPotential,
+        site
+      })
+    });
+    history.push("/send");
+  }
 
   return (
     <>
-      <H2>Summary and crisis potential</H2>
-      <H1>Please check and report</H1>
+      <FormReport onSubmit={handleSubmit}>
+        <H2>Summary and crisis potential</H2>
+        <H1>Please check and report</H1>
 
-      <Field>
-        <ContainerFlexRowWrap>
-          <div>
-            <IssueCrisisPotential
-              crisisPotential={parseInt(
-                sessionStorage.getItem("crisisPotential")
-              )}
-            >
-              {sessionStorage.getItem("crisisPotential")}
-            </IssueCrisisPotential>
-          </div>
-          <div>
-            <ContainerFlexCol>
-              <H3>Crisis potential</H3>
-              <span>based on your information</span>
-            </ContainerFlexCol>
-          </div>
-          <div>
-            <SVGSquareButton>{<Next />}</SVGSquareButton>
-          </div>
-        </ContainerFlexRowWrap>
-      </Field>
+        <Field>
+          <ContainerFlexRowWrap>
+            <div>
+              <IssueCrisisPotential crisisPotential={crisisPotential}>
+                {crisisPotential}
+              </IssueCrisisPotential>
+            </div>
+            <div>
+              <ContainerFlexCol>
+                <H3>Crisis potential</H3>
+                <span>based on your information</span>
+              </ContainerFlexCol>
+            </div>
+            <div>
+              <SVGSquareButton>{<Next />}</SVGSquareButton>
+            </div>
+          </ContainerFlexRowWrap>
+        </Field>
 
-      <BiggerField>
-        <LinkEntry url="/report/1" sessionStorageValue="type" svg={<Next />} />
-        <LinkEntry
-          url="/report/2"
-          sessionStorageValue="timeDate"
-          svg={<Next />}
-        />
-        <LinkEntry url="/report/2" sessionStorageValue="site" svg={<Next />} />
-      </BiggerField>
+        <BiggerField>
+          <LinkEntry
+            url="/report/1"
+            sessionStorageValue="type"
+            svg={<Next />}
+          />
+          <LinkEntry
+            url="/report/2"
+            sessionStorageValue="timeDate"
+            svg={<Next />}
+          />
+          <LinkEntry
+            url="/report/2"
+            sessionStorageValue="site"
+            svg={<Next />}
+          />
+        </BiggerField>
 
-      <SliderDotsButton />
-
-      <Aside>
-        <Link to="/send">
+        <Aside>
           <SvgTextFooterButton
             svg={<Next />}
-            text="Report to the crisis management"
+            text="Report issue to crisis management"
           ></SvgTextFooterButton>
-        </Link>
-      </Aside>
+        </Aside>
+      </FormReport>
     </>
   );
 }

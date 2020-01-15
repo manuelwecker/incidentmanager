@@ -16,10 +16,10 @@ function Settings() {
       <span>client management is not part of the MVP.</span>
 
       <Aside>
-        <Link to="/report/2">
+        <Link to="/issues">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 2"
+            text="Back to all issues"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

@@ -48,6 +48,7 @@ function App() {
         <Container>
           <Switch>
             <Route exact path="/" component={StartScreen} />
+            <Route exact path="/login" component={Login} />
             <Route>
               <Header>
                 <Logo />

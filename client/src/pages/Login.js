@@ -9,6 +9,7 @@ import {
   SvgTextFooterButton
 } from "../components/Buttons";
 import { FireAnimated, Next, Avatar } from "../assets/Icons";
+import { Field } from "../components/Forms";
 
 const ButtonStartScreen = styled(Button)`
   background-color: #ffffff;
@@ -25,6 +26,11 @@ const LogoWrapper = styled.div`
   align-items: center;
   align-self: center;
   vertical-align: middle;
+`;
+
+const InputWrapper = styled.div`
+  width: 200px;
+  margin: 0 0 4px 0;
 `;
 
 const SvgWrapper = styled.div`
@@ -70,21 +76,45 @@ const IconWrapper = styled.div`
   vertical-align: middle;
 `;
 
-function StartScreen() {
+const Spacer = styled.hr`
+  border: 0px solid white;
+  height: 50px;
+  opacity: 1;
+  width: 0px;
+`;
+
+const Input = styled.input`
+  all: unset;
+  min-width: 100%;
+  &:hover {
+    color: ${props => props.theme.colors.corporateDesignSecondary};
+  }
+`;
+
+function Login() {
   const location = useLocation();
   return (
     <>
       <Div>
-        <SVGWrapper>
-          <IconWrapper>
-            <FireAnimated width="100px" height="100px" viewBox="0 0 64 64" />
-          </IconWrapper>
-          <SVGIncidentManagerBig></SVGIncidentManagerBig>
-        </SVGWrapper>
+        <InputWrapper>
+          <Field>
+            <Input type="text" placeholder="gast" />
+          </Field>
+          <Field>
+            <Input type="text" placeholder="****" />
+          </Field>
+        </InputWrapper>
+        <Link to="/issues">
+          <SvgTextFooterButton
+            svg={<Next />}
+            text="Login with gast/gast"
+          ></SvgTextFooterButton>
+        </Link>
+        <Spacer />
         <Link to="/login">
           <SvgTextFooterButton
             svg={<Avatar />}
-            text="Login for a demo"
+            text="Or register as new user"
           ></SvgTextFooterButton>
         </Link>
       </Div>
@@ -98,4 +128,4 @@ function StartScreen() {
   );
 }
 
-export default StartScreen;
+export default Login;

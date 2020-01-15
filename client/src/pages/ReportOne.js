@@ -6,7 +6,7 @@ import {
   SliderDotsButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { Fire, Accident, Next } from "../assets/Icons";
+import { Fire, Accident, Next, Demonstration } from "../assets/Icons";
 import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
@@ -56,7 +56,7 @@ export default function ReportFour() {
             typeStored
           />
           <Radio
-            svg={<Fire />}
+            svg={<Demonstration />}
             text="Demonstration"
             name="type"
             id="demonstration"

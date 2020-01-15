@@ -13,9 +13,7 @@ const dark = {
     secondary: "#52565a",
     tertiary: "#7e8890",
 
-    warningHigh: "#b70000",
-    warningMid: "#f49d00",
-    warningLow: "#7EB61C",
+    warningLevel: { 3: "#b70000", 2: "#f49d00", 1: "#7EB61C" },
 
     font: "#ffffff",
     fontSofter: "#bec4c7"

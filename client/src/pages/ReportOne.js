@@ -6,7 +6,7 @@ import {
   SliderDotsButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { Fire, Accident, Next } from "../assets/Icons";
+import { Fire, Accident, Next, Demonstration } from "../assets/Icons";
 import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
@@ -23,6 +23,7 @@ const BiggerField = styled(Field)`
 `;
 
 export default function ReportFour() {
+  sessionStorage.clear();
   const location = useLocation();
   const [type, setType] = useSessionStorage("type");
   let [isChecked, setIsChecked] = React.useState();
@@ -55,7 +56,7 @@ export default function ReportFour() {
             typeStored
           />
           <Radio
-            svg={<Fire />}
+            svg={<Demonstration />}
             text="Demonstration"
             name="type"
             id="demonstration"
@@ -124,7 +125,7 @@ export default function ReportFour() {
       <SliderDotsButton />
 
       <Aside>
-        <Link to="/report/2" active={location.pathname === "/report/2"}>
+        <Link to="/report/2">
           <SvgTextFooterButton
             svg={<Next />}
             text="Next to step 2"

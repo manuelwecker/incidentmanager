@@ -1,7 +1,7 @@
 const dark = {
   company: {
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg",
+    logo: "",
+    deviceWidth: "500px",
     borderRadius: "4px"
   },
   colors: {
@@ -9,13 +9,11 @@ const dark = {
     corporateDesignSecondary: "#00a6eb",
     background: "#333333",
 
-    primary: "#333333",
-    secondary: "#52565a",
+    primary: "#52565A",
+    secondary: "#333333",
     tertiary: "#7e8890",
 
-    warningHigh: "#b70000",
-    warningMid: "#f49d00",
-    warningLow: "#7EB61C",
+    warningLevel: { 3: "#b70000", 2: "#f49d00", 1: "#7EB61C" },
 
     font: "#ffffff",
     fontSofter: "#bec4c7"

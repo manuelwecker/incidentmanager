@@ -57,18 +57,13 @@ export default function ReportOne() {
           <CreateMemo
             type={currentIssue.type}
             country={currentIssue.country}
+            city={currentIssue.city}
             timeDate={currentIssue.timeDate}
-            timezone={currentIssue.timezone}
           ></CreateMemo>
-
-          <div>
-            <br />
-            Prüfung (kommt aus db/issues): {currentIssue.type}
-          </div>
         </TextArea>
 
         <Aside>
-          <Link to="/send" active={location.pathname === "/send"}>
+          <Link to="/tasks">
             <SvgTextFooterButton
               svg={<Next />}
               text="Send internal memo and show tasks"

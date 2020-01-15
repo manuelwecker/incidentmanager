@@ -32,6 +32,7 @@ const ContainerFlexRowWrap = styled(ContainerFlexRow)`
 
 export default function ReportThree() {
   const [isClicked, setIsClicked] = React.useState(false);
+  const [isEnlarged, setIsEnlarged] = React.useState(false);
   const location = useLocation();
   return (
     <>
@@ -43,7 +44,7 @@ export default function ReportThree() {
           <Field>
             <ContainerFlexColWrap>
               <ContainerFlexRowWrap>
-                <H3>Are there deaths?</H3>
+                <H3>Are there casualties?</H3>
                 <EnlargeButton
                   onClick={() => setIsClicked(!isClicked)}
                   isClicked={isClicked}
@@ -95,12 +96,69 @@ export default function ReportThree() {
         )}
       </FieldGroup>
 
+      <FieldGroup>
+        <FieldEnlarge>
+          <Field>
+            <ContainerFlexColWrap>
+              <ContainerFlexRowWrap>
+                <H3>Are there injured?</H3>
+                <EnlargeButton
+                  onClick={() => setIsEnlarged(!isEnlarged)}
+                  isClicked={isEnlarged}
+                ></EnlargeButton>
+              </ContainerFlexRowWrap>
+
+              <ContainerFlexRowWrap>
+                <ContainerFlexCol>
+                  <input type="checkbox"></input>
+                  <Label>Yes</Label>
+                </ContainerFlexCol>
+                <ContainerFlexCol>
+                  <input type="checkbox"></input>
+                  <Label>No</Label>
+                </ContainerFlexCol>
+                <ContainerFlexCol>
+                  <input type="checkbox"></input>
+                  <Label>Unknown</Label>
+                </ContainerFlexCol>
+              </ContainerFlexRowWrap>
+            </ContainerFlexColWrap>
+          </Field>
+        </FieldEnlarge>
+
+        {isEnlarged && (
+          <>
+            <Field>
+              <ContainerFlexRowWrap>
+                <input type="checkbox" />
+                <span>Own employees</span>
+                <input type="text" placeholder="Count" />
+              </ContainerFlexRowWrap>
+            </Field>
+            <Field>
+              <ContainerFlexRowWrap>
+                <input type="checkbox" />
+                <span>External employees</span>
+                <input type="text" placeholder="Count" />
+              </ContainerFlexRowWrap>
+            </Field>
+            <Field>
+              <ContainerFlexRowWrap>
+                <input type="checkbox" />
+                <span>Other persons</span>
+                <input type="text" placeholder="Count" />
+              </ContainerFlexRowWrap>
+            </Field>
+          </>
+        )}
+      </FieldGroup>
+
       <SliderDotsButton />
       <Aside>
-        <Link to="/report/4" active={location.pathname === "/report/4"}>
+        <Link to="/report/4">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 3"
+            text="Next to step 4"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

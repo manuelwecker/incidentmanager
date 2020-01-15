@@ -68,15 +68,6 @@ const TextRight = styled(IssueInfo)`
   text-align: right;
 `;
 
-// const IssueDetailLinks = styled.div`
-//   width: 100%;
-//   height: 34px;
-//   display: block;
-//   background-color: ${props => props.theme.colors.primary};
-//   border-bottom: 1px solid ${props => props.theme.colors.background};
-//   text-align: left;
-// `;
-
 export default function Issue({
   type,
   city,
@@ -96,11 +87,12 @@ export default function Issue({
   //     : shortenedDate;
   // return console.log(shortenedDate);
   // }
-
   return (
     <>
       <IssueListEntry>
-        <IssueCrisisPotential>{crisisPotential}</IssueCrisisPotential>
+        <IssueCrisisPotential crisisPotential={parseInt(crisisPotential)}>
+          {crisisPotential}
+        </IssueCrisisPotential>
         <ContainerFlexCol>
           <ContainerFlexRow>
             <TextLeft>
@@ -111,16 +103,16 @@ export default function Issue({
           <ContainerFlexRow>
             <TextLeft>
               {/* <ShortenDate date= */}
-              {timeDate}
+              {/* {timeDate} */}
               {/* // /> */}
             </TextLeft>
-            <TextRight>{timezone}</TextRight>
+            <TextRight>{country}</TextRight>
           </ContainerFlexRow>
         </ContainerFlexCol>
         <ContainerFlexRow>
           <ContainerFlexCol>
             <TextRight>open</TextRight>
-            <TextRight>Tasks</TextRight>
+            <TextRight>tasks</TextRight>
           </ContainerFlexCol>
         </ContainerFlexRow>
         <IssueTasks>{openTasks}</IssueTasks>

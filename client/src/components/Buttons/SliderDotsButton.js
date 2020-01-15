@@ -40,6 +40,10 @@ const Container = styled.div`
   position: absolute;
   bottom: +70px;
   left: 0px;
+  @media only screen and (min-width: ${props =>
+      props.theme.company.deviceWidth}) {
+    max-width: ${props => props.theme.company.deviceWidth};
+  }
 `;
 
 function ButtonsSliderDots() {

@@ -6,5 +6,6 @@ export { default as Radio } from "./Radio.js";
 export { default as TextEntry } from "./TextEntry.js";
 export { default as TaskEntry } from "./TaskEntry.js";
 export { default as DetailLink } from "./DetailLink.js";
+export { default as LinkEntry } from "./LinkEntry.js";
 export { default as BiggerField } from "./BiggerField.js";
 export { default as IssueCrisisPotential } from "./IssueCrisisPotential.js";

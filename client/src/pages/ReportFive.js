@@ -19,7 +19,7 @@ export default function ReportFive() {
       <Switch isOn={value} handleToggle={() => setValue(!value)} />
       <SliderDotsButton />
       <Aside>
-        <Link to="/send" active={location.pathname === "/send"}>
+        <Link to="/send">
           <SvgTextFooterButton
             svg={<Next />}
             text="Next to step 2"

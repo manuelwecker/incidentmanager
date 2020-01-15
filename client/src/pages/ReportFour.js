@@ -10,7 +10,7 @@ import {
   SvgTextButton
 } from "../components/Buttons";
 import { H1, H2, H3 } from "../components/Headlines";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FormReport, FieldGroup, Field, Switch } from "../components/Forms";
 import Aside from "../components/Aside";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
@@ -67,64 +67,19 @@ const TimeDate = styled.input`
   border: 1px solid;
 `;
 
-export default function ReportOne() {
-  const history = useHistory();
-  const [text, setText] = useSessionStorage("text", "");
-  const [crisisPotential, setCrisisPotential] = useSessionStorage(
-    "crisisPotential",
-    ""
-  );
-  const [timeDate, setTimeDate] = useSessionStorage("timeDate", new Date());
-
-  const [employeeInjured, setEmployeeInjured] = useSessionStorage(
-    "employeeInjured",
-    ""
-  );
-  const [isSelected, setIsSelected] = React.useState(false);
-
-  let city = sessionStorage.getItem("city");
-  let site = sessionStorage.getItem("site");
-  let type = sessionStorage.getItem("type");
-
-  // loading State onSubmitting = true
-  async function handleSubmit(event) {
-    let typeStored = sessionStorage.getItem("type");
-    setCrisisPotential(calculateCrisisPotential(typeStored));
-
-    event.preventDefault();
-
-    await fetch("/api/issues", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        type,
-        timeDate,
-        city,
-        site,
-        crisisPotential
-      })
-    });
-    // Clear for next session
-    // setTyp("");
-    // setTimeDate("");
-    history.push("/summary");
-  }
-
+export default function ReportFour() {
   return (
     <>
-      <FormReport onSubmit={handleSubmit}>
-        <H2>Media attention:</H2>
-        <H1>Media requests or coverage?</H1>
+      <H2>Media attention:</H2>
+      <H1>Media requests or coverage?</H1>
 
-        <FieldGroup>
-          <H3>Current media</H3>
-          {/* <Field>
-            <label>requests</label>
-            <input type="checkbox" />
-          </Field> */}
-          <Field>
+      <FieldGroup>
+        <H3>Current media</H3>
+        <Field>
+          <input type="checkbox" />
+          <label>requests</label>
+        </Field>
+        {/* <Field>
             <label htmlFor="employerInjured">Employer injured</label>
             <Switch
               type="checkbox"
@@ -136,35 +91,35 @@ export default function ReportOne() {
               value="employerInjured"
               onChange={event => setEmployeeInjured(event.target.value)}
             />
-          </Field>
-          <Field>
-            <label>broadcasting</label>
-            <input type="checkbox" />
-          </Field>
-          <Field>
-            <label>published</label>
-            <input type="checkbox" />
-          </Field>
-        </FieldGroup>
+          </Field> */}
+        <Field>
+          <input type="checkbox" />
+          <label>broadcasting</label>
+        </Field>
+        <Field>
+          <input type="checkbox" />
+          <label>published</label>
+        </Field>
+      </FieldGroup>
 
-        <FieldGroup>
-          <H3>Type of media</H3>
-          <Field>
-            <label>television</label>
-            <input type="checkbox" />
-          </Field>
-          <Field>
-            <label>print</label>
-            <input type="checkbox" />
-          </Field>
-          <Field>
-            <label>online</label>
-            <input type="checkbox" />
-          </Field>
-        </FieldGroup>
+      <FieldGroup>
+        <H3>Type of media</H3>
+        <Field>
+          <input type="checkbox" />
+          <label>television</label>
+        </Field>
+        <Field>
+          <input type="checkbox" />
+          <label>print</label>
+        </Field>
+        <Field>
+          <input type="checkbox" />
+          <label>online</label>
+        </Field>
+      </FieldGroup>
 
-        {/* new */}
-        {/* <Container>
+      {/* new */}
+      {/* <Container>
           <Typ
             name="typeofissue"
             type="radio"
@@ -199,21 +154,23 @@ export default function ReportOne() {
         />
          */}
 
-        {/* <Text
+      {/* <Text
           type="text"
           value={crisisPotential}
           onChange={event => setCrisisPotential(event.target.value)}
           placeholder="calculated"
         /> */}
-        <SliderDotsButton />
-        {/* <button type="submit"></button> */}
-        <Aside>
+      <SliderDotsButton />
+      {/* <button type="submit"></button> */}
+
+      <Aside>
+        <Link to="/summary">
           <SvgTextFooterButton
             svg={<Next />}
             text="Check summary and crisis potential"
           ></SvgTextFooterButton>
-        </Aside>
-      </FormReport>
+        </Link>
+      </Aside>
     </>
   );
 }

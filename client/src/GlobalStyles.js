@@ -10,7 +10,10 @@ function GlobalStyles() {
         *:after {
           box-sizing: border-box;
         }
-
+        input[type="text"] {
+          all: unset;
+          padding: 0 0 0 4px;
+        }
         a {
           text-decoration: none;
           color: ${theme.colors.font};

@@ -6,7 +6,10 @@ const IssueCrisisPotential = styled.div`
   margin: 0px;
   padding: 4px;
   color: #ffffff;
-  background-color: ${props => props.theme.colors.warningHigh};
+
+  background-color: ${props =>
+    props.theme.colors.warningLevel[props.crisisPotential] ||
+    props.theme.colors.secondary};
   border-radius: 4px;
   border: none;
   text-align: center;

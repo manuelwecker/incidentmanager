@@ -19,13 +19,22 @@ import {
   StartScreen,
   Summary,
   ReportFive,
-  TaskList
+  TaskList,
+  Login,
+  Settings
 } from "./pages";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
   height: 100vh;
+  @media only screen and (min-width: ${props =>
+    props.theme.company.deviceWidth}) {
+            max-width: ${props => props.theme.company.deviceWidth};
+          }
+  
+  }
 `;
 
 function App() {
@@ -46,6 +55,7 @@ function App() {
         <Container>
           <Switch>
             <Route exact path="/" component={StartScreen} />
+            <Route exact path="/login" component={Login} />
             <Route>
               <Header>
                 <Logo />
@@ -61,14 +71,8 @@ function App() {
                   <Route path="/summary" component={Summary}></Route>
                   <Route path="/send" component={SendMemo}></Route>
                   <Route path="/tasks" component={TaskList}></Route>
-                  <Route path="/login">
-                    <H2>Enter your user and password or register</H2>
-                    <H1>Login</H1>
-                  </Route>
-                  <Route path="/settings">
-                    <H2>Set up your company and personal profile</H2>
-                    <H1>Settings</H1>
-                  </Route>
+                  <Route path="/login" component={Login}></Route>
+                  <Route path="/settings" component={Settings}></Route>
                 </Switch>
               </Main>
               <Footer onClick={onClick} />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import NoStyleButton from "./Buttons/NoStyleButton";
 
@@ -11,6 +11,18 @@ const FooterNavigation = styled.footer`
   align-items: center;
   align-content: center;
   padding: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  background-color: ${props => props.theme.colors.primary};
+  padding: 4px;
+  z-index: 1;
+  @media only screen and (min-width: ${props =>
+      props.theme.company.deviceWidth}) {
+    max-width: ${props => props.theme.company.deviceWidth};
+  }
 `;
 
 const Button = styled.button``;
@@ -19,13 +31,13 @@ function Footer({ name, value, onClick }) {
   const location = useLocation();
   return (
     <FooterNavigation>
-      <Link to="/crisismanual" active={location.pathname === "/crisismanual"}>
+      <Link to="/crisismanual">
         <NoStyleButton>crisis manual</NoStyleButton>
       </Link>
       <NoStyleButton name="activeTheme" value={"light"} onClick={onClick}>
-        switch Theme
+        switch theme
       </NoStyleButton>
-      <Link to="/legalnotice" active={location.pathname === "/legalnotice"}>
+      <Link to="/legalnotice">
         <NoStyleButton>legal notice</NoStyleButton>
       </Link>
     </FooterNavigation>

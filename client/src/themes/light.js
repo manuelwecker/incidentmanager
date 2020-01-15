@@ -1,7 +1,7 @@
 const light = {
   company: {
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/3/35/Altana_Logo_2007.svg",
+    logo: "",
+    deviceWidth: "500px",
     borderRadius: "4px"
   },
   colors: {
@@ -13,9 +13,7 @@ const light = {
     secondary: "#b1b1b1",
     tertiary: "#bec4c7",
 
-    warningHigh: "#b70000",
-    warningMid: "#f49d00",
-    warningLow: "#7EB61C",
+    warningLevel: { 3: "#b70000", 2: "#f49d00", 1: "#7EB61C" },
 
     font: "#333333",
     fontlighter: "#7e8890"

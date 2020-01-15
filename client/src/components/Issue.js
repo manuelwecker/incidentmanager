@@ -101,18 +101,18 @@ export default function Issue({
             <TextRight>{city}</TextRight>
           </ContainerFlexRow>
           <ContainerFlexRow>
-            {/* <TextLeft> */}
-            {/* <ShortenDate date= */}
-            {/* {timeDate} */}
-            {/* // /> */}
-            {/* </TextLeft> */}
-            {/* <TextRight>{timezone}</TextRight> */}
+            <TextLeft>
+              {/* <ShortenDate date= */}
+              {/* {timeDate} */}
+              {/* // /> */}
+            </TextLeft>
+            <TextRight>{country}</TextRight>
           </ContainerFlexRow>
         </ContainerFlexCol>
         <ContainerFlexRow>
           <ContainerFlexCol>
             <TextRight>open</TextRight>
-            <TextRight>Tasks</TextRight>
+            <TextRight>tasks</TextRight>
           </ContainerFlexCol>
         </ContainerFlexRow>
         <IssueTasks>{openTasks}</IssueTasks>

@@ -7,5 +7,8 @@ export { default as Next } from "./Next";
 export { default as Todo } from "./Todo";
 export { default as Done } from "./Done";
 export { default as Fire } from "./Fire";
+export { default as Theft } from "./Theft";
+export { default as Spillage } from "./Spillage";
 export { default as Demonstration } from "./Demonstration";
 export { default as FireAnimated } from "./FireAnimated";
+export { default as Weather } from "./Weather";

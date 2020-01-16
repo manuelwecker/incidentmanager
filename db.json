@@ -19,7 +19,7 @@
       "id": 2
     },
     {
-      "type": "demonstration",
+      "type": "theft",
       "timeDate": "2020-01-12T20:35:36.977Z",
       "city": "München",
       "site": "onsite",
@@ -28,172 +28,34 @@
       "id": 3
     },
     {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:42:06 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "Ger",
-      "city": "DDorf",
-      "site": "onsite",
+      "type": "fire",
+      "timeDate": "Thu Jan 16 2020 12:14:34 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "1",
+      "site": "",
       "id": 4
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:48:11 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "Ger",
-      "city": "DDorf",
-      "crisisPotential": "3",
-      "site": "offsite",
-      "id": 5
-    },
-    {
-      "type": "fire",
-      "timeDate": "Wed Jan 15 2020 15:50:57 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "Germany",
-      "city": "Leverkusen",
-      "crisisPotential": "1",
-      "site": "onsite",
-      "id": 6
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:51:57 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 7
-    },
-    {
-      "type": "strike",
-      "timeDate": "Wed Jan 15 2020 15:54:40 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "2",
-      "site": "",
-      "id": 8
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:56:18 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 9
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:56:41 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "Leverkusen",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 10
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:57:13 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "onsite",
-      "id": 11
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 15:59:03 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 12
-    },
-    {
-      "type": "fire",
-      "timeDate": "Wed Jan 15 2020 16:00:30 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 13
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 16:08:28 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 14
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Wed Jan 15 2020 16:10:27 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 15
-    },
-    {
-      "type": "spillage",
-      "timeDate": "Wed Jan 15 2020 16:11:02 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 16
-    },
-    {
-      "type": "demonstration",
-      "timeDate": "Wed Jan 15 2020 16:11:20 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "3",
-      "site": "",
-      "id": 17
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Wed Jan 15 2020 16:11:47 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 18
-    },
-    {
-      "type": "undefined",
-      "timeDate": "Wed Jan 15 2020 16:32:20 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 19
-    },
-    {
-      "type": "fire",
-      "timeDate": "Wed Jan 15 2020 16:46:12 GMT+0100 (Mitteleuropäische Normalzeit)",
-      "country": "",
-      "city": "",
-      "crisisPotential": "1",
-      "site": "",
-      "id": 20
     }
   ],
   "tasks": [
     {
       "id": 1,
-      "taskName": "AufgabeA",
-      "taskStatus": false
+      "taskName": "alert rescue workers",
+      "taskStatus": true
     },
     {
       "id": 2,
-      "taskName": "AufgabeB",
+      "taskName": "give first aid",
       "taskStatus": true
     },
     {
       "id": 3,
-      "taskName": "AufgabeC",
+      "taskName": "inform crisis management",
+      "taskStatus": true
+    },
+    {
+      "id": 4,
+      "taskName": "Inform authorities",
       "taskStatus": false
     }
   ],
@@ -202,21 +64,21 @@
       "type": "fire",
       "headline": "Fire bei GreenChem",
       "subline": "Initial statement for internal use only",
-      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
+      "copytext": "At GreenChem today near CITY a TYPE has occurred. According to the current state of information, EMPLOYEEINJURED employee(s), EXTNERNALEMPLOYEEINJURED external employee(s) and EXTNERNAL other people have been injured. They will receive medical treatment as required. The emergency services as well as the responsible authorities have been alerted immediately to combat or limit the damage. We have set the crisis potential at stage CRISISPOTENTIAL.",
       "id": 1
     },
     {
       "type": "accident",
       "headline": "Unfall bei GreenChem",
       "subline": "Initial statement for internal use only",
-      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
+      "copytext": "At GreenChem today near CITY a TYPE has occurred. According to the current state of information, EMPLOYEEINJURED employee(s), EXTNERNALEMPLOYEEINJURED external employee(s) and EXTNERNAL other people have been injured. They will receive medical treatment as required. The emergency services as well as the responsible authorities have been alerted immediately to combat or limit the damage. We have set the crisis potential at stage CRISISPOTENTIAL.",
       "id": 2
     },
     {
       "type": "demonstration",
       "headline": "Demonstration bei GreenChem",
       "subline": "Initial statement for internal use only",
-      "copytext": "Bei GreenChem ist es heute (TIMEDATE / TIMEZONE / COUNTRY) in der Nähe von CITY zu einem TYPE gekommen. Nach dem derzeitigen Informationsstand sind EMPLOYERINJURED Mitarbeiter und EXTNERNALINJURED Personen verletzt worden. Sie werden nach Bedarf medizinisch versorgt. Die Werksfeuerwehr und weitere Einsatzkräfte sowie zuständige Behörden sind sofort zur Schadensbekämpfung bzw. Schadensbegrenzung alarmiert worden und sind teils auch vor Ort im Einsatz. Eine Gefährdung für die Umwelt und Bevölkerung DANGERYESNOMAYBE.",
+      "copytext": "At GreenChem today near CITY a TYPE has occurred. According to the current state of information, EMPLOYEEINJURED employee(s), EXTNERNALEMPLOYEEINJURED external employee(s) and EXTNERNAL other people have been injured. They will receive medical treatment as required. The emergency services as well as the responsible authorities have been alerted immediately to combat or limit the damage. We have set the crisis potential at stage CRISISPOTENTIAL.",
       "id": 3
     }
   ]

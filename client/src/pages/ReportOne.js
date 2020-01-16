@@ -6,12 +6,21 @@ import {
   SliderDotsButton,
   SvgTextFooterButton
 } from "../components/Buttons";
-import { Fire, Accident, Next, Demonstration } from "../assets/Icons";
+import {
+  Fire,
+  Accident,
+  Next,
+  Demonstration,
+  Spillage,
+  Weather,
+  Theft
+} from "../assets/Icons";
 import { H1, H2, H3 } from "../components/Headlines";
 import { useLocation, Link } from "react-router-dom";
 import Aside from "../components/Aside";
 import { FormReport, FieldGroup, Field, Radio } from "../components/Forms";
 import useSessionStorage from "../hooks/useSessionStorage";
+import Strike from "../assets/Icons/Strike";
 
 const BiggerField = styled(Field)`
   min-height: 280px;
@@ -78,7 +87,7 @@ export default function ReportFour() {
         </FieldGroup>
         <FieldGroup>
           <Radio
-            svg={<Fire />}
+            svg={<Spillage />}
             text="Spillage"
             name="type"
             id="spillage"
@@ -88,7 +97,7 @@ export default function ReportFour() {
             typeStored
           />
           <Radio
-            svg={<Fire />}
+            svg={<Weather />}
             text="Storm"
             name="type"
             id="storm"
@@ -98,7 +107,7 @@ export default function ReportFour() {
             typeStored
           />
           <Radio
-            svg={<Fire />}
+            svg={<Strike />}
             text="Strike"
             name="type"
             id="strike"
@@ -110,7 +119,7 @@ export default function ReportFour() {
         </FieldGroup>
         <FieldGroup>
           <Radio
-            svg={<Fire />}
+            svg={<Theft />}
             text="Theft"
             name="type"
             id="theft"

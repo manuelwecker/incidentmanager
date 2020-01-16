@@ -4,16 +4,6 @@ The next level of crisis communiation
 
 The app digitalize crisis communication. And bring all information needed to the mobile. From the recording and evaluation of the incident to internal reporting to the crisis management team and automatic press releases for the most common crisis scenarios. A task list shows what needs to be done. In this way, the app supports the classification of the escalation level and communication at the crisis location. Crisis manual and eLearnings can also be implemented.
 
-### Screenshots
-
-Bildschirmfoto 2020-01-16 um 15.54.21
-
-Bildschirmfoto 2020-01-16 um 15.55.29
-
-Bildschirmfoto 2020-01-16 um 15.56.05
-
-IMG_5053.PNG
-
 ### Tech/framework used
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

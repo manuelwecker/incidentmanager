@@ -178,13 +178,58 @@
       "crisisPotential": "1",
       "site": "",
       "id": 20
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Wed Jan 15 2020 18:08:32 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "3",
+      "site": "",
+      "id": 21
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Wed Jan 15 2020 18:27:51 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "3",
+      "site": "",
+      "id": 22
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Wed Jan 15 2020 19:49:07 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "1",
+      "site": "",
+      "id": 23
+    },
+    {
+      "type": "demonstration",
+      "timeDate": "Wed Jan 15 2020 19:53:42 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "3",
+      "site": "",
+      "id": 24
+    },
+    {
+      "type": "undefined",
+      "timeDate": "Thu Jan 16 2020 12:08:49 GMT+0100 (Mitteleuropäische Normalzeit)",
+      "country": "",
+      "city": "",
+      "crisisPotential": "1",
+      "site": "",
+      "id": 25
     }
   ],
   "tasks": [
     {
       "id": 1,
       "taskName": "AufgabeA",
-      "taskStatus": false
+      "taskStatus": true
     },
     {
       "id": 2,
@@ -194,7 +239,7 @@
     {
       "id": 3,
       "taskName": "AufgabeC",
-      "taskStatus": false
+      "taskStatus": true
     }
   ],
   "memos": [

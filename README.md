@@ -6,7 +6,13 @@ The app digitalize crisis communication. And bring all information needed to the
 
 ### Screenshots
 
-(...)
+Bildschirmfoto 2020-01-16 um 15.54.21
+
+Bildschirmfoto 2020-01-16 um 15.55.29
+
+Bildschirmfoto 2020-01-16 um 15.56.05
+
+IMG_5053.PNG
 
 ### Tech/framework used
 
@@ -14,10 +20,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
+* Incident Management for companies
+* Report 
+
+## Tech Stack
+
+* React
+* JavaScript
+* HTML5
+* CSS3
+* JSON-Server
+* @Emotion
+
 ## How to use?
 
 You will find a client and server split.
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -40,17 +57,14 @@ Install dependencies
 
 ## API Reference
 
-(planned)
-MongoDB on Atlas
-
-For developer database open the terminal window and type `mongo`.
+MongoDB on Atlas (planned)
 
 ## Credits
 
-THX to senior full stack dev / coach lmachens @neuefische
+THX to senior full stack dev / coach [@lmachens] (https://github.com/lmachens) [@neuefische] (https://www.neuefische.de/)
 
 ## License
 
-UNLICENSED
-Concept and logo design @jp-kom.de
-Code ©manuelwecker
+UNLICENSED <br />
+Concept and icon design [@jp-kom.de] (https://www.jp-kom.de/) <br />
+Code [@manuelwecker] (https://manuelwecker.de/)

@@ -35,11 +35,11 @@ export default function ReportOne() {
             name="timeDate"
             value={timeDate}
             onChange={event => setTimeDate(event.target.value)}
-            checked={location.pathname === "/report/2"}
+
             // active={location.pathname === "/summary"}}checked
             // {location.pathname === "/report/2"} (checked)}
           />
-          <label htmlFor="timeDate">Today and now</label>
+          <label htmlFor="timeDate">Now</label>
         </Field>
         <Field>
           <input
@@ -48,7 +48,7 @@ export default function ReportOne() {
             name="timeDate"
             value="otherDate"
           />
-          <label htmlFor="timeDate">Other date / time</label>
+          <label htmlFor="timeDate">Other day or time</label>
           <input
             type="datetime-local"
             value={timeDate}
@@ -75,7 +75,7 @@ export default function ReportOne() {
             name="city"
             value={city}
             onChange={event => setCity(event.target.value)}
-            placeholder="Next City"
+            placeholder="City ro town"
           />
         </Field>
         <Field>

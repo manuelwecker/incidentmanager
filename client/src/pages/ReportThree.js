@@ -37,14 +37,14 @@ export default function ReportThree() {
   return (
     <>
       <H2>Involved people:</H2>
-      <H1>Who is effected and injured?</H1>
+      <H1>Who is affected, dead or injured?</H1>
 
       <FieldGroup>
         <FieldEnlarge>
           <Field>
             <ContainerFlexColWrap>
               <ContainerFlexRowWrap>
-                <H3>Are there casualties?</H3>
+                <H3>Were there casualties?</H3>
                 <EnlargeButton
                   onClick={() => setIsClicked(!isClicked)}
                   isClicked={isClicked}
@@ -88,7 +88,7 @@ export default function ReportThree() {
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
-                <span>Other persons</span>
+                <span>Other people</span>
                 <input type="text" placeholder="Count" />
               </ContainerFlexRowWrap>
             </Field>
@@ -101,7 +101,7 @@ export default function ReportThree() {
           <Field>
             <ContainerFlexColWrap>
               <ContainerFlexRowWrap>
-                <H3>Are there injured?</H3>
+                <H3>Were there any injuries?</H3>
                 <EnlargeButton
                   onClick={() => setIsEnlarged(!isEnlarged)}
                   isClicked={isEnlarged}
@@ -145,7 +145,7 @@ export default function ReportThree() {
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
-                <span>Other persons</span>
+                <span>Other people</span>
                 <input type="text" placeholder="Count" />
               </ContainerFlexRowWrap>
             </Field>

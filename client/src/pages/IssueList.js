@@ -29,8 +29,8 @@ export default function IssueList() {
 
   return (
     <>
-      <H2>What has happened worldwide?</H2>
-      <H1>Current issues</H1>
+      <H2>What’s happening on a global scale?</H2>
+      <H1>Current challenges</H1>
 
       {issues.map(issue => (
         <Issue
@@ -49,7 +49,7 @@ export default function IssueList() {
         <Link to="/report/1">
           <SvgTextFooterButton
             svg={<Plus />}
-            text="Report a new issue"
+            text="Report an issue"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

@@ -71,10 +71,10 @@ export default function ReportFour() {
   return (
     <>
       <H2>Media attention:</H2>
-      <H1>Media requests or coverage?</H1>
+      <H1>Is there media coverage?</H1>
 
       <FieldGroup>
-        <H3>Current media</H3>
+        <H3>Media interest</H3>
         <Field>
           <input type="checkbox" />
           <label>requests</label>

@@ -42,7 +42,7 @@ export default function Summary() {
     "crisisPotential",
     calculateCrisisPotential(type)
   );
-  console.log("Summaray", type, crisisPotential);
+  // console.log("Summaray", type, crisisPotential);
   // let typeStored = setCrisisPotential(sessionStorage.getItem("type"));
   // const crisisPotential =
   //   calculateCrisisPotential(typeStored)

@@ -59,6 +59,7 @@ export default function ReportOne() {
             country={currentIssue.country}
             city={currentIssue.city}
             timeDate={currentIssue.timeDate}
+            crisisPotential={currentIssue.crisisPotential}
           ></CreateMemo>
         </TextArea>
 

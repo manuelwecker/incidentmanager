@@ -31,7 +31,7 @@ const BiggerField = styled(Field)`
   overflow: auto;
 `;
 
-export default function ReportFour() {
+export default function ReportOne() {
   sessionStorage.clear();
   const location = useLocation();
   const [type, setType] = useSessionStorage("type");
@@ -49,8 +49,8 @@ export default function ReportFour() {
   }
   return (
     <>
-      <H2>Typ of incident:</H2>
-      <H1>What happened?</H1>
+      <H2>Type of incident:</H2>
+      <H1>What is happening?</H1>
 
       <BiggerField>
         <FieldGroup>
@@ -98,10 +98,10 @@ export default function ReportFour() {
           />
           <Radio
             svg={<Weather />}
-            text="Storm"
+            text="Weather"
             name="type"
-            id="storm"
-            value="storm"
+            id="weather"
+            value="weather"
             onClick={onChangeHandler}
             isChecked
             typeStored

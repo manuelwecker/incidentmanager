@@ -19,13 +19,13 @@ const Path1 = styled.path`
 
 const Path2 = styled.path`
   fill: ${props => props.theme.colors.corporateDesignSecondary};
-  animation: fade 3s infinite alternate;
+  animation: fade 6s infinite alternate;
   @keyframes fade {
     0% {
       opacity: 0;
     }
     50% {
-      opacity: 0;
+      opacity: 1;
     }
     100% {
       opacity: 0;

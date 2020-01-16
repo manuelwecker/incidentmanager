@@ -1,6 +1,13 @@
 import React from "react";
 
-function CreateMemo({ type, city, country, timedate, timezone }) {
+function CreateMemo({
+  type,
+  city,
+  country,
+  timedate,
+  timezone,
+  crisisPotential
+}) {
   const [memos, setMemos] = React.useState([]);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
@@ -35,6 +42,7 @@ function CreateMemo({ type, city, country, timedate, timezone }) {
     replacedMemo = replacedMemo.replace("CITY", city);
     replacedMemo = replacedMemo.replace("TIMEZONE", timezone);
     replacedMemo = replacedMemo.replace("TYPE", type);
+    replacedMemo = replacedMemo.replace("CRISISPOTENTIAL", crisisPotential);
 
     // advanced function but not in use, missing quotations in object?
     // const replacedMemoDetails = [{ TIMEDATE: timedate }, { TYPE: type }];

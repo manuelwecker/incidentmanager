@@ -32,13 +32,13 @@ function Footer({ name, value, onClick }) {
   return (
     <FooterNavigation>
       <Link to="/crisismanual">
-        <NoStyleButton>crisis manual</NoStyleButton>
+        <NoStyleButton>Crisis Manual</NoStyleButton>
       </Link>
       <NoStyleButton name="activeTheme" value={"light"} onClick={onClick}>
-        switch theme
+        Switch Theme
       </NoStyleButton>
       <Link to="/legalnotice">
-        <NoStyleButton>legal notice</NoStyleButton>
+        <NoStyleButton>Legal Notice</NoStyleButton>
       </Link>
     </FooterNavigation>
   );

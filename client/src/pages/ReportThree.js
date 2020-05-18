@@ -36,7 +36,7 @@ export default function ReportThree() {
   const location = useLocation();
   return (
     <>
-      <H2>Involved people:</H2>
+      <H2>Involved people</H2>
       <H1>Who is affected, dead or injured?</H1>
 
       <FieldGroup>
@@ -75,21 +75,21 @@ export default function ReportThree() {
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>Own employees</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>External employees</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>Other people</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
           </>
@@ -132,21 +132,21 @@ export default function ReportThree() {
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>Own employees</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>External employees</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
             <Field>
               <ContainerFlexRowWrap>
                 <input type="checkbox" />
                 <span>Other people</span>
-                <input type="text" placeholder="Count" />
+                <input type="text" placeholder="Number" />
               </ContainerFlexRowWrap>
             </Field>
           </>
@@ -158,7 +158,7 @@ export default function ReportThree() {
         <Link to="/report/4">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 4"
+            text="Go to step 4"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

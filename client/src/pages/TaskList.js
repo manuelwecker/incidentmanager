@@ -62,7 +62,7 @@ export default function IssueList() {
 
   return (
     <>
-      <H2>What has happened worldwide?</H2>
+      <H2>Checklist</H2>
       <H1>Current tasks</H1>
 
       <BiggerField>

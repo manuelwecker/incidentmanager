@@ -55,7 +55,7 @@ function CreateMemo({
       <>
         <h4>{currentMemo.headline}</h4>
         <h5>{currentMemo.subline}</h5>
-        {replacedMemo}
+        <textarea>{replacedMemo}</textarea>
       </>
     );
   }

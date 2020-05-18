@@ -70,14 +70,14 @@ const TimeDate = styled.input`
 export default function ReportFour() {
   return (
     <>
-      <H2>Media attention:</H2>
+      <H2>Media attention</H2>
       <H1>Is there media coverage?</H1>
 
       <FieldGroup>
-        <H3>Media interest</H3>
+        
         <Field>
           <input type="checkbox" />
-          <label>requests</label>
+          <label>Requests</label>
         </Field>
         {/* <Field>
             <label htmlFor="employerInjured">Employer injured</label>
@@ -94,11 +94,11 @@ export default function ReportFour() {
           </Field> */}
         <Field>
           <input type="checkbox" />
-          <label>broadcasting</label>
+          <label>Broadcasting</label>
         </Field>
         <Field>
           <input type="checkbox" />
-          <label>published</label>
+          <label>Published</label>
         </Field>
       </FieldGroup>
 
@@ -106,15 +106,19 @@ export default function ReportFour() {
         <H3>Type of media</H3>
         <Field>
           <input type="checkbox" />
-          <label>television</label>
+          <label>Television</label>
         </Field>
         <Field>
           <input type="checkbox" />
-          <label>print</label>
+          <label>Print</label>
         </Field>
         <Field>
           <input type="checkbox" />
-          <label>online</label>
+          <label>Online</label>
+        </Field>
+        <Field>
+          <input type="checkbox" />
+          <label>Social media/blogs</label>
         </Field>
       </FieldGroup>
 

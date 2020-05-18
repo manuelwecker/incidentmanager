@@ -29,8 +29,8 @@ export default function IssueList() {
 
   return (
     <>
-      <H2>What’s happening on a global scale?</H2>
-      <H1>Current challenges</H1>
+      <H2>What’s happening?</H2>
+      <H1>Current Challenges</H1>
 
       {issues.map(issue => (
         <Issue

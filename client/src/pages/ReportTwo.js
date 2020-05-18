@@ -23,7 +23,7 @@ export default function ReportOne() {
   const location = useLocation(false);
   return (
     <>
-      <H2>Location, Date and Time:</H2>
+      <H2>Location, Date and Time</H2>
       <H1>Where and when did it happened?</H1>
 
       <FieldGroup>
@@ -48,7 +48,7 @@ export default function ReportOne() {
             name="timeDate"
             value="otherDate"
           />
-          <label htmlFor="timeDate">Other day or time</label>
+          <label htmlFor="timeDate"></label>
           <input
             type="datetime-local"
             value={timeDate}
@@ -75,7 +75,7 @@ export default function ReportOne() {
             name="city"
             value={city}
             onChange={event => setCity(event.target.value)}
-            placeholder="City ro town"
+            placeholder="City or town"
           />
         </Field>
         <Field>
@@ -122,7 +122,7 @@ export default function ReportOne() {
         <Link to="/report/3">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 3"
+            text="Go to step 3"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

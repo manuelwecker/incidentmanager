@@ -97,7 +97,7 @@ export default function Summary() {
             <div>
               <ContainerFlexCol>
                 <H3>Crisis potential</H3>
-                <span>based on your information</span>
+                <span>based on your assessment</span>
               </ContainerFlexCol>
             </div>
             <div>

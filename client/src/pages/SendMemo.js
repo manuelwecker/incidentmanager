@@ -52,15 +52,18 @@ export default function ReportOne() {
       <>
         <H2>Internal memo</H2>
         <H1>Inform the crisis management</H1>
-
         <TextArea>
-          <CreateMemo
+        <CreateMemo
             type={currentIssue.type}
             country={currentIssue.country}
             city={currentIssue.city}
             timeDate={currentIssue.timeDate}
             crisisPotential={currentIssue.crisisPotential}
-          ></CreateMemo>
+          ></CreateMemo>    
+
+          <h4>Email recipient</h4>
+        <h5>Add email address comma separated</h5>      
+          <textarea name="recipient">manuel-dev@web.de</textarea>
         </TextArea>
 
         <Aside>

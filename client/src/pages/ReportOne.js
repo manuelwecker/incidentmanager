@@ -49,7 +49,7 @@ export default function ReportOne() {
   }
   return (
     <>
-      <H2>Type of incident:</H2>
+      <H2>Type of incident</H2>
       <H1>What is happening?</H1>
 
       <BiggerField>
@@ -137,7 +137,7 @@ export default function ReportOne() {
         <Link to="/report/2">
           <SvgTextFooterButton
             svg={<Next />}
-            text="Next to step 2"
+            text="Go to step 2"
           ></SvgTextFooterButton>
         </Link>
       </Aside>

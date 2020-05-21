@@ -20,7 +20,7 @@ export default function IssueList() {
   const response = useFetch("/api/issues");
 
   React.useEffect(() => {
-    setIssues(response);
+    setIssues(response.data);
   }, [response]);
 
   return (

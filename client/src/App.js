@@ -8,7 +8,7 @@ import Logo from "./components/Logo";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
-import { H1, H2 } from "./components/Headlines";
+// import { H1, H2 } from "./components/Headlines";
 import {
   ReportOne,
   ReportTwo,
@@ -30,10 +30,8 @@ const Container = styled.div`
 
   height: 100vh;
   @media only screen and (min-width: ${props =>
-    props.theme.company.deviceWidth}) {
-            max-width: ${props => props.theme.company.deviceWidth};
-          }
-  
+      props.theme.company.deviceWidth}) {
+    max-width: ${props => props.theme.company.deviceWidth};
   }
 `;
 

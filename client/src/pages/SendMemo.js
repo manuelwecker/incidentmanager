@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import CreateMemo from "../components/CreateMemo";
 import Aside from "../components/Aside";
 import { Next } from "../assets/Icons";
+import useFetch from "../hooks/useFetch";
 
 const TextArea = styled.div`
   border: 1px solid none;
@@ -17,54 +18,60 @@ const TextArea = styled.div`
   padding: 4px;
 `;
 
-export default function ReportOne() {
-  const location = useLocation();
-  const [issues, setIssues] = React.useState([]);
-  const [error, setError] = React.useState(false);
-  const [loading, setLoading] = React.useState(true);
+export default function SendMemo() {
+  // const location = useLocation();
+  const [issue, setIssue] = React.useState(false);
+  // const [error, setError] = React.useState(false);
+  // const [loading, setLoading] = React.useState(true);
+  const response = useFetch("/api/lastissue");
 
-  async function fetchIssues() {
-    try {
-      setLoading(true);
-      setError(false);
-      const response = await fetch(
-        "/api/issues?_sort=timeDate&_order=desc&_limit=1"
-      );
-      const newIssue = await response.json();
-      setIssues(newIssue);
-    } catch (error) {
-      console.error(error);
-      setError(true);
-    } finally {
-      setLoading(false);
-    }
-  }
+  console.log("response", response);
+
+  // async function fetchIssues() {
+  //   try {
+  //     setLoading(true);
+  //     setError(false);
+  //     // const response = await fetch(
+  //     //   "/api/issues?_sort=timeDate&_order=desc&_limit=1"
+  //     // );
+
+  //     const newIssue = await response.json();
+  //     setIssue(newIssue);
+  //   } catch (error) {
+  //     console.error(error);
+  //     setError(true);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
   React.useEffect(() => {
-    fetchIssues();
-  }, []);
+    setIssue(response.data);
+  }, [response]);
 
-  const currentIssue = issues[0];
+  if (!issue) return "Loading...";
+  if (response.status !== 200) {
+    return `Error: Something went wrong`;
+  }
+  if (issue) {
+    const currentIssue = issue[0];
+    console.log(currentIssue.type);
 
-  if (loading) return "Loading...";
-  if (error) return `Error: Something went wrong`;
-  if (!loading)
     return (
       <>
         <H2>Internal memo</H2>
         <H1>Inform the crisis management</H1>
         <TextArea>
-        <CreateMemo
+          <CreateMemo
             type={currentIssue.type}
             country={currentIssue.country}
             city={currentIssue.city}
             timeDate={currentIssue.timeDate}
             crisisPotential={currentIssue.crisisPotential}
-          ></CreateMemo>    
-
-          <h4>Email recipient</h4>
-        <h5>Add email address comma separated</h5>      
-          <textarea name="recipient">manuel-dev@web.de</textarea>
+          ></CreateMemo>
         </TextArea>
+        <h4>Email recipient</h4>
+        <H2>Add email address comma separated</H2>
+        <TextArea name="recipient">manuel-dev@web.de</TextArea>
 
         <Aside>
           <Link to="/tasks">
@@ -76,4 +83,5 @@ export default function ReportOne() {
         </Aside>
       </>
     );
+  }
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { EnlargeButton, SVGSquareButton } from "../components/Buttons";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
-import tasks from "../assets/images/tasks.svg";
-import IssueCrisisPotential from "../components/Forms/IssueCrisisPotential";
-import { TextEntry, DetailLink, BiggerField, TaskEntry } from "./Forms";
+// import tasks from "../assets/images/tasks.svg";
+// import IssueCrisisPotential from "../components/Forms/IssueCrisisPotential";
+// import { TextEntry, DetailLink, BiggerField, TaskEntry } from "./Forms";
 import { Next, Fire, Done, Todo } from "../assets/Icons";
 
 const IssueInfo = styled.span`

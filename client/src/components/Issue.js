@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { EnlargeButton } from "../components/Buttons";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import tasks from "../assets/images/tasks.svg";
 import IssueCrisisPotential from "../components/Forms/IssueCrisisPotential";
@@ -139,3 +141,13 @@ export default function Issue({
     </>
   );
 }
+
+Issue.propTypes = {
+  type: PropTypes.string,
+  city: PropTypes.string,
+  country: PropTypes.string,
+  timeDate: PropTypes.string,
+  timezone: PropTypes.string,
+  openTasks: PropTypes.string,
+  crisisPotential: PropTypes.string
+};

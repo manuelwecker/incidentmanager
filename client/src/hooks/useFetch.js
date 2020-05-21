@@ -4,14 +4,21 @@ function useFetch(url) {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    async function doFetch() {
-      const response = await fetch(url);
+    async function fetchData() {
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
       const newData = await response.json();
+
       setData(newData);
     }
 
-    doFetch();
-  }, []);
+    fetchData();
+  }, [url]);
 
   return data;
 }

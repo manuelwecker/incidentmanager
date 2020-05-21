@@ -27,6 +27,8 @@ import useSessionStorage from "../hooks/useSessionStorage";
 import { useHistory } from "react-router-dom";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
 
+import saveData from "../api/saveData";
+
 const ContainerFlexRowWrap = styled(ContainerFlexRow)`
   width: 100%;
   padding: 0 4px 0 4px;
@@ -56,28 +58,19 @@ export default function Summary() {
   );
   const [isSelected, setIsSelected] = React.useState(false);
 
-  let city = sessionStorage.getItem("city");
-  let country = sessionStorage.getItem("country");
-  let site = sessionStorage.getItem("site");
-
   // loading State onSubmitting = true
   async function handleSubmit(event) {
     event.preventDefault();
 
-    await fetch("/api/issues", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        type,
-        timeDate,
-        country,
-        city,
-        crisisPotential,
-        site
-      })
-    });
+    const data = {
+      type: type,
+      timeDate: timeDate,
+      country: sessionStorage.getItem("country"),
+      city: sessionStorage.getItem("city"),
+      crisisPotential: crisisPotential,
+      site: sessionStorage.getItem("site")
+    };
+    await saveData("/api/issues", data);
     history.push("/send");
   }
 

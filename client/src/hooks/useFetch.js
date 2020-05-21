@@ -1,6 +1,7 @@
 import React from "react";
 
 function useFetch(url) {
+  const [status, setStatus] = React.useState(false);
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
@@ -11,7 +12,7 @@ function useFetch(url) {
           "Content-Type": "application/json"
         }
       });
-
+      setStatus(response.status);
       const newData = await response.json();
 
       setData(newData);
@@ -20,7 +21,7 @@ function useFetch(url) {
     fetchData();
   }, [url]);
 
-  return data;
+  return { data, status };
 }
 
 export default useFetch;

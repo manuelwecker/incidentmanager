@@ -27,7 +27,7 @@ import useSessionStorage from "../hooks/useSessionStorage";
 import { useHistory } from "react-router-dom";
 import calculateCrisisPotential from "../utils/calculateCrisisPotential";
 
-import saveData from "../api/saveData";
+import SaveData from "../api/SaveData";
 
 const ContainerFlexRowWrap = styled(ContainerFlexRow)`
   width: 100%;
@@ -70,7 +70,7 @@ export default function Summary() {
       crisisPotential: crisisPotential,
       site: sessionStorage.getItem("site")
     };
-    await saveData("/api/issues", data);
+    await SaveData("/api/issues", data);
     history.push("/send");
   }
 

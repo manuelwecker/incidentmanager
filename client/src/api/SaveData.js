@@ -1,4 +1,5 @@
-export default function saveData(url, data) {
+export default function SaveData(url, data) {
+  console.log("data:", data);
   return fetch(url, {
     method: "POST",
     headers: {

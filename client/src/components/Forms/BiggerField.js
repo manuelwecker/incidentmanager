@@ -5,6 +5,7 @@ import Field from "./Field";
 const BiggerField = styled(Field)`
   min-height: 136px;
   max-height: auto;
+  overflow: auto;
 
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 import React from "react";
 import GetMemo from "../api/GetMemo";
-import { MemoInput } from "./Forms/MemoInputs";
+import { MemoInput } from "./Forms/Inputs";
 
 function CreateMemo({
   type,

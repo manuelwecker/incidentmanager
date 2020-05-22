@@ -42,6 +42,7 @@ export default function IssueList() {
               openTasks={issue.openTasks}
               tasks={issue.tasks}
               crisisPotential={issue.crisisPotential}
+              id={issue._id}
             />
           ))}
         </>

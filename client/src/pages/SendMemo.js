@@ -7,7 +7,7 @@ import CreateMemo from "../components/CreateMemo";
 import Aside from "../components/Aside";
 import { Next } from "../assets/Icons";
 import useFetch from "../hooks/useFetch";
-import { MemoInputEmail } from "../components/Forms/MemoInputs";
+import { MemoInputEmail } from "../components/Forms/Inputs";
 
 const TextArea = styled.div`
   border: 1px solid none;
@@ -26,8 +26,6 @@ export default function SendMemo() {
   // const [loading, setLoading] = React.useState(true);
   const response = useFetch("/api/lastissue");
 
-  // console.log("response", response);
-
   React.useEffect(() => {
     setIssue(response.data);
   }, [response]);
@@ -38,7 +36,6 @@ export default function SendMemo() {
   }
   if (issue) {
     const currentIssue = issue[0];
-    // console.log(currentIssue.type);
 
     return (
       <>

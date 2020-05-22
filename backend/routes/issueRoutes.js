@@ -1,12 +1,12 @@
 const express = require("express");
-const dbRoutes = express.Router();
+const issueRoutes = express.Router();
 
 const { addIssue, getIssues, getLastIssue } = require("../lib/issues");
 
-dbRoutes.post("/issues", async (request, response) => {
+issueRoutes.post("/issues", async (request, response) => {
   try {
-    const attendee = request.body;
-    await addIssue(attendee);
+    const issue = request.body;
+    await addIssue(issue);
     response.end();
   } catch (error) {
     console.error(error);
@@ -14,7 +14,7 @@ dbRoutes.post("/issues", async (request, response) => {
   }
 });
 
-dbRoutes.get("/lastissue", async (request, response) => {
+issueRoutes.get("/lastissue", async (request, response) => {
   try {
     const issue = await getLastIssue();
     console.log(issue);
@@ -25,10 +25,10 @@ dbRoutes.get("/lastissue", async (request, response) => {
   }
 });
 
-dbRoutes.get("/issues", async (request, response) => {
+issueRoutes.get("/issues", async (request, response) => {
   try {
     const issues = await getIssues();
-    console.log(issues);
+
     response.json(issues);
   } catch (error) {
     console.error(error);
@@ -36,4 +36,4 @@ dbRoutes.get("/issues", async (request, response) => {
   }
 });
 
-module.exports = dbRoutes;
+module.exports = issueRoutes;

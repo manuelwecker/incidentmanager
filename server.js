@@ -4,7 +4,8 @@ const express = require("express");
 const path = require("path");
 
 const { initDb } = require("./backend/lib/db");
-const dbRoutes = require("./backend/routes/dbRoutes");
+const issueRoutes = require("./backend/routes/issueRoutes");
+const memoRoutes = require("./backend/routes/memoRoutes");
 
 const app = express();
 
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 7070;
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api", dbRoutes);
+app.use("/api", issueRoutes, memoRoutes);
 
 // Serve any static files
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -28,16 +29,3 @@ initDb(process.env.MONGO_URL, process.env.DB_NAME).then(() => {
     console.log(`Server running on Port:${PORT}`);
   });
 });
-
-// const server = jsonServer.create();
-// const router = jsonServer.router("db.json");
-// const middlewares = jsonServer.defaults({
-//   static: "./client/build"
-// });
-
-// server.use(middlewares);
-// server.use("/api", router);
-
-// server.listen(PORT, () => {
-//   console.log(`JSON Server is running on http://localhost:${PORT}`);
-// });

@@ -7,6 +7,7 @@ import CreateMemo from "../components/CreateMemo";
 import Aside from "../components/Aside";
 import { Next } from "../assets/Icons";
 import useFetch from "../hooks/useFetch";
+import { MemoInputEmail } from "../components/Forms/MemoInputs";
 
 const TextArea = styled.div`
   border: 1px solid none;
@@ -25,25 +26,8 @@ export default function SendMemo() {
   // const [loading, setLoading] = React.useState(true);
   const response = useFetch("/api/lastissue");
 
-  console.log("response", response);
+  // console.log("response", response);
 
-  // async function fetchIssues() {
-  //   try {
-  //     setLoading(true);
-  //     setError(false);
-  //     // const response = await fetch(
-  //     //   "/api/issues?_sort=timeDate&_order=desc&_limit=1"
-  //     // );
-
-  //     const newIssue = await response.json();
-  //     setIssue(newIssue);
-  //   } catch (error) {
-  //     console.error(error);
-  //     setError(true);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // }
   React.useEffect(() => {
     setIssue(response.data);
   }, [response]);
@@ -54,7 +38,7 @@ export default function SendMemo() {
   }
   if (issue) {
     const currentIssue = issue[0];
-    console.log(currentIssue.type);
+    // console.log(currentIssue.type);
 
     return (
       <>
@@ -68,10 +52,10 @@ export default function SendMemo() {
             timeDate={currentIssue.timeDate}
             crisisPotential={currentIssue.crisisPotential}
           ></CreateMemo>
+          <h4>Email recipient</h4>
+          <H2>Add email address comma separated</H2>
+          <MemoInputEmail name="recipient">manuel-dev@web.de</MemoInputEmail>
         </TextArea>
-        <h4>Email recipient</h4>
-        <H2>Add email address comma separated</H2>
-        <TextArea name="recipient">manuel-dev@web.de</TextArea>
 
         <Aside>
           <Link to="/tasks">

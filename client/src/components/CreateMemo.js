@@ -1,4 +1,6 @@
 import React from "react";
+import GetMemo from "../api/GetMemo";
+import { MemoInput } from "./Forms/MemoInputs";
 
 function CreateMemo({
   type,
@@ -15,9 +17,10 @@ function CreateMemo({
   async function fetchMemos() {
     try {
       setLoading(true);
-      const response = await fetch(`/api/memos?type=${type}`);
-      const newMemo = await response.json();
-      setMemos(newMemo);
+      const response = await GetMemo({ type });
+      console.log("createMemo", response);
+      // const newMemo = await response.json();
+      setMemos(response);
     } catch (error) {
       console.error(error);
       setError(true);
@@ -55,7 +58,7 @@ function CreateMemo({
       <>
         <h4>{currentMemo.headline}</h4>
         <h5>{currentMemo.subline}</h5>
-        <textarea>{replacedMemo}</textarea>
+        <MemoInput>{replacedMemo}</MemoInput>
       </>
     );
   }

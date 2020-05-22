@@ -10,9 +10,8 @@ const TextEntryWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 0 4px; 
+  padding: 0 0 0 4px;
   margin: 0px;
-  }
 `;
 
 function TaskEntry({ text, svg, children }) {

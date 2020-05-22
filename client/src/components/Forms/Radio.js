@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
+import PropTypes from "prop-types";
 
 const RadioInput = styled.input`
   visibility: hidden;
   width: 0px;
   height: 0px;
-  &:checked {
+  &:checked + label {
     border: 3px solid ${props => props.theme.colors.corporateDesignSecondary};
     background-color: ${props => props.theme.colors.primary};
   }
@@ -34,17 +35,33 @@ const Span = styled.span`
   text-align: center;
 `;
 
-function Radio({ id, svg, text, isChecked, typeStored, ...other }) {
+export default function Radio({
+  id,
+  svg,
+  text,
+  isChecked,
+  typeStored,
+  ...other
+}) {
+  console.log("isChecked:", isChecked);
+  // console.log("id:", id);
+  // console.log("typeStored:", typeStored);
+
   if (id === typeStored) {
-    isChecked = false;
-  } else {
     isChecked = true;
+  } else {
+    isChecked = false;
   }
   let renderChecked = !isChecked ? "" : "checked";
 
   return (
     <>
-      <RadioInput type="radio" id={id} {...other} checked={renderChecked} />
+      <RadioInput
+        type="radio"
+        id={id}
+        {...other}
+        defaultChecked={renderChecked}
+      />
       <Label htmlFor={id}>
         {svg}
         <Span>{text}</Span>
@@ -53,4 +70,10 @@ function Radio({ id, svg, text, isChecked, typeStored, ...other }) {
   );
 }
 
-export default Radio;
+Radio.propTypes = {
+  id: PropTypes.string,
+  svg: PropTypes.object,
+  text: PropTypes.string,
+  isChecked: PropTypes.bool,
+  typeStored: PropTypes.string
+};

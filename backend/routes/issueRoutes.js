@@ -17,7 +17,7 @@ issueRoutes.post("/issues", async (request, response) => {
 issueRoutes.get("/lastissue", async (request, response) => {
   try {
     const issue = await getLastIssue();
-    console.log(issue);
+
     response.json(issue);
   } catch (error) {
     console.error(error);

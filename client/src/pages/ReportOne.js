@@ -45,8 +45,6 @@ export default function ReportOne() {
     id === event.target.value
       ? setIsChecked((isChecked = false))
       : setIsChecked((isChecked = true));
-
-    console.log(isChecked);
   }
 
   React.useEffect(() => {
@@ -54,7 +52,6 @@ export default function ReportOne() {
     setTypeStored(data);
   }, [type]);
 
-  console.log("stored", typeStored);
   return (
     <>
       <H2>Type of incident</H2>

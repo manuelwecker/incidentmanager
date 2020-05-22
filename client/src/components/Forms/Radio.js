@@ -43,10 +43,6 @@ export default function Radio({
   typeStored,
   ...other
 }) {
-  console.log("isChecked:", isChecked);
-  // console.log("id:", id);
-  // console.log("typeStored:", typeStored);
-
   if (id === typeStored) {
     isChecked = true;
   } else {

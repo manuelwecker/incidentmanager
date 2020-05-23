@@ -41,6 +41,6 @@ export const TaskInput = styled.input`
 `;
 
 export const TaskInputNumber = styled(TaskInput)`
-  width: 100px;
+  width: 90px;
   margin-left: 5px;
 `;

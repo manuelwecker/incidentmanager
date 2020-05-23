@@ -3,7 +3,10 @@ const { getCollection } = require("./db");
 
 async function getTasks() {
   const tasks = await getCollection("tasks");
-  return tasks.find().toArray();
+  return tasks
+    .find()
+    .sort({ number: 1 })
+    .toArray();
 }
 
 async function updateTasks(task) {
@@ -17,4 +20,10 @@ async function addTask(task) {
   return tasks.insertOne(task);
 }
 
-module.exports = { getTasks, updateTasks, addTask };
+async function deleteTask(TaskID) {
+  const id = new ObjectID(TaskID);
+  const tasks = await getCollection("tasks");
+  await tasks.deleteOne({ _id: id });
+}
+
+module.exports = { getTasks, updateTasks, addTask, deleteTask };

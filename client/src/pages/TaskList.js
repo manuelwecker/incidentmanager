@@ -84,10 +84,10 @@ export default function IssueList() {
     history.push("/issues");
   }
 
-  function handleTaskStatusChange(id, checked) {
+  function handleTaskStatusChange(number, checked) {
     const newTasks = [...tasks];
     const updatedTaskIndex = newTasks.findIndex(
-      task => task.id === parseInt(id)
+      task => task.number === parseInt(number)
     );
     newTasks[updatedTaskIndex].taskStatus = checked;
     setTasks(newTasks);
@@ -101,7 +101,7 @@ export default function IssueList() {
 
   async function handleAdd() {
     const newTask = {
-      id: parseInt(taskNumber),
+      number: parseInt(taskNumber),
       taskName: addedTask,
       taskStatus: false
     };
@@ -120,7 +120,8 @@ export default function IssueList() {
         {tasks.map(task => (
           <Task
             key={task._id}
-            id={task.id}
+            _id={task._id}
+            number={task.number}
             taskName={task.taskName}
             taskStatus={task.taskStatus}
             onTaskStatusChange={handleTaskStatusChange}

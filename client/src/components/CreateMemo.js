@@ -18,8 +18,7 @@ function CreateMemo({
     try {
       setLoading(true);
       const response = await GetMemo({ type });
-      console.log("createMemo", response);
-      // const newMemo = await response.json();
+
       setMemos(response);
     } catch (error) {
       console.error(error);
